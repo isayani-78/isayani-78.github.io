@@ -1,6 +1,11 @@
-/* ================= Matrix Background ================= */
+/* =========================
+   script.js for Sayani Portfolio
+   ========================= */
+
+/* ---------- Matrix background (persistent) ---------- */
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
+
 function resizeCanvas(){
   canvas.width = innerWidth;
   canvas.height = innerHeight;
@@ -8,121 +13,110 @@ function resizeCanvas(){
 resizeCanvas();
 addEventListener('resize', resizeCanvas);
 
-const columns = Math.floor(canvas.width / 18);
-let drops = new Array(columns).fill(1);
-function drawMatrix(){
-  ctx.fillStyle = 'rgba(1,4,6,0.16)';
+const cols = Math.floor(canvas.width / 20) + 1;
+let ypos = new Array(cols).fill(0);
+
+function matrixTick(){
+  // slight dark overlay to create trail
+  ctx.fillStyle = 'rgba(2,6,10,0.15)';
   ctx.fillRect(0,0,canvas.width,canvas.height);
   ctx.fillStyle = '#28ffc6';
-  ctx.font = '14px monospace';
-  for(let i=0;i<drops.length;i++){
-    const char = String.fromCharCode(65 + Math.random()*26);
-    ctx.fillText(char, i*18, drops[i]*18);
-    if(drops[i]*18 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-    drops[i]++;
+  ctx.font = '14pt monospace';
+  for (let i = 0; i < cols; i++){
+    const ch = String.fromCharCode(65 + Math.random()*33);
+    ctx.fillText(ch, i*20, ypos[i]);
+    if (ypos[i] > canvas.height + Math.random()*10000) ypos[i] = 0;
+    ypos[i] += 18;
   }
 }
-setInterval(drawMatrix, 55);
+setInterval(matrixTick, 60);
 
-/* ================= Global Slideshow (fixed) ================= */
-const gsSlides = document.querySelectorAll('#global-slideshow .gs-slide');
-let gsIdx = 0;
-function gsShow(i){
-  gsSlides.forEach((s, idx)=> s.classList.toggle('active', idx===i));
+/* ---------- Right-panel slideshow ---------- */
+let slides = Array.from(document.querySelectorAll('#slideshow .slide'));
+let slideIdx = 0;
+function showSlide(i){
+  slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
 }
-document.getElementById('gs-prev').addEventListener('click', ()=>{ gsIdx=(gsIdx-1+gsSlides.length)%gsSlides.length; gsShow(gsIdx); });
-document.getElementById('gs-next').addEventListener('click', ()=>{ gsIdx=(gsIdx+1)%gsSlides.length; gsShow(gsIdx); });
-setInterval(()=>{ gsIdx=(gsIdx+1)%gsSlides.length; gsShow(gsIdx); }, 4500);
+document.getElementById('next').addEventListener('click', ()=>{
+  slideIdx = (slideIdx + 1) % slides.length; showSlide(slideIdx);
+});
+document.getElementById('prev').addEventListener('click', ()=>{
+  slideIdx = (slideIdx - 1 + slides.length) % slides.length; showSlide(slideIdx);
+});
+setInterval(()=>{ slideIdx = (slideIdx + 1) % slides.length; showSlide(slideIdx); }, 4000);
 
-/* ================= Page slide navigation + nav highlight ================= */
-const pages = document.querySelectorAll('.page');
-const navLinks = document.querySelectorAll('.top-nav a');
+/* ---------- Page slide navigation + nav highlight ---------- */
+const pages = Array.from(document.querySelectorAll('.page'));
+const navLinks = Array.from(document.querySelectorAll('.top-nav a'));
 
 function activatePage(id){
-  // show page
   pages.forEach(p => p.classList.remove('active'));
   const target = document.getElementById(id);
-  if(target) target.classList.add('active');
+  if (target) target.classList.add('active');
 
-  // nav highlight
-  navLinks.forEach(l => l.classList.remove('active'));
-  const link = document.querySelector(`.top-nav a[href="#${id}"]`);
-  if(link) link.classList.add('active');
-
-  // bring to top
+  // update nav highlight
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+  // scroll top to avoid leftover scroll
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// set click handlers
+// nav click handlers
 navLinks.forEach(link=>{
   const href = link.getAttribute('href');
-  if(!href || !href.startsWith('#')) return;
-  const id = href.slice(1);
-  link.addEventListener('click', (e)=>{
-    e.preventDefault();
-    activatePage(id);
-  });
-});
-
-// auto-activate home on load
-window.addEventListener('load', ()=> activatePage('home'));
-
-/* ================= Global Page intersection: animate skill bars ONCE ================= */
-let skillsAnimated = false;
-const skillEls = document.querySelectorAll('.skill');
-
-function animateSkillsOnce(){
-  if(skillsAnimated) return;
-  // if skills section is active or visible, animate
-  const skillsSection = document.getElementById('skills');
-  if(!skillsSection) return;
-  const rect = skillsSection.getBoundingClientRect();
-  if(rect.top < window.innerHeight){
-    skillsAnimated = true;
-    skillEls.forEach((el, idx)=>{
-      const val = parseInt(el.getAttribute('data-val')) || 70;
-      const fill = el.querySelector('.fill');
-      const pct = el.querySelector('.pct');
-      // animate width after small stagger
-      setTimeout(()=>{
-        fill.style.width = val + '%';
-        // show percentage counting up
-        let count = 0;
-        const step = Math.max(1, Math.round(val/30));
-        const interval = setInterval(()=>{
-          count += step;
-          if(count >= val) count = val;
-          if(pct) pct.textContent = count + '%';
-          if(count >= val) clearInterval(interval);
-        }, 18);
-        // add highlight glow then remove
-        el.classList.add('highlight','filled');
-        setTimeout(()=>{ el.classList.remove('highlight'); }, 1600);
-      }, idx * 120);
+  if (href && href.startsWith('#')){
+    link.addEventListener('click', e=>{
+      e.preventDefault();
+      const id = href.slice(1);
+      activatePage(id);
     });
   }
-}
-
-// trigger on load and on page change/scroll
-window.addEventListener('load', animateSkillsOnce);
-window.addEventListener('scroll', animateSkillsOnce);
-
-// Also run animate when skills page activated via nav
-document.querySelectorAll('.top-nav a[href="#skills"]').forEach(a=>{
-  a.addEventListener('click', ()=> { setTimeout(animateSkillsOnce, 300); });
 });
 
-/* ================= Contact form placeholder ================= */
+// set initial page (home)
+window.addEventListener('load', ()=>{ activatePage('home'); });
+
+/* ---------- Skills: one-time fill + percent animation ---------- */
+function animateSkillsOnce(){
+  const skillEls = Array.from(document.querySelectorAll('.skill'));
+  skillEls.forEach((skill, idx) => {
+    const fill = skill.querySelector('.fill');
+    const percentLabel = skill.querySelector('.percent');
+    const val = parseInt(fill.getAttribute('data-val') || skill.getAttribute('data-val') || 70, 10);
+    // stagger animation a little
+    setTimeout(()=>{
+      fill.style.width = val + '%';
+      skill.classList.add('highlight');
+      // animate number counting to val
+      if (percentLabel){
+        let counter = 0;
+        percentLabel.textContent = '0%';
+        percentLabel.style.opacity = 1;
+        const interval = setInterval(()=>{
+          counter += 1;
+          percentLabel.textContent = counter + '%';
+          if (counter >= val) clearInterval(interval);
+        }, Math.max(10, Math.floor(1200/val)));
+      }
+      // remove highlight glow after 2s (so hover will reapply glow)
+      setTimeout(()=> skill.classList.remove('highlight'), 2000);
+    }, 300 + idx*120);
+  });
+}
+
+// run animation once on first load
+window.addEventListener('load', animateSkillsOnce);
+
+/* ---------- Contact form placeholder handling ---------- */
 const contactForm = document.getElementById('contact-form');
-if(contactForm){
+if (contactForm){
   contactForm.addEventListener('submit', function(e){
-    if(this.action.includes('REPLACE_WITH')){
+    if (this.action.includes('REPLACE_WITH') || this.action.includes('REPLACE_WITH_FORMSPREE')){
       e.preventDefault();
-      alert('Form endpoint not set. Replace action with Formspree or your endpoint to receive messages.');
+      alert('⚠️ Contact endpoint not configured. Sign up at Formspree and replace the form action to receive messages.');
     }
   });
 }
 
-/* ================= footer year ================= */
+/* ---------- Footer year ---------- */
 const yearEl = document.getElementById('year');
-if(yearEl) yearEl.textContent = new Date().getFullYear();
+if (yearEl) yearEl.textContent = new Date().getFullYear();
