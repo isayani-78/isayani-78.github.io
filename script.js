@@ -1,75 +1,128 @@
-:root{
-  --bg:#040509;
-  --panel:#0d1117;
-  --muted:#b7cbe0;
-  --accent:#28ffc6;
-  --accent2:#6ee7ff;
+/* ================= Matrix Background ================= */
+const canvas = document.getElementById('matrix');
+const ctx = canvas.getContext('2d');
+function resizeCanvas(){
+  canvas.width = innerWidth;
+  canvas.height = innerHeight;
 }
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--muted);-webkit-font-smoothing:antialiased}
-canvas#matrix{position:fixed;inset:0;z-index:-2;opacity:0.12}
-.container{width:min(1100px,94%);margin:0 auto;position:relative;z-index:3}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:sticky;top:0;background:linear-gradient(180deg, rgba(4,6,8,0.75), rgba(4,6,8,0.4));border-bottom:1px solid rgba(255,255,255,0.02);z-index:10}
-.brand{font-weight:800;color:#fff;font-size:20px}
-.brand span{color:var(--accent2)}
-.top-nav a{margin-left:16px;color:var(--muted);text-decoration:none}
-.btn{background:linear-gradient(90deg,var(--accent2),var(--accent));padding:10px 14px;border-radius:10px;color:#04111a;font-weight:700;text-decoration:none;border:none;cursor:pointer}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+resizeCanvas();
+addEventListener('resize', resizeCanvas);
 
-.hero{display:grid;grid-template-columns:1fr 380px;gap:24px;padding:36px 0;align-items:start}
-.hero-left h1{font-size:32px;color:#fff;margin:0 0 8px;line-height:1.05}
-.lead{color:var(--muted);margin:0 0 12px}
-.meta{list-style:none;padding:0;margin:14px 0 0;color:var(--muted)}
-
-/* profile */
-.profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);display:flex;gap:12px;align-items:center;margin-bottom:12px}
-.photo-wrap{width:110px;height:110px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-.photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.info h2{margin:0;color:#fff;font-size:18px}
-.info p{margin:6px 0;color:var(--muted)}
-.socials a{display:inline-block;margin-right:8px;color:var(--accent2);text-decoration:none;font-weight:600;font-size:13px}
-
-/* slideshow */
-.slideshow{background:var(--panel);border-radius:12px;padding:8px;border:1px solid rgba(255,255,255,0.02)}
-.slideshow .slide{display:none;position:relative;border-radius:8px;overflow:hidden}
-.slideshow .slide.active{display:block}
-.slideshow img{width:100%;height:160px;object-fit:cover;display:block}
-.cap{position:absolute;left:12px;bottom:10px;background:rgba(3,12,18,0.8);padding:6px 10px;border-radius:8px;color:var(--accent2);font-weight:700}
-
-/* ✨ Quote Section */
-.quote-section{padding:50px 0;text-align:center}
-.quote-container{max-width:700px;margin:0 auto}
-.quote-img{width:100%;max-height:320px;object-fit:cover;border-radius:14px;margin-bottom:16px;border:2px solid rgba(255,255,255,0.08)}
-.quote-section blockquote{font-size:22px;color:#fff;font-weight:600;line-height:1.4;text-shadow:0 0 10px var(--accent2),0 0 20px var(--accent);}
-
-/* sections */
-.section{padding:28px 0;border-top:1px solid rgba(255,255,255,0.02)}
-.two-col{display:grid;grid-template-columns:1fr 320px;gap:22px}
-.side-note{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-
-/* skills */
-.skill-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
-.skill label{display:block;font-weight:600;color:#fff;margin-bottom:6px;font-size:14px}
-.bar{background:#1a1f25;border-radius:10px;overflow:hidden;height:12px;position:relative}
-.fill{background:linear-gradient(90deg,var(--accent2),var(--accent));height:100%;width:0;border-radius:10px;transition:width 1.8s ease-in-out;box-shadow:0 0 8px var(--accent2);}
-
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.project{background:var(--panel);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-.project h3{margin:0 0 8px;color:#fff}
-
-/* contact */
-.contact form{display:flex;flex-direction:column;gap:8px;max-width:520px}
-.contact input,.contact textarea{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted)}
-.hint{color:rgba(255,255,255,0.35);font-size:13px}
-
-/* footer */
-.site-footer{padding:28px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
-
-/* responsive */
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr; padding:18px 0}
-  .two-col{grid-template-columns:1fr}
-  .hero-right{order:-1}
+const columns = Math.floor(canvas.width / 18);
+let drops = new Array(columns).fill(1);
+function drawMatrix(){
+  ctx.fillStyle = 'rgba(1,4,6,0.16)';
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = '#28ffc6';
+  ctx.font = '14px monospace';
+  for(let i=0;i<drops.length;i++){
+    const char = String.fromCharCode(65 + Math.random()*26);
+    ctx.fillText(char, i*18, drops[i]*18);
+    if(drops[i]*18 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+  }
 }
+setInterval(drawMatrix, 55);
+
+/* ================= Global Slideshow (fixed) ================= */
+const gsSlides = document.querySelectorAll('#global-slideshow .gs-slide');
+let gsIdx = 0;
+function gsShow(i){
+  gsSlides.forEach((s, idx)=> s.classList.toggle('active', idx===i));
+}
+document.getElementById('gs-prev').addEventListener('click', ()=>{ gsIdx=(gsIdx-1+gsSlides.length)%gsSlides.length; gsShow(gsIdx); });
+document.getElementById('gs-next').addEventListener('click', ()=>{ gsIdx=(gsIdx+1)%gsSlides.length; gsShow(gsIdx); });
+setInterval(()=>{ gsIdx=(gsIdx+1)%gsSlides.length; gsShow(gsIdx); }, 4500);
+
+/* ================= Page slide navigation + nav highlight ================= */
+const pages = document.querySelectorAll('.page');
+const navLinks = document.querySelectorAll('.top-nav a');
+
+function activatePage(id){
+  // show page
+  pages.forEach(p => p.classList.remove('active'));
+  const target = document.getElementById(id);
+  if(target) target.classList.add('active');
+
+  // nav highlight
+  navLinks.forEach(l => l.classList.remove('active'));
+  const link = document.querySelector(`.top-nav a[href="#${id}"]`);
+  if(link) link.classList.add('active');
+
+  // bring to top
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// set click handlers
+navLinks.forEach(link=>{
+  const href = link.getAttribute('href');
+  if(!href || !href.startsWith('#')) return;
+  const id = href.slice(1);
+  link.addEventListener('click', (e)=>{
+    e.preventDefault();
+    activatePage(id);
+  });
+});
+
+// auto-activate home on load
+window.addEventListener('load', ()=> activatePage('home'));
+
+/* ================= Global Page intersection: animate skill bars ONCE ================= */
+let skillsAnimated = false;
+const skillEls = document.querySelectorAll('.skill');
+
+function animateSkillsOnce(){
+  if(skillsAnimated) return;
+  // if skills section is active or visible, animate
+  const skillsSection = document.getElementById('skills');
+  if(!skillsSection) return;
+  const rect = skillsSection.getBoundingClientRect();
+  if(rect.top < window.innerHeight){
+    skillsAnimated = true;
+    skillEls.forEach((el, idx)=>{
+      const val = parseInt(el.getAttribute('data-val')) || 70;
+      const fill = el.querySelector('.fill');
+      const pct = el.querySelector('.pct');
+      // animate width after small stagger
+      setTimeout(()=>{
+        fill.style.width = val + '%';
+        // show percentage counting up
+        let count = 0;
+        const step = Math.max(1, Math.round(val/30));
+        const interval = setInterval(()=>{
+          count += step;
+          if(count >= val) count = val;
+          if(pct) pct.textContent = count + '%';
+          if(count >= val) clearInterval(interval);
+        }, 18);
+        // add highlight glow then remove
+        el.classList.add('highlight','filled');
+        setTimeout(()=>{ el.classList.remove('highlight'); }, 1600);
+      }, idx * 120);
+    });
+  }
+}
+
+// trigger on load and on page change/scroll
+window.addEventListener('load', animateSkillsOnce);
+window.addEventListener('scroll', animateSkillsOnce);
+
+// Also run animate when skills page activated via nav
+document.querySelectorAll('.top-nav a[href="#skills"]').forEach(a=>{
+  a.addEventListener('click', ()=> { setTimeout(animateSkillsOnce, 300); });
+});
+
+/* ================= Contact form placeholder ================= */
+const contactForm = document.getElementById('contact-form');
+if(contactForm){
+  contactForm.addEventListener('submit', function(e){
+    if(this.action.includes('REPLACE_WITH')){
+      e.preventDefault();
+      alert('Form endpoint not set. Replace action with Formspree or your endpoint to receive messages.');
+    }
+  });
+}
+
+/* ================= footer year ================= */
+const yearEl = document.getElementById('year');
+if(yearEl) yearEl.textContent = new Date().getFullYear();
