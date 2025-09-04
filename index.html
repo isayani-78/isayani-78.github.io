@@ -3,7 +3,135 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title>
+<title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="container">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="brand">Sayani<span>.Portfolio</span></div>
+      <nav class="top-nav">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hi, I’m Sayani</h1>
+        <p class="lead">Digital Forensic Analyst & Ethical Hacker</p>
+        <ul class="meta">
+          <li>UG Student in Digital Forensics</li>
+          <li>Cybersecurity Enthusiast</li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <!-- Profile Card -->
+        <div class="profile-card">
+          <div class="photo-wrap">
+            <img src="assets/profile.jpg" alt="Sayani">
+          </div>
+          <div class="info">
+            <h2>Sayani</h2>
+            <p>Forensics & Security</p>
+            <div class="socials">
+              <a href="#">GitHub</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <!-- Slideshow -->
+        <div class="slideshow">
+          <div class="slide active"><img src="assets/slide1.jpg" alt=""><div class="cap">Network Security</div></div>
+          <div class="slide"><img src="assets/slide2.jpg" alt=""><div class="cap">Forensic Tools</div></div>
+          <div class="slide"><img src="assets/slide3.jpg" alt=""><div class="cap">AI in Security</div></div>
+        </div>
+        <div class="controls">
+          <button id="prev" class="btn ghost">Prev</button>
+          <button id="next" class="btn ghost">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div>
+          <h3>Languages & Scripting</h3>
+          <ul>
+            <li>HTML</li>
+            <li>Python</li>
+            <li>Bash Scripting</li>
+            <li>Shell Scripting</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Security & Pentesting</h3>
+          <ul>
+            <li>VAPT & Pentesting</li>
+            <li>Threat Management</li>
+            <li>Digital Forensics</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools & Frameworks</h3>
+          <ul>
+            <li>Kali Linux</li>
+            <li>Wireshark</li>
+            <li>Autopsy</li>
+            <li>Nmap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>AI Powered Phishing Detector</h3>
+          <p>Detects phishing emails using AI & ML models.</p>
+        </div>
+        <div class="project">
+          <h3>Network Scanner</h3>
+          <p>Python-based scanner for OS, ports, and services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="5" placeholder="Your message"></textarea>
+        <button type="submit" class="btn">Send</button>
+        <p class="hint">This form requires a backend service like Formspree.</p>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2025 Sayani | Cyber Portfolio</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 <meta name="description" content="Portfolio & resume of SAYANI MAITY — Digital Forensics student."/>
 <link rel="stylesheet" href="styles.css"/>
 <style>
