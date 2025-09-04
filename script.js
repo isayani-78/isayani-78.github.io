@@ -20,7 +20,7 @@ function matrix(){
 setInterval(matrix, 60);
 addEventListener('resize', ()=>{ w = canvas.width = innerWidth; h = canvas.height = innerHeight; });
 
-// slideshow
+// Slideshow
 let slides = document.querySelectorAll('.slideshow .slide');
 let idx = 0;
 function show(i){ slides.forEach(s=>s.classList.remove('active')); slides[i].classList.add('active'); }
@@ -28,10 +28,23 @@ document.getElementById('next').addEventListener('click', ()=>{ idx=(idx+1)%slid
 document.getElementById('prev').addEventListener('click', ()=>{ idx=(idx-1+slides.length)%slides.length; show(idx);});
 setInterval(()=>{ idx=(idx+1)%slides.length; show(idx); }, 4000);
 
+// Skills animation
+window.addEventListener('load', ()=>{
+  document.querySelectorAll('.skill').forEach(skill=>{
+    const val = skill.getAttribute('data-val') || 70;
+    const fill = skill.querySelector('.fill');
+    setTimeout(()=>{
+      fill.style.width = val + '%';
+      skill.classList.add('highlight');
+      setTimeout(()=>skill.classList.remove('highlight'),2000);
+    },400);
+  });
+});
+
 // Contact form
 document.getElementById('contact-form').addEventListener('submit', function(e){
   if(this.action.includes('REPLACE_WITH')){
     e.preventDefault();
-    alert('Form endpoint not configured. Sign up at Formspree.io and replace the form action with your Formspree endpoint.');
+    alert('⚠️ Form endpoint not configured. Use Formspree.io or your backend.');
   }
 });
