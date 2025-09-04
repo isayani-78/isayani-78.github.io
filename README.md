@@ -1,4 +1,4 @@
-# Sayani Maity — Full Portfolio (Cyber Theme)
+# Sayani Maity — Full Portfolio 
 
 This package contains a full-featured resume/portfolio site with:
 
