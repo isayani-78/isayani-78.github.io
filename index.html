@@ -1,218 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title>
-  <meta name="description" content="Portfolio & resume of SAYANI MAITY — Digital Forensics student."/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayani | Cyber Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Matrix Background -->
   <canvas id="matrix"></canvas>
 
-  <header class="site-header container">
-    <div class="brand">SAYANI <span>MAITY</span></div>
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="brand">Sayani<span>.cyber</span></div>
     <nav class="top-nav">
-      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#research">Research</a>
-      <a href="#empire">Empire</a>
+      <a href="#goals">Goals</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <a class="btn" href="resume.pdf" download>Download Resume</a>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- HOME (first page) -->
-    <section id="home" class="page active">
-      <div class="hero-center">
-        <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
-        <h1 class="hero-name">SAYANI MAITY</h1>
-        <p class="hero-sub">Ethical Hacker (Pentester) • Digital Forensics Enthusiast</p>
+  <!-- Slides -->
+  <div class="slides">
 
-        <!-- Home quick-links bar (visible only on Home) -->
-        <div class="home-links">
-          <a href="#about" class="home-link">About</a>
-          <a href="#skills" class="home-link">Skills</a>
-          <a href="#projects" class="home-link">Projects</a>
-          <a href="#research" class="home-link">Research</a>
-          <a href="#contact" class="home-link">Contact</a>
-        </div>
+    <!-- Slide 1: Hero -->
+    <section class="slide active" id="home">
+      <div class="hero-center">
+        <img src="profile.jpg" alt="Sayani" class="profile-pic" />
+        <h1>Sayani</h1>
+        <p class="tagline">Digital Forensics & Ethical Hacking Enthusiast</p>
       </div>
 
-      <!-- Right panel (profile + slideshow + social) shown ONLY on Home -->
-      <aside class="home-right-panel">
-        <div class="profile-card">
-          <div class="photo-wrap"><img src="assets/profile.jpg" alt="Sayani"></div>
-          <div class="info">
-            <h2 class="big-name">SAYANI MAITY</h2>
-            <p class="role">Digital Forensics Student • Pentester</p>
-            <div class="social-bar">
-              <a href="https://github.com/isayani-78" target="_blank" aria-label="GitHub">GitHub</a>
-              <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-              <a href="mailto:sayanimaity2024@gmail.com" aria-label="Email">Email</a>
-              <a href="https://discord.com/invite/isayani_78" target="_blank" aria-label="Discord">Discord</a>
-              <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" aria-label="GeeksforGeeks">GfG</a>
-              <a href="https://x.com/isayani78" target="_blank" aria-label="X">X</a>
-              <a href="https://www.facebook.com/isayani78" target="_blank" aria-label="Facebook">Facebook</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slideshow on Home (shows project images & captions) -->
-        <div class="slideshow" id="home-slideshow">
-          <div class="slide active">
-            <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
-            <div class="cap">CMTL — CyberSec Multi-Tool Launcher</div>
-          </div>
-          <div class="slide">
-            <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI Phishing">
-            <div class="cap">AI-Powered Phishing Email Detector (In Dev)</div>
-          </div>
-          <div class="slide">
-            <img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study">
-            <div class="cap">Forensic Case Study</div>
-          </div>
-          <div class="controls"><button id="home-prev">‹</button><button id="home-next">›</button></div>
+      <!-- Sidebar (only on 1st slide) -->
+      <aside class="sidebar">
+        <h3>Connect</h3>
+        <div class="socials">
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+          <a href="https://discord.com" target="_blank">Discord</a>
+          <a href="mailto:youremail@example.com">Email</a>
         </div>
       </aside>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="page">
-      <div class="content two-col">
-        <div>
-          <h2>About Me</h2>
-          <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics</strong> at the Indian School of Ethical Hacking under MAKAUT (2023–2026). With a foundation in pure sciences, I blend academic research and hands-on practice in digital forensics, penetration testing, OSINT and security tooling. I produce forensic case reports, build practical security tools like CMTL, and research applied ML approaches for security problems.</p>
+    <!-- Slide 2: About -->
+    <section class="slide" id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Sayani — an undergraduate student in Digital Forensics and Ethical Hacking.  
+        I am passionate about uncovering digital evidence, penetration testing, and using AI to build smarter defense systems.  
+        My work blends curiosity, creativity, and research to make cyberspace more secure.
+      </p>
+    </section>
 
-          <h3>More about my approach</h3>
-          <p>I focus on reproducible investigations, clear timeline reconstruction, and building tools that help analysts work faster. I enjoy collaborating on open-source projects, publishing short case studies, and contributing to the security research community.</p>
+    <!-- Slide 3: Skills -->
+    <section class="slide" id="skills">
+      <h2>Skills</h2>
+      <div class="skills-columns">
+
+        <div class="skill-col">
+          <h3>Languages & Scripting</h3>
+          <div class="skill"><label>Python</label><div class="bar"><div class="fill" style="--val:90%"></div></div></div>
+          <div class="skill"><label>Bash</label><div class="bar"><div class="fill" style="--val:85%"></div></div></div>
+          <div class="skill"><label>Shell</label><div class="bar"><div class="fill" style="--val:80%"></div></div></div>
+          <div class="skill"><label>HTML</label><div class="bar"><div class="fill" style="--val:75%"></div></div></div>
         </div>
 
-        <aside class="side-note">
-          <h3>Education Journey</h3>
-          <p><strong>Maria's Day School</strong> (2008–2015)</p>
-          <p><strong>St. Thomas' High School</strong> (2015–2023) — Completed ICSE & ISC (Pure Science)</p>
-          <p><strong>B.Sc. Digital Forensics</strong> — Indian School of Ethical Hacking, MAKAUT (2023–2026)</p>
+        <div class="skill-col">
+          <h3>Security & Pentesting</h3>
+          <div class="skill"><label>VAPT & Pentesting</label><div class="bar"><div class="fill" style="--val:88%"></div></div></div>
+          <div class="skill"><label>Threat Management</label><div class="bar"><div class="fill" style="--val:80%"></div></div></div>
+          <div class="skill"><label>Digital Forensics</label><div class="bar"><div class="fill" style="--val:90%"></div></div></div>
+        </div>
 
-          <h3>Goal</h3>
-          <p>Digital Forensics Enthusiast, Ethical Hacker (Pentester), and an Academic Researcher.</p>
-        </aside>
+        <div class="skill-col">
+          <h3>Research & Cloud</h3>
+          <div class="skill"><label>OSINT</label><div class="bar"><div class="fill" style="--val:75%"></div></div></div>
+          <div class="skill"><label>Cloud Security</label><div class="bar"><div class="fill" style="--val:70%"></div></div></div>
+        </div>
+
       </div>
     </section>
 
-    <!-- SKILLS (column-wise with glowing progress bars) -->
-    <section id="skills" class="page">
-      <div class="content">
-        <h2>Skills</h2>
-        <div class="skill-grid-columns">
-          <div class="skill-column">
-            <h3>Languages & Scripting</h3>
-            <div class="skill" data-val="90"><label>Python</label><div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="80"><label>Bash</label><div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="75"><label>Shell Scripting</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="70"><label>HTML</label><div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div></div>
-          </div>
-
-          <div class="skill-column">
-            <h3>Security & Pentesting</h3>
-            <div class="skill" data-val="85"><label>VAPT & Pentesting</label><div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="80"><label>Threat Management</label><div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="78"><label>Burp / Nmap</label><div class="bar"><div class="fill" data-val="78"></div><span class="percent">0%</span></div></div>
-          </div>
-
-          <div class="skill-column">
-            <h3>Forensics & OSINT</h3>
-            <div class="skill" data-val="90"><label>Digital Forensics</label><div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="80"><label>Networking & Forensics</label><div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="75"><label>OSINT & Research</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
-          </div>
-
-          <div class="skill-column">
-            <h3>Cloud & Tools</h3>
-            <div class="skill" data-val="70"><label>Cloud Basics</label><div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="85"><label>Nmap</label><div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="75"><label>Autopsy</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
-          </div>
+    <!-- Slide 4: Projects -->
+    <section class="slide" id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Basic Strong Password Generator (2025)</h3>
+          <p>A simple yet effective tool that generates secure, random, and unbreakable passwords. Built with user security as the top priority.</p>
+        </div>
+        <div class="project">
+          <h3>Caesar Cipher Generator (2025)</h3>
+          <p>A cryptography project that implements the classical Caesar cipher encryption and decryption, demonstrating the fundamentals of secure communication.</p>
+        </div>
+        <div class="project">
+          <h3>CMTL (2025–Present)</h3>
+          <p>Custom Authentication System with Penetration Test Evaluation. A research-driven project exploring secure login mechanisms and testing resilience against cyberattacks.</p>
+        </div>
+        <div class="project">
+          <h3>AI Powered Phishing Email Detector (2025–Present)</h3>
+          <p>Ongoing project integrating Artificial Intelligence to detect phishing emails. Focused on real-time classification and proactive defense against social engineering attacks.</p>
         </div>
       </div>
+      <p class="git-link">Explore more on <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
     </section>
 
-    <!-- PROJECTS (4 items) -->
-    <section id="projects" class="page">
-      <div class="content">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <img src="assets/basic-strong-password-generator.jpg" alt="Basic Strong Password Generator">
-            <h3>Basic Strong Password Generator (2025)</h3>
-            <p>Python-based password generator with configurable rules and safe defaults.</p>
-            <p><a href="https://github.com/isayani-78/-Basic-Strong-Password-Generator" target="_blank">View on GitHub</a></p>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/caesar-cipher-generator.jpg" alt="Caesar Cipher Generator">
-            <h3>Caesar Cipher Generator (2025)</h3>
-            <p>Educational implementation of the classic Caesar cipher to demonstrate substitution ciphers.</p>
-            <p><a href="https://github.com/isayani-78/caesar-cipher-generator" target="_blank">View on GitHub</a></p>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
-            <h3>CMTL — CyberSec Multi-Tool Launcher (2025–Present)</h3>
-            <p>Launcher that aggregates common cybersecurity utilities and streamlines triage workflows.</p>
-            <p><a href="https://github.com/isayani-78/CMTL" target="_blank">View on GitHub</a></p>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI Phishing Detector">
-            <h3>AI-Powered Phishing Email Detector (2025–Present)</h3>
-            <p>Research prototype using NLP, header analysis and URL reputation signals — looking for collaborators and dataset contributions.</p>
-            <p><a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector" target="_blank">View on GitHub</a></p>
-          </article>
-        </div>
-      </div>
+    <!-- Slide 5: Goals -->
+    <section class="slide" id="goals">
+      <h2>Research & Goals</h2>
+      <p>
+        My goal is to blend cybersecurity with AI-driven innovation.  
+        I aspire to contribute tools for digital investigations, AI-based phishing detection, and advanced penetration testing.  
+        With research at the core, I want to shape solutions that protect individuals, businesses, and nations in the digital era.
+      </p>
     </section>
 
-    <!-- RESEARCH & GOALS (expanded) -->
-    <section id="research" class="page">
-      <div class="content">
-        <h2>Research & Goals</h2>
-        <p>My research focuses on forensic artifact analysis, reliable timeline reconstruction, and applying automation to repetitive forensic tasks. I pursue reproducible methods and clear documentation so others can learn from case studies.</p>
-        <p>Short term I want to build and publish open-source forensic utilities (like CMTL), curate datasets for phishing research, and collaborate with practitioners for real-world case studies. Long term I want to combine penetration testing and forensics into a research-oriented career — publishing papers on applied ML for cyber defense, teaching workshops, and contributing to community tooling.</p>
-      </div>
+    <!-- Slide 6: Education -->
+    <section class="slide" id="education">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li><strong>Maria’s Day School</strong> (2008–2015)</li>
+        <li><strong>St. Thomas’ High School</strong> (2015–2023) — Completed ICSE & ISC (Secondary & Higher Secondary) with Pure Science.</li>
+        <li><strong>Undergraduate</strong> (2023–Present) — Digital Forensics & Ethical Hacking.</li>
+      </ul>
     </section>
 
-    <!-- EMPIRE image only (no text) -->
-    <section id="empire" class="page">
-      <div class="content">
-        <div class="empire-wrap">
-          <img src="assets/empire.jpg" alt="Empire" class="empire-img">
-        </div>
-      </div>
+    <!-- Slide 7: Empire Motivation -->
+    <section class="slide" id="empire">
+      <h2>Motivation</h2>
+      <img src="empire.jpg" alt="Empire isn't built in a day" class="empire-img" />
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="page">
-      <div class="content">
-        <h2>Contact</h2>
-        <p>📧 <a href="mailto:sayanimaity2024@gmail.com">sayanimaity2024@gmail.com</a></p>
-        <form id="contact-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST">
-          <label for="name">Name</label><input id="name" name="name" required/>
-          <label for="email">Email</label><input id="email" name="email" type="email" required/>
-          <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
-          <button class="btn" type="submit">Send Message</button>
-          <p class="hint">To receive messages: sign up at Formspree and replace the form action.</p>
-        </form>
-      </div>
+    <!-- Slide 8: Contact -->
+    <section class="slide" id="contact">
+      <h2>Contact</h2>
+      <p>Let’s connect for collaboration, research, or projects.</p>
+      <p class="git-link"><a href="mailto:youremail@example.com">youremail@example.com</a></p>
     </section>
 
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Sayani Maity — Built with care • Hosted on GitHub Pages</p>
-    </footer>
-  </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
