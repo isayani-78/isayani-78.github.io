@@ -257,3 +257,10 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   0%{transform:translateY(-20px);opacity:0}
   100%{transform:translateY(0);opacity:1}
 }
+
+/* Only for Operating Systems Box */
+#os-box {
+  max-width: 300px;   /* small width */
+  padding: 12px 15px; /* inside gap small */
+}
+
