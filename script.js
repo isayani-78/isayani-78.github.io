@@ -1,8 +1,8 @@
-// MATRIX BACKGROUND EFFECT
+// ===== MATRIX BACKGROUND =====
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
-let w = canvas.width = innerWidth;
-let h = canvas.height = innerHeight;
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
 const cols = Math.floor(w / 20) + 1;
 const ypos = Array(cols).fill(0);
 
@@ -18,71 +18,55 @@ function matrix() {
     ypos[i] += 18;
   }
 }
-
 setInterval(matrix, 60);
-
-addEventListener('resize', () => {
-  w = canvas.width = innerWidth;
-  h = canvas.height = innerHeight;
+window.addEventListener('resize', () => {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
 });
 
-// SLIDESHOW FUNCTIONALITY
-let slides = document.querySelectorAll('.slideshow .slide');
-let idx = 0;
+// ===== SLIDESHOW =====
+let slides = document.querySelectorAll('.slide');
+let current = 0;
 
-function showSlide(i) {
-  slides.forEach((s) => s.classList.remove('active'));
-  slides[i].classList.add('active');
-
-  // Show project/social sidebar only on the first slide
-  document.querySelector('.project-sidebar')?.classList.toggle('active', i === 0);
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
 }
 
-document.getElementById('next').addEventListener('click', () => {
-  idx = (idx + 1) % slides.length;
-  showSlide(idx);
+document.getElementById('next')?.addEventListener('click', () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
 });
 
-document.getElementById('prev').addEventListener('click', () => {
-  idx = (idx - 1 + slides.length) % slides.length;
-  showSlide(idx);
+document.getElementById('prev')?.addEventListener('click', () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
 });
 
-// Auto slide every 5 seconds
 setInterval(() => {
-  idx = (idx + 1) % slides.length;
-  showSlide(idx);
-}, 5000);
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 6000);
 
-// INITIAL DISPLAY
-showSlide(idx);
-
-// SKILL BAR ANIMATION
+// ===== SKILL BAR ANIMATION =====
 window.addEventListener('load', () => {
-  document.querySelectorAll('.skill .bar').forEach((b) => {
-    const val = b.parentElement.getAttribute('data-val') || b.getAttribute('data-val') || 70;
-    b.querySelector('.fill').style.width = val + '%';
-    b.querySelector('.fill').classList.add('glow'); // glowing effect
-  });
-});
-
-// SMOOTH SCROLL FOR NAV LINKS
-document.querySelectorAll('.top-nav a').forEach((link) => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+  const skillFills = document.querySelectorAll('.skill .fill');
+  skillFills.forEach(fill => {
+    const val = fill.parentElement.getAttribute('data-val') || 70;
+    fill.style.width = val + '%';
+    // Add glow for first skill column
+    if(fill.closest('.skill-column').querySelector('h3')?.textContent === "Scripting & Language"){
+      fill.classList.add('glow');
     }
   });
 });
 
-// CONTACT FORM VALIDATION
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-  if (this.action.includes('REPLACE_WITH')) {
+// ===== CONTACT FORM CHECK =====
+document.getElementById('contact-form')?.addEventListener('submit', function(e){
+  if(this.action.includes('REPLACE_WITH')){
     e.preventDefault();
-    alert(
-      'Form endpoint not configured. Sign up at Formspree.io and replace the form action with your endpoint.'
-    );
+    alert('Form endpoint not configured. Sign up at Formspree.io and replace the form action with your endpoint.');
   }
 });
