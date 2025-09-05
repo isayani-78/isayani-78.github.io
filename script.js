@@ -60,10 +60,9 @@ function activatePage(id){
   if(target) target.classList.add('active');
 
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
-
   window.scrollTo({ top:0, behavior:'smooth' });
 
-  // Right panel only visible on home
+  // Show right panel only on home
   if(id === 'home'){ 
     rightPanel?.classList.remove('hidden'); 
   } else { 
@@ -77,15 +76,11 @@ navLinks.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       activatePage(href.slice(1));
-      
-      // Close mobile menu after click
+
+      // Close mobile menu after any link click
       document.querySelector('.top-nav')?.classList.remove('active');
     });
   }
-});
-
-window.addEventListener('load', () => { 
-  activatePage('home'); 
 });
 
 /* HAMBURGER MENU */
