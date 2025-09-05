@@ -284,38 +284,6 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   box-sizing: border-box;
 }
 
-/* Optional: if another rule is forcing full width, use more specificity or !important */
-@media (min-width: 900px) {
-  /* only force on larger screens so mobile remains fluid */
-  #os-box .skill-inner {
-    max-width: 360px !important;
-  }
-}
-/* Small Box styling for OS like AI/ML */
-#os-box {
-  max-width: 380px;     /* box width make small */
-  margin: 0 auto;       /* placed in a center  */
-}
 
-#os-box h3 {
-  text-align: center;
-}
-
-#os-box .skill {
-  margin-bottom: 8px;
-}
-/* Operating Systems box - smaller */
-#os-box {
-  max-width: 380px;   /* ছোট করে */
-  margin: 0 auto;     /* center */
-}
-
-#os-box h3 {
-  text-align: center;
-}
-
-#os-box .skill {
-  margin-bottom: 14px;
-}
 
 
