@@ -36,6 +36,7 @@ Welcome to my personal portfolio website! This project showcases my skills, educ
   - **Operating Systems:** Unix, GNU/Linux, Ubuntu, Kali Linux, Black Arch, Parrot
   - **Tools:** Nmap, Autopsy, SPF, Magnet AXIOM, FTK Imager, ZAP, Wireshark, WhatWeb/Wappalyzer, OpenVAS, Nessus, Nikto, Netcat, Telnet, Netdiscover, Angry IP Scanner, Advanced IP Scanner
   - **AI:** AI Prompting
+  - **Data Protection and Information Hiding Techniques:** Cryptography,Steganography,Steganalysis,Obfuscation,Encoding,Quantum Cryptography,Format-Preserving Encryption (FPE).
 
 ### 4. Research
 - Focused on:
