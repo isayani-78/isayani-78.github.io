@@ -13,11 +13,12 @@
   <header class="site-header container">
     <div class="brand">SAYANI <span>MAITY</span></div>
     <nav class="top-nav">
-      <a href="#home">Home</a>
+      <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#research">Research</a>
+      <a href="#empire">Empire</a>
       <a href="#contact">Contact</a>
       <a class="btn" href="resume.pdf" download>Download Resume</a>
     </nav>
@@ -25,8 +26,8 @@
 
   <main class="container">
 
-    <!-- RIGHT-SIDEBAR SLIDESHOW (visible across pages) -->
-    <aside class="right-panel">
+    <!-- RIGHT-SIDEBAR SLIDESHOW (only 1st page) -->
+    <aside class="right-panel" id="right-panel">
       <div class="profile-card">
         <div class="photo-wrap"><img src="assets/profile.jpg" alt="Sayani"></div>
         <div class="info">
@@ -48,42 +49,35 @@
         <div class="slide active"><img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL"><div class="cap">CMTL — CyberSec Multi-Tool Launcher</div></div>
         <div class="slide"><img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI Phishing Detector"><div class="cap">AI Phishing Detector (In Dev)</div></div>
         <div class="slide"><img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study"><div class="cap">Forensic Case Study</div></div>
-        <div class="controls"><button id="prev">‹</button><button id="next">›</button></div>
       </div>
     </aside>
 
-    <!-- PAGES / SECTIONS -->
+    <!-- PAGES -->
     <section id="home" class="page active">
       <div class="hero-center">
-        <!-- Only profile pic and name here (no other images) -->
         <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
         <h1 class="hero-name">SAYANI MAITY</h1>
-        <p class="hero-sub">Ethical Hacker (Pentester) • Digital Forensics Enthusiast</p>
+        <p class="hero-sub">Digital Forensic Analyst in making. 👩‍💻 , Curious learner, exploring security & coding. 🔐</p>
       </div>
     </section>
 
     <section id="about" class="page">
-      <div class="content two-col">
-        <div>
-          <h2>About Me</h2>
-          <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics</strong> at the Indian School of Ethical Hacking under MAKAUT (2023–2026). I blend academic research and hands-on practice in digital forensics, penetration testing, OSINT, and security tooling. I produce case reports, build practical security tools, and investigate system artifacts to reconstruct events.</p>
-          <p>Beyond technical work I enjoy participating in CTFs, writing research notes, and painting — I believe curiosity and persistence drive strong investigators.</p>
-        </div>
-        <aside class="side-note">
-          <h3>Education</h3>
-          <p><strong>ICSE, ISC</strong><br>St. Thomas' High School</p>
-          <p><strong>B.Sc. Digital Forensics</strong><br>Indian School of Ethical Hacking (MAKAUT), 2023–2026</p>
-          <h3>Goal</h3>
-          <p>Digital Forensics Enthusiast, Ethical Hacker (Pentester), and an Academic Researcher.</p>
-        </aside>
+      <div class="content">
+        <h2>About Me</h2>
+        <p>I am <strong>SAYANI MAITY</strong>, pursuing <strong>B.Sc. in Digital Forensics</strong> (2023–2026). I specialize in digital forensics, penetration testing, OSINT, and security tooling. I create detailed case reports, analyze artifacts, and reconstruct system events. I actively participate in CTFs and hands-on security research, exploring AI-assisted detection tools and automation.</p>
+        <p>My skills include Python, Bash, shell scripting, VAPT, threat management, Nmap, Burp, Autopsy, networking, OSINT research, and cloud basics. I am passionate about learning and sharing knowledge through practical projects.</p>
+        <h3>Education & Goal</h3>
+        <ul>
+          <li><strong>ICSE, ISC:</strong> St. Thomas' High School</li>
+          <li><strong>B.Sc. Digital Forensics:</strong> Indian School of Ethical Hacking (MAKAUT), 2023–2026</li>
+          <li>Goal: Become an expert digital forensic analyst and ethical hacker, contributing to security research and open-source projects.</li>
+        </ul>
       </div>
     </section>
 
     <section id="skills" class="page">
       <div class="content">
         <h2>Skills</h2>
-
-        <!-- Columns by category -->
         <div class="skill-grid-columns">
 
           <div class="skill-column">
@@ -105,14 +99,12 @@
             <h3>Forensics & OSINT</h3>
             <div class="skill" data-val="90"><label>Digital Forensics</label><div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div></div>
             <div class="skill" data-val="80"><label>Networking & Forensics</label><div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="75"><label>OSINT & Research</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
-          </div>
-
-          <div class="skill-column">
-            <h3>Cloud & Tools</h3>
-            <div class="skill" data-val="70"><label>Cloud Basics</label><div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="85"><label>Nmap</label><div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div></div>
-            <div class="skill" data-val="75"><label>Autopsy</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
+            <div class="skill-column">
+              <h3>Cloud & Tools</h3>
+              <div class="skill" data-val="70"><label>Cloud Basics</label><div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div></div>
+              <div class="skill" data-val="85"><label>Nmap</label><div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div></div>
+              <div class="skill" data-val="75"><label>Autopsy</label><div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div></div>
+            </div>
           </div>
 
         </div>
@@ -124,23 +116,31 @@
         <h2>Projects</h2>
         <div class="projects-grid">
           <article class="project-card">
+            <img src="assets/Basic-Strong-Password-Generator.jpg" alt="Basic Strong Password Generator">
+            <h3>Basic Strong Password Generator (2025)</h3>
+            <p>Python-based tool to generate secure passwords with customizable length and complexity.</p>
+            <p><a href="https://github.com/isayani-78/-Basic-Strong-Password-Generator" target="_blank">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/caesar-cipher-generator.jpg" alt="Caeser Cipher Generator">
+            <h3>Caeser Cipher Generator (2025)</h3>
+            <p>Encrypt and decrypt messages using Caesar cipher with a user-friendly interface.</p>
+            <p><a href="https://github.com/isayani-78/caesar-cipher-generator" target="_blank">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
             <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
-            <h3>CMTL — CyberSec Multi-Tool Launcher</h3>
+            <h3>CMTL — CyberSec Multi-Tool Launcher (2025–Present)</h3>
             <p>Centralized toolkit for scanning, fingerprinting, and triage.</p>
             <p><a href="https://github.com/isayani-78/CMTL" target="_blank">View on GitHub</a></p>
           </article>
 
           <article class="project-card">
             <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="Phishing Detector">
-            <h3>AI-Powered Phishing Email Detector</h3>
-            <p>NLP + header analysis to detect phishing emails (in dev).</p>
+            <h3>AI-Powered Phishing Email Detector (2025–Present)</h3>
+            <p>NLP + header analysis to detect phishing emails (in development). Seeking contributions.</p>
             <p><a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector" target="_blank">View on GitHub</a></p>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study">
-            <h3>Forensic Case Study</h3>
-            <p>Documented incident response & artifact reconstruction.</p>
           </article>
         </div>
       </div>
@@ -149,14 +149,13 @@
     <section id="research" class="page">
       <div class="content">
         <h2>Research & Goals</h2>
-        <p>I research forensic artifact analysis, timeline reconstruction, and applied security automation. I am exploring AI-driven phishing detection, privacy-preserving analysis, and publishing open-source forensic tooling and case studies.</p>
+        <p>My research focuses on forensic artifact analysis, timeline reconstruction, and applied security automation. I am actively exploring AI-driven phishing detection, privacy-preserving forensic analysis, and developing open-source forensic tools and case studies. My goals include contributing to the cybersecurity community, improving investigative efficiency, and sharing knowledge through practical projects and guides.</p>
       </div>
     </section>
 
     <section id="empire" class="page">
       <div class="content">
-        <h2></h2>
-        <!-- Empire image only here, no quote text; put the jpg you will provide as assets/empire.jpg -->
+        <h2>Empire</h2>
         <div class="empire-wrap">
           <img src="assets/empire.jpg" alt="Empire" class="empire-img">
         </div>
@@ -165,14 +164,14 @@
 
     <section id="contact" class="page">
       <div class="content">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
         <p>📧 <a href="mailto:sayanimaity2024@gmail.com">sayanimaity2024@gmail.com</a></p>
         <form id="contact-form" action="REPLACE_WITH_FORMSPREE_ENDPOINT" method="POST">
           <label for="name">Name</label><input id="name" name="name" required/>
           <label for="email">Email</label><input id="email" name="email" type="email" required/>
           <label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea>
           <button class="btn" type="submit">Send Message</button>
-          <p class="hint">To receive messages: sign up for Formspree and replace the form `action` with your endpoint.</p>
+          <p class="hint">Sign up at Formspree and replace form action to receive messages.</p>
         </form>
       </div>
     </section>
