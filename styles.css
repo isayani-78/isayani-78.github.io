@@ -156,6 +156,12 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   transition: 0.3s ease-in-out;
 }
 
+/* 🔹 Smaller box style for OS & AI/ML */
+.skill-box.small-box {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
 .skill-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px #00ffe7;
@@ -192,19 +198,6 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   height: 100%;
   width: 0;
   transition: width 1.5s ease;
-}
-
-/* ---- Smaller skill-box for AI/ML & OS ---- */
-.skill-box.ai-ml,
-.skill-box.os {
-  padding: 14px;
-  font-size: 0.9rem;
-}
-
-.skill-box.ai-ml h3,
-.skill-box.os h3 {
-  font-size: 1.1rem;
-  padding-bottom: 6px;
 }
 
 /* Projects */
