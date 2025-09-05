@@ -258,9 +258,37 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   100%{transform:translateY(0);opacity:1}
 }
 
-/* Only for Operating Systems Box */
+/* ---------- Force small size for Operating Systems box only ---------- */
+/* place this near the end of styles.css so it overrides previous rules */
+
+.skill-grid-columns > #os-box,
 #os-box {
-  max-width: 300px;   /* small width */
-  padding: 12px 15px; /* inside gap small */
+  /* center the box inside its grid cell (if using grid) */
+  justify-self: center;
+  align-self: start;
+}
+
+/* Make the outer grid item act as a centering container */
+#os-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* inner content gets the max-width (actual visible small box) */
+#os-box .skill-inner {
+  width: 100%;
+  max-width: 360px;        /* <-- desired small width, change px if you want smaller */
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
+/* Optional: if another rule is forcing full width, use more specificity or !important */
+@media (min-width: 900px) {
+  /* only force on larger screens so mobile remains fluid */
+  #os-box .skill-inner {
+    max-width: 360px !important;
+  }
 }
 
