@@ -159,9 +159,9 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 .project-card a.github-link{color:#fff;text-decoration:none;transition:color .3s}
 .project-card a.github-link:hover{color:var(--accent2);text-decoration:underline}
 
-/* The Foundation of Forever */
-.The Foundation of Forever-wrap{display:flex;justify-content:center;margin-top:18px}
-.The Foundation of Forever-img{max-width:900px;width:100%;border-radius:12px;display:block;border:2px solid rgba(255,255,255,0.04)}
+/* empire */
+.empire-wrap{display:flex;justify-content:center;margin-top:18px}
+.empire-img{max-width:900px;width:100%;border-radius:12px;display:block;border:2px solid rgba(255,255,255,0.04)}
 
 /* Contact form */
 .contact form{display:flex;flex-direction:column;gap:8px;max-width:640px}
