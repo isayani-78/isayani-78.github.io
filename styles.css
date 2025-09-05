@@ -293,8 +293,8 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 }
 /* Small Box styling for OS like AI/ML */
 #os-box {
-  max-width: 380px;     /* box width ছোট করলো */
-  margin: 0 auto;       /* center এ রাখলো */
+  max-width: 380px;     /* box width make small */
+  margin: 0 auto;       /* placed in a center  */
 }
 
 #os-box h3 {
@@ -303,6 +303,19 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 
 #os-box .skill {
   margin-bottom: 8px;
+}
+/* Operating Systems box - smaller */
+#os-box {
+  max-width: 380px;   /* ছোট করে */
+  margin: 0 auto;     /* center */
+}
+
+#os-box h3 {
+  text-align: center;
+}
+
+#os-box .skill {
+  margin-bottom: 10px;
 }
 
 
