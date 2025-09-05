@@ -291,4 +291,18 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
     max-width: 360px !important;
   }
 }
+/* Small Box styling for OS like AI/ML */
+#os-box {
+  max-width: 380px;     /* box width ছোট করলো */
+  margin: 0 auto;       /* center এ রাখলো */
+}
+
+#os-box h3 {
+  text-align: center;
+}
+
+#os-box .skill {
+  margin-bottom: 8px;
+}
+
 
