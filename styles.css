@@ -158,14 +158,14 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 .project-card:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(0,200,180,0.06);border-color:var(--accent2)}
 
 /* Github link white & responsive */
-.project-card a.github-link{
+.project-card a{
   color:#ffffff;
   text-decoration:none;
-  word-break: break-word; /* Wrap long URLs/text */
+  word-break: break-word; 
   display:block;
   text-align:left;
 }
-.project-card a.github-link:hover{
+.project-card a:hover{
   color: var(--accent2);
   text-decoration:underline;
 }
@@ -209,7 +209,7 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   .top-nav .btn{width:90%;text-align:center}
 
   /* Project card links wrap nicely on mobile */
-  .project-card a.github-link{text-align:center;}
+  .project-card a{text-align:center;}
 }
 
 @media (max-width:700px){
