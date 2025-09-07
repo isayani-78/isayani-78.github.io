@@ -66,6 +66,7 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   cursor:pointer;
 }
 
+/* CSS */
 .resume-btn {
   display: inline-block;
   padding: 12px 28px;
@@ -85,8 +86,9 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 }
 
 .resume-btn:hover {
-  cursor: pointer; /* cursor pointer on hover */
+  cursor: pointer; /* pointer on hover */
 }
+
 
 
 
