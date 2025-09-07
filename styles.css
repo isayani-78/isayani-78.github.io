@@ -70,20 +70,22 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   display: inline-block;
   padding: 12px 28px;
   background-color: #ffffff; /* white background */
-  color: #000000; /* black text */
+  color: #000000; /* deep black text */
   font-weight: 700;
   border-radius: 12px;
   border: 2px solid #000000; /* black border */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* subtle black glow */
   text-decoration: none;
   transition: all 0.3s ease;
   user-select: none;
 }
 
+.resume-btn:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* glow on click */
+  transform: translateY(-2px);
+}
+
 .resume-btn:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* stronger glow on hover */
-  transform: translateY(-3px);
-  cursor: pointer;
+  cursor: pointer; /* cursor pointer on hover */
 }
 
 
