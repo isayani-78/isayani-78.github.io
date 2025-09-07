@@ -284,7 +284,7 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   box-sizing: border-box;
 }
 
-/* Smooth scrolling */
+//* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
@@ -306,9 +306,9 @@ html {
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* slightly bigger than before */
-  gap: 25px; /* slightly bigger gap */
-  max-width: 1200px; /* slightly wider grid */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -317,30 +317,30 @@ html {
   border: 2px solid #00ff80;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 255, 128, 0.6);
-  padding: 18px; /* slightly bigger padding */
-  overflow: visible; /* keep full certificate visible */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* animation setup */
+  padding: 18px;
+  overflow: visible; /* allow full content to show */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeInUp 1s forwards;
   cursor: pointer;
+  position: relative; /* needed for hover z-index */
+  z-index: 1;
 }
 
 .certificate-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00ff80, 0 0 40px #00ff80, 0 0 60px #00ff80;
-  animation: pulse 1.5s infinite alternate;
+  transform: translateY(-5px) scale(1.05); /* slight zoom */
+  box-shadow: 0 0 25px #00ff80, 0 0 50px #00ff80, 0 0 70px #00ff80;
+  z-index: 10; /* bring card above others */
 }
 
 .certificate-card img {
   width: 100%;
-  height: auto; /* full height display */
-  object-fit: cover;
+  height: auto;
+  object-fit: contain; /* keep full image visible */
   border-radius: 8px;
   margin-bottom: 12px;
-  max-height: 350px; /* increased so certificate fits */
+  max-height: 350px; /* prevents cutting */
 }
 
 .certificate-card h3 {
@@ -389,30 +389,16 @@ html {
 .certificate-card:nth-child(8) { animation-delay: 1.6s; }
 .certificate-card:nth-child(9) { animation-delay: 1.8s; }
 
-/* 📱 Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-  #certificates h2 {
-    font-size: 1.8rem;
-  }
-  .certificate-card img {
-    max-height: 300px; /* responsive max height */
-  }
-  .certificate-card h3 {
-    font-size: 0.95rem;
-  }
+  #certificates h2 { font-size: 1.8rem; }
+  .certificate-card img { max-height: 300px; }
+  .certificate-card h3 { font-size: 0.95rem; }
 }
 
 @media (max-width: 480px) {
-  #certificates {
-    padding: 40px 10px;
-  }
-  #certificates h2 {
-    font-size: 1.5rem;
-  }
-  .certificate-card img {
-    max-height: 250px; /* responsive smaller devices */
-  }
-  .certificate-card h3 {
-    font-size: 0.9rem;
-  }
+  #certificates { padding: 40px 10px; }
+  #certificates h2 { font-size: 1.5rem; }
+  .certificate-card img { max-height: 250px; }
+  .certificate-card h3 { font-size: 0.9rem; }
 }
