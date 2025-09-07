@@ -67,22 +67,27 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 }
 
 .resume-btn {
-  background: linear-gradient(90deg, #00ffe0, #00bfff);
-  color: #04111a;
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: var(--accent2); /* light blue bg */
+  color: #040509; /* dark text for contrast */
   font-weight: 700;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 2px solid var(--accent); /* bright border */
+  box-shadow: 0 4px 10px rgba(40, 255, 198, 0.3);
   text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-block;
   margin-top: 12px;
+  user-select: none;
 }
 
 .resume-btn:hover {
-  background: linear-gradient(90deg, #00bfff, #00ffe0);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 255, 224, 0.4);
+  background-color: var(--accent);
+  border-color: var(--accent2);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(40, 255, 198, 0.7);
+  transform: translateY(-3px);
+  cursor: pointer;
 }
 
 .btn.ghost{
