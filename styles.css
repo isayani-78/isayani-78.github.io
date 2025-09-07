@@ -68,23 +68,20 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 
 .resume-btn {
   display: inline-block;
-  padding: 10px 24px;
-  background-color: #e0f7fa; /* light cyan-ish background */
-  color: #004d40; /* deep teal/green color for text */
+  padding: 12px 28px;
+  background-color: #ffffff; /* white background */
+  color: #000000; /* black text */
   font-weight: 700;
   border-radius: 12px;
-  border: 2px solid #004d40; /* same deep color for border */
-  box-shadow: 0 0 8px rgba(0, 77, 64, 0.6); /* subtle glow */
+  border: 2px solid #000000; /* black border */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* subtle black glow */
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-top: 12px;
   user-select: none;
 }
 
 .resume-btn:hover {
-  background-color: #b2dfdb; /* slightly darker light background */
-  box-shadow: 0 0 15px rgba(0, 77, 64, 0.8);
-  color: #00251a; /* even deeper text color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* stronger glow on hover */
   transform: translateY(-3px);
   cursor: pointer;
 }
