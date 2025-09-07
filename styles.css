@@ -65,6 +65,26 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   border:none;
   cursor:pointer;
 }
+
+.resume-btn {
+  background: linear-gradient(90deg, #00ffe0, #00bfff);
+  color: #04111a;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.resume-btn:hover {
+  background: linear-gradient(90deg, #00bfff, #00ffe0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 255, 224, 0.4);
+}
+
 .btn.ghost{
   background:transparent;
   border:1px solid rgba(255,255,255,0.06);
@@ -403,29 +423,3 @@ html {
   .certificate-card h3 { font-size: 0.9rem; }
 }
 
-/* style.css */
-
-body {
-  background-color: #121212; /* optional: dark background */
-  font-family: Arial, sans-serif;
-}
-
-.download-resume-button {
-  background: linear-gradient(90deg, #2193b0, #6dd5ed); /* cool blue gradient */
-  color: white;
-  font-weight: bold;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.download-resume-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
