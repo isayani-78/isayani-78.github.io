@@ -69,12 +69,12 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 .resume-btn {
   display: inline-block;
   padding: 10px 24px;
-  background-color: var(--accent2); /* light blue bg */
-  color: #040509; /* dark text for contrast */
+  background-color: #0a1f2d; /* deep dark blue */
+  color: var(--accent2); /* light accent color */
   font-weight: 700;
   border-radius: 12px;
-  border: 2px solid var(--accent); /* bright border */
-  box-shadow: 0 4px 10px rgba(40, 255, 198, 0.3);
+  border: 2px solid #28ffc6; /* neon greenish border */
+  box-shadow: 0 0 15px #28ffc6; /* subtle glow */
   text-decoration: none;
   transition: all 0.3s ease;
   margin-top: 12px;
@@ -82,13 +82,13 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 }
 
 .resume-btn:hover {
-  background-color: var(--accent);
-  border-color: var(--accent2);
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(40, 255, 198, 0.7);
+  background-color: #063441; /* a bit lighter but still deep */
+  box-shadow: 0 0 25px #28ffc6, 0 0 40px #28ffc6; /* stronger glow on hover */
+  color: #ffffff; /* white text on hover */
   transform: translateY(-3px);
   cursor: pointer;
 }
+
 
 .btn.ghost{
   background:transparent;
