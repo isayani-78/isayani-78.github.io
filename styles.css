@@ -70,26 +70,24 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
 .resume-btn {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ffffff; /* white background */
-  color: #000000; /* deep black text */
+  background-color: #000000; /* black background */
+  color: #ffffff; /* white text */
   font-weight: 700;
   border-radius: 12px;
-  border: 2px solid #000000; /* black border */
+  border: 2px solid #ffffff; /* white border */
   text-decoration: none;
   transition: all 0.3s ease;
   user-select: none;
 }
 
 .resume-btn:active {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* glow on click */
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* white glow on click */
   transform: translateY(-2px);
 }
 
 .resume-btn:hover {
   cursor: pointer; /* pointer on hover */
 }
-
-
 
 
 .btn.ghost{
