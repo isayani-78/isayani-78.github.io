@@ -284,49 +284,133 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   box-sizing: border-box;
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Certificates Section */
 #certificates {
-  background: #f9f9f9;
+  background: black;
   padding: 60px 20px;
   text-align: center;
 }
 
 #certificates h2 {
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 12px rgba(0, 255, 128, 0.8), 0 0 20px rgba(0, 255, 128, 0.6);
 }
 
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   max-width: 1100px;
   margin: auto;
 }
 
 .certificate-card {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ff80;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.6);
   padding: 15px;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* animation setup */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
 }
 
 .certificate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #00ff80, 0 0 40px #00ff80, 0 0 60px #00ff80;
+  animation: pulse 1.5s infinite alternate;
 }
 
 .certificate-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 12px;
 }
 
 .certificate-card h3 {
-  color: #3498db;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.4;
+}
+
+/* clickable links */
+.certificate-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.certificate-card a:hover h3 {
+  text-decoration: underline;
+}
+
+/* keyframes for fade-in */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* keyframes for glowing pulse */
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 15px #00ff80, 0 0 30px rgba(0, 255, 128, 0.7);
+  }
+  to {
+    box-shadow: 0 0 25px #00ff80, 0 0 50px rgba(0, 255, 128, 1);
+  }
+}
+
+/* staggered animation delays */
+.certificate-card:nth-child(1) { animation-delay: 0.2s; }
+.certificate-card:nth-child(2) { animation-delay: 0.4s; }
+.certificate-card:nth-child(3) { animation-delay: 0.6s; }
+.certificate-card:nth-child(4) { animation-delay: 0.8s; }
+.certificate-card:nth-child(5) { animation-delay: 1s; }
+.certificate-card:nth-child(6) { animation-delay: 1.2s; }
+.certificate-card:nth-child(7) { animation-delay: 1.4s; }
+.certificate-card:nth-child(8) { animation-delay: 1.6s; }
+.certificate-card:nth-child(9) { animation-delay: 1.8s; }
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  #certificates h2 {
+    font-size: 1.8rem;
+  }
+  .certificate-card img {
+    height: 180px;
+  }
+  .certificate-card h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #certificates {
+    padding: 40px 10px;
+  }
+  #certificates h2 {
+    font-size: 1.5rem;
+  }
+  .certificate-card img {
+    height: 160px;
+  }
+  .certificate-card h3 {
+    font-size: 0.9rem;
+  }
 }
