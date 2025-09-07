@@ -66,22 +66,21 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   cursor:pointer;
 }
 
-/* CSS */
 .resume-btn {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #000000; /* black background */
+  background-color: #000000; /* black interior */
   color: #ffffff; /* white text */
   font-weight: 700;
   border-radius: 12px;
   border: 2px solid #ffffff; /* white border */
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
   user-select: none;
 }
 
 .resume-btn:active {
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.7); /* white glow on click */
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.8); /* white glow on click */
   transform: translateY(-2px);
 }
 
