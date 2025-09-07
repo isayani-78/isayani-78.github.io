@@ -402,3 +402,30 @@ html {
   .certificate-card img { max-height: 250px; }
   .certificate-card h3 { font-size: 0.9rem; }
 }
+
+/* style.css */
+
+body {
+  background-color: #121212; /* optional: dark background */
+  font-family: Arial, sans-serif;
+}
+
+.download-resume-button {
+  background: linear-gradient(90deg, #2193b0, #6dd5ed); /* cool blue gradient */
+  color: white;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.download-resume-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
