@@ -44,7 +44,7 @@ Welcome to my personal portfolio website! This project showcases my skills, educ
   - Timeline reconstruction
   - Applied security automation
   - AI-driven detection tools
-  - Cloud, IoT, and mobile forensics
+  -Computer and mobile forensics
 - Goal: Contribute to cybersecurity knowledge, improve investigative efficiency, and develop practical tools.
 
 ### 5. Contact
