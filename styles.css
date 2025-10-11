@@ -177,13 +177,13 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   border: 1px solid #0ff;
   border-radius: 12px;
   padding: 20px;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 🔹 Smaller box style for OS & AI/ML */
 .skill-box.small-box {
-  max-width: 350px;
-  margin: 0 auto;
+  max-width: 360px; /* set a smaller width */
+  margin: 0 auto; /* center inside the grid */
 }
 
 .skill-box:hover {
@@ -223,6 +223,30 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   width: 0;
   transition: width 1.5s ease;
 }
+
+/* ---------- Force small size for Operating Systems box only ---------- */
+.skill-grid-columns > #os-box,
+#os-box {
+  justify-self: center;
+  align-self: start;
+}
+
+/* Make the outer grid item act as a centering container */
+#os-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* inner content gets the max-width (actual visible small box) */
+#os-box .skill-inner {
+  width: 100%;
+  max-width: 360px; /* desired small width */
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+
 
 /* Projects */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
