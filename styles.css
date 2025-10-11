@@ -345,87 +345,86 @@ canvas#matrix {
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
-/* ---------- Skills Section ---------- */
-.skill-grid-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+/* ---------- Skills Section (Glowing Card Style) ---------- */
+
+.skills-section {
+  padding: 60px 0;
+  text-align: center;
 }
 
-.skill-box {
-  background: rgba(20, 20, 20, 0.9);
-  border: 1px solid #0ff;
-  border-radius: 12px;
-  padding: 20px;
+.section-title {
+  font-size: 2.2rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+/* Each glowing skill card */
+.skill-card {
+  background: rgba(15, 15, 15, 0.9);
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 15px #a000ff, 0 0 25px rgba(160, 0, 255, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-box.small-box {
-  max-width: 360px;
-  margin: 0 auto;
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px #00ffff, 0 0 45px rgba(0, 255, 255, 0.6);
 }
 
-.skill-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00ffe7;
-}
-
-.skill-box h3 {
-  color: #0ff;
-  margin-bottom: 15px;
-  text-align: center;
+/* Card Titles */
+.skill-card h3 {
+  color: #00ffff;
   font-size: 1.3rem;
-  border-bottom: 1px solid #0ff;
+  margin-bottom: 18px;
+  text-shadow: 0 0 10px #00ffff;
+  border-bottom: 1px solid #00ffff;
   padding-bottom: 8px;
 }
 
-.skill {
-  margin: 12px 0;
-}
-
-.skill label {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.bar {
-  background: #333;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 8px;
-}
-
-.fill {
-  background: linear-gradient(90deg, #00ffe7, #00bfff);
-  height: 100%;
-  width: 0;
-  transition: width 1.5s ease;
-}
-
-/* Force small size for Operating Systems box only */
-.skill-grid-columns > #os-box,
-#os-box {
-  justify-self: center;
-  align-self: start;
-}
-
-#os-box {
+/* Tags container */
+.skill-tags {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
 }
 
-#os-box .skill-inner {
-  width: 100%;
-  max-width: 360px;
-  padding: 10px 12px;
-  box-sizing: border-box;
+/* Individual skill tags */
+.skill-tags span {
+  background: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
 }
 
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat
+.skill-tags span:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
