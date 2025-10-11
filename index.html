@@ -104,108 +104,376 @@
 </section>
 
 
-      <!-- ===== Skills Section ===== -->
-<section id="skills" class="skills-section">
-  <h2 class="section-title">Skills</h2>
+     <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Sayani Maity</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Skills Page Custom Design ===== */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-  <div class="skills-grid">
+    .skills-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-    <div class="skill-card">
-      <h3>Languages & Scripting</h3>
-      <div class="skill-tags">
-        <span>Python</span>
-        <span>Matplotlib</span>
-        <span>Bash</span>
-        <span>Shell Scripting</span>
-        <span>HTML</span>
-        <span>NumPy</span>
-        <span>C</span>
-        <span>JavaScript</span>
+    .section-title {
+      font-size: 2rem;
+      color: #0ff;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px #0ff;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .skill-box {
+      background: rgba(10, 10, 10, 0.85);
+      border: 1px solid #00ffff;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(180, 0, 255, 0.6), 0 0 25px rgba(0, 255, 255, 0.3);
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #00ffff, 0 0 40px #b000ff;
+    }
+
+    .skill-box h3 {
+      font-size: 1.3rem;
+      color: #00ffff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .skill-items span {
+      background-color: transparent;
+      border: 1px solid #00ffff;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.95rem;
+      color: #00ffff;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 0 5px #00ffff;
+    }
+
+    .skill-items span:hover {
+      background-color: #00ffff;
+      color: #000;
+      box-shadow: 0 0 20px #00ffff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <section id="skills" class="page">
+  <div class="content">
+    <h2>Skills</h2>
+    <div class="skill-grid-columns">
+
+      <!-- Languages & Scripting -->
+      <div class="skill-box">
+        <h3>Languages & Scripting</h3>
+        <div class="skill" data-val="90">
+          <label>Python</label>
+          <div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>Matplotlib</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="85">
+          <label>Bash</label>
+          <div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Shell Scripting</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>HTML</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>NumPy</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="skill-card">
-      <h3>Security & Pentesting</h3>
-      <div class="skill-tags">
-        <span>VAPT</span>
-        <span>WAPT</span>
-        <span>Threat Management</span>
-        <span>Burp Suite</span>
-        <span>Nmap</span>
-        <span>Internet Security</span>
-        <span>Network Security</span>
-        <span>OWASP Top 10</span>
-        <span>Metasploit</span>
-        <span>Kali Linux</span>
-        <span>Wireshark</span>
-        <span>Packet Analysis</span>
+      <!-- Security & Pentesting -->
+      <div class="skill-box">
+        <h3>Security & Pentesting</h3>
+        <div class="skill" data-val="85">
+          <label>VAPT</label>
+          <div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>WAPT</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>Threat Management</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="78">
+          <label>Burp</label>
+          <div class="bar"><div class="fill" data-val="78"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="78">
+          <label>Nmap</label>
+          <div class="bar"><div class="fill" data-val="78"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Internet Security</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Network Security</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="skill-card">
-      <h3>Forensic & OSINT</h3>
-      <div class="skill-tags">
-        <span>Digital Forensic</span>
-        <span>Computer Forensic</span>
-        <span>Mobile Forensic</span>
-        <span>Network Forensic</span>
-        <span>Social Engineering</span>
-        <span>Information Gathering</span>
-        <span>Blue Team</span>
-        <span>Incident Response</span>
-        <span>OSINT Investigation</span>
+      <!-- Forensic & OSINT -->
+      <div class="skill-box">
+        <h3>Forensic & OSINT</h3>
+        <div class="skill" data-val="90">
+          <label>Digital Forensic</label>
+          <div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="85">
+          <label>Computer Forensic</label>
+          <div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>Mobile Forensic</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>Network Forensic</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Social Engineering</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Information Gathering</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Blue Team</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="skill-card">
-      <h3>Tools & Frameworks</h3>
-      <div class="skill-tags">
-        <span>Autopsy</span>
-        <span>FTK Imager</span>
-        <span>Volatility</span>
-        <span>Wireshark</span>
-        <span>Burp Suite</span>
-        <span>Metasploit</span>
-        <span>SQLmap</span>
-        <span>Maltego</span>
-        <span>Recon-ng</span>
-        <span>Shodan</span>
+      <!-- Operating Systems -->
+<div class="skill-box">
+  <h3>Operating Systems</h3>
+
+  <div class="skill" data-val="70">
+    <label>Unix</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="90">
+    <label>GNU/Linux</label>
+    <div class="bar"><div class="fill" data-val="90"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="75">
+    <label>Ubuntu</label>
+    <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="65">
+    <label>Kali Linux</label>
+    <div class="bar"><div class="fill" data-val="65"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="60">
+    <label>Black Arch</label>
+    <div class="bar"><div class="fill" data-val="60"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Parrot</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="80">
+    <label>Windows (as always)</label>
+    <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+  </div>
+</div>
+
+
+      <!-- Tools -->
+      <div class="skill-box">
+        <h3>Tools</h3>
+        <div class="skill" data-val="85">
+          <label>Nmap</label>
+          <div class="bar"><div class="fill" data-val="85"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Autopsy</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>SPF (Smartphone Forensic)</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>Magnet AXIOM</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>FTK Imager</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>ZAP</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="80">
+          <label>Wireshark</label>
+          <div class="bar"><div class="fill" data-val="80"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>WhatWeb / Wappalyzer</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="75">
+          <label>OpenVAS</label>
+          <div class="bar"><div class="fill" data-val="75"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Nessus</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Nikto</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Netcat</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Telnet</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Netdiscover</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Angry IP Scanner</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>Advanced IP Scanner</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
+        <div class="skill" data-val="70">
+          <label>And Many More</label>
+          <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+        </div>
       </div>
-    </div>
+  
+<div class="skill-grid-columns">
 
-    <div class="skill-card">
-      <h3>Operating Systems</h3>
-      <div class="skill-tags">
-        <span>Kali Linux</span>
-        <span>Windows</span>
-        <span>Ubuntu</span>
-        <span>Parrot OS</span>
-        <span>Remnux</span>
-        <span>CAINE</span>
-      </div>
-    </div>
+      <!-- AI & ML -->
+<div class="skill-box">
+  <h3>Artificial Intelligence & Machine Learning</h3>
 
-    <div class="skill-card">
-      <h3>Database & Version Control</h3>
-      <div class="skill-tags">
-        <span>MySQL</span>
-        <span>SQLite</span>
-        <span>Git</span>
-        <span>GitHub</span>
-      </div>
+  <div class="skill" data-val="80">
+    <label>AI Prompting</label>
+    <div class="bar">
+      <div class="fill" data-val="80"></div>
+      <span class="percent">0%</span>
     </div>
+  </div>
 
-    <div class="skill-card">
-      <h3>Soft Skills</h3>
-      <div class="skill-tags">
-        <span>Team Collaboration</span>
-        <span>Problem Solving</span>
-        <span>Communication</span>
-        <span>Leadership</span>
-        <span>Adaptability</span>
-      </div>
+  <div class="skill" data-val="75">
+    <label>Machine Learning (ML)</label>
+    <div class="bar">
+      <div class="fill" data-val="75"></div>
+      <span class="percent">0%</span>
     </div>
+  </div>
 
+</div>
+
+
+        <!-- Data Protection & Information Hiding Techniques -->
+<div class="skill-box">
+  <h3>Data Protection & Information Hiding Techniques</h3>
+
+  <div class="skill" data-val="70">
+    <label>Cryptography</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Steganography</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Steganalysis</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Obfuscation</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Encoding</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Decoding</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Quantum Cryptography</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+
+  <div class="skill" data-val="70">
+    <label>Format-Preserving Encryption (FPE)</label>
+    <div class="bar"><div class="fill" data-val="70"></div><span class="percent">0%</span></div>
+  </div>
+    </div>
   </div>
 </section>
 
