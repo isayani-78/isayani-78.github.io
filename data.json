@@ -1,1 +1,43 @@
+{
+  "skills": [
+    { "name": "Python", "level": "Intermediate" },
+    { "name": "Bash / Shell Scripting", "level": "Intermediate" },
+    { "name": "Kali Linux", "level": "Intermediate" },
+    { "name": "Wireshark", "level": "Intermediate" },
+    { "name": "Nmap", "level": "Intermediate" },
+    { "name": "Burp Suite", "level": "Intermediate" },
+    { "name": "Autopsy", "level": "Beginner" },
+    { "name": "Network Forensics", "level": "Beginner" },
+    { "name": "Cryptography", "level": "Beginner" },
+    { "name": "OSINT", "level": "Beginner" },
+    { "name": "Machine Learning (Basics)", "level": "Beginner" }
+  ],
+  "projects": [
+    {
+      "title": "CMTL — CyberSec Multi-Tool Launcher",
+      "desc": "Cyber Security Multi-Tool Launcher: unified GUI to run scans, assessments and tools centrally.",
+      "link": "https://github.com/isayani-78/CMTL",
+      "img": "assets/CMTL — CyberSec Multi-Tool Launcher.jpg"
+    },
+    {
+      "title": "AI-Powered Phishing Email Detector",
+      "desc": "NLP + header heuristics to detect phishing (in development).",
+      "link": "https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector",
+      "img": "assets/AI- powered Phishing Email Detector (In Development).jpg"
+    },
+    {
+      "title": "Caesar Cipher Generator",
+      "desc": "Educational tool with auto-decryption and brute-force demonstration.",
+      "link": "https://github.com/isayani-78/caesar-cipher-generator",
+      "img": "assets/caesar-cipher-generator.jpg"
+    }
+  ],
+  "social": {
+    "GitHub": "https://github.com/isayani-78",
+    "LinkedIn": "https://www.linkedin.com/in/sayanimaity/",
+    "Email": "mailto:sayanimaity2024@gmail.com",
+    "X": "https://x.com/isayani78",
+    "Medium": "https://medium.com/@isayani-78"
+  }
+}
 
