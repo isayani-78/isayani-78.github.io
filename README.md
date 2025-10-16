@@ -1,4 +1,4 @@
-[# 🌟 Sayani Maity — Portfolio & Resume
+# 🌟 Sayani Maity — Portfolio & Resume Website  
 
 https://isayani-78.github.io/
 
