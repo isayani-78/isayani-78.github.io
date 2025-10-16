@@ -168,3 +168,16 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
     width: 90%;
   }
 }
+
+/* === FIX: Remove leftover gap after removing AI/ML section === */
+.skill-category:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.skills-container > *:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
