@@ -28,11 +28,12 @@ This portfolio presents my journey: showcasing my technical skills, projects, ce
 
 ---
 
-## 📬 Contact & Socials  
+## 📬 Contact & Social Links  
 - **Email:** sayanimaity2024@gmail.com  
 - **GitHub:** [isayani-78](https://github.com/isayani-78)  
-- **LinkedIn:** (Insert your LinkedIn profile link)  
-- **X / Twitter:** [@isayani78](https://twitter.com/isayani78) :contentReference[oaicite:0]{index=0}  
+- **LinkedIn:** [Sayani Maity](https://www.linkedin.com/in/sayani-maity-/)  
+- **Twitter / X:** [@isayani78](https://twitter.com/isayani78)  
+- **Portfolio:** [isayani-78.github.io](https://isayani-78.github.io/)  
 
 ---
 
