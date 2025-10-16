@@ -1,43 +1,110 @@
 {
-  "skills": [
-    { "name": "Python", "level": "Intermediate" },
-    { "name": "Bash / Shell Scripting", "level": "Intermediate" },
-    { "name": "Kali Linux", "level": "Intermediate" },
-    { "name": "Wireshark", "level": "Intermediate" },
-    { "name": "Nmap", "level": "Intermediate" },
-    { "name": "Burp Suite", "level": "Intermediate" },
-    { "name": "Autopsy", "level": "Beginner" },
-    { "name": "Network Forensics", "level": "Beginner" },
-    { "name": "Cryptography", "level": "Beginner" },
-    { "name": "OSINT", "level": "Beginner" },
-    { "name": "Machine Learning (Basics)", "level": "Beginner" }
-  ],
-  "projects": [
+  "personal": {
+    "name": "Sayani Maity",
+    "title": "Digital Forensics & Ethical Hacking Student",
+    "email": "sayanimaity2024@gmail.com",
+    "profileImage": "assets/profile.jpg",
+    "about": "I am SAYANI MAITY, currently pursuing B.Sc. in Digital Forensics (2023-2026) at the Indian School Of Ethical Hacking (ISOEH) under MAKAUT, West Bengal. I specialize in Digital Forensics, Penetration Testing, OSINT, and Cybersecurity tooling.",
+    "socials": {
+      "GitHub": "https://github.com/isayani-78",
+      "LinkedIn": "https://www.linkedin.com/in/sayanimaity/",
+      "Email": "mailto:sayanimaity2024@gmail.com",
+      "Discord": "https://discord.com/invite/isayani_78",
+      "GeeksforGeeks": "https://auth.geeksforgeeks.org/user/isayani_05",
+      "X": "https://x.com/isayani78",
+      "Medium": "https://medium.com/@isayani-78",
+      "Facebook": "https://www.facebook.com/isayani78"
+    }
+  },
+
+  "education": [
     {
-      "title": "CMTL — CyberSec Multi-Tool Launcher",
-      "desc": "Cyber Security Multi-Tool Launcher: unified GUI to run scans, assessments and tools centrally.",
-      "link": "https://github.com/isayani-78/CMTL",
-      "img": "assets/CMTL — CyberSec Multi-Tool Launcher.jpg"
+      "degree": "ICSE, ISC (Pure Science)",
+      "institution": "St. Thomas' High School, Howrah, West Bengal"
     },
     {
-      "title": "AI-Powered Phishing Email Detector",
-      "desc": "NLP + header heuristics to detect phishing (in development).",
-      "link": "https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector",
-      "img": "assets/AI- powered Phishing Email Detector (In Development).jpg"
+      "degree": "B.Sc. Digital Forensics",
+      "institution": "Indian School of Ethical Hacking (ISOEH) under MAKAUT, West Bengal (2023–2026)"
+    }
+  ],
+
+  "skills": {
+    "Languages & Scripting": ["Python", "Matplotlib", "Bash", "Shell Scripting", "HTML", "NumPy"],
+    "Security & Pentesting": ["VAPT", "WAPT", "Threat Management", "Burp Suite", "Nmap", "Internet Security", "Network Security"],
+    "Forensic & OSINT": ["Digital Forensic", "Computer Forensic", "Mobile Forensic", "Network Forensic", "Social Engineering", "Information Gathering", "Blue Team"],
+    "Operating Systems": ["Unix", "GNU/Linux", "Ubuntu", "Kali Linux", "Black Arch", "Parrot", "Windows (as always)"],
+    "Tools": ["Nmap", "Autopsy", "SPF (Smartphone Forensic)", "Magnet AXIOM", "FTK Imager", "ZAP", "Wireshark", "WhatWeb / Wappalyzer", "OpenVAS", "Nessus", "Nikto", "Netcat", "Telnet", "Netdiscover", "Angry IP Scanner", "Advanced IP Scanner", "And Many More"],
+    "Artificial Intelligence & Machine Learning": ["AI Prompting", "Machine Learning (ML)"],
+    "Data Protection & Information Hiding Techniques": ["Cryptography", "Steganography", "Steganalysis", "Obfuscation", "Encoding", "Decoding", "Quantum Cryptography", "Format-Preserving Encryption (FPE)"]
+  },
+
+  "projects": [
+    {
+      "title": "Basic Strong Password Generator",
+      "year": "2025",
+      "image": "assets/Basic-Strong-Password-Generator.jpg",
+      "description": "A simple Python script to generate a strong random password of desired length using uppercase, lowercase, digits, and special characters.",
+      "github": "https://github.com/isayani-78/-Basic-Strong-Password-Generator"
     },
     {
       "title": "Caesar Cipher Generator",
-      "desc": "Educational tool with auto-decryption and brute-force demonstration.",
-      "link": "https://github.com/isayani-78/caesar-cipher-generator",
-      "img": "assets/caesar-cipher-generator.jpg"
+      "year": "2025",
+      "image": "assets/caesar-cipher-generator.jpg",
+      "description": "Implements Caesar Cipher encryption and decryption with auto-brute-force functionality for cybersecurity learning and practice.",
+      "github": "https://github.com/isayani-78/caesar-cipher-generator"
+    },
+    {
+      "title": "CMTL — CyberSec Multi-Tool Launcher",
+      "year": "2025",
+      "image": "assets/CMTL — CyberSec Multi-Tool Launcher.jpg",
+      "description": "A unified GUI-based cybersecurity tool launcher integrating scanners, forensic tools, and vulnerability assessment tools in one platform.",
+      "github": "https://github.com/isayani-78/CMTL"
+    },
+    {
+      "title": "AI-Powered Phishing Email Detector (In Development)",
+      "year": "2025–Present",
+      "image": "assets/AI- powered Phishing Email Detector (In Development).jpg",
+      "description": "An AI + NLP-based phishing email detection system that analyzes email headers and contents to detect suspicious activity.",
+      "github": "https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector"
     }
   ],
-  "social": {
-    "GitHub": "https://github.com/isayani-78",
-    "LinkedIn": "https://www.linkedin.com/in/sayanimaity/",
-    "Email": "mailto:sayanimaity2024@gmail.com",
-    "X": "https://x.com/isayani78",
-    "Medium": "https://medium.com/@isayani-78"
-  }
-}
 
+  "certificates": [
+    {
+      "title": "Completion of Core Python Course",
+      "image": "assets/Completion of Core Python Course.jpg"
+    },
+    {
+      "title": "Certificate from Cyber Security Centre of Excellence, Department of IT & Electronics, Government of West Bengal",
+      "image": "assets/Certificate from Cyber Security Centre of Exellence Deprtment of Information Technology & Electronics Government of West Bengal.jpg"
+    },
+    {
+      "title": "Participation in CTF — MAKAUT University, West Bengal",
+      "image": "assets/Participation in CTF Organised by Our University Maulana Abul Kalam Azad University OF Technology (MAKAUT), West Bengal.jpg"
+    },
+    {
+      "title": "CTF Participation of Infocom Hackstar by ABP (2023)",
+      "image": "assets/CTF Participation of Infocom Hackstar by ABP (2023).jpeg"
+    },
+    {
+      "title": "CTF Participation of Infocom Hackstar by ABP (2024)",
+      "image": "assets/CTF Participation of Infocom Hackstar by ABP (2024).jpg"
+    },
+    {
+      "title": "Participation in Cryptoquest",
+      "image": "assets/Participation in Cryptoquest.jpg"
+    },
+    {
+      "title": "Participation in CTF of Cyraksha (The Cyber Club of Kolkata) — Hackathon 1",
+      "image": "assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 1].jfif"
+    },
+    {
+      "title": "Participation in CTF of Cyraksha (The Cyber Club of Kolkata) — Hackathon 2",
+      "image": "assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2].jpg"
+    },
+    {
+      "title": "Participation In CTF Workshop By Cyraksha (The Cyber Club Of Kolkata)",
+      "image": "assets/Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata).jpg"
+    }
+  ]
+}
