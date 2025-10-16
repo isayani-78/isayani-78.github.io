@@ -1,4 +1,4 @@
-/* ===== styles.css (final, fixed) ===== */
+/* ===== styles.css (final) ===== */
 :root{
   --bg:#040509;
   --panel:#0d1117;
@@ -169,13 +169,3 @@ canvas#matrix{position:fixed;inset:0;z-index:-3;opacity:0.12}
   }
 }
 
-/* ✅ FIX: Remove unwanted empty space under AI & ML box */
-.skills-container {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.skill-category:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
