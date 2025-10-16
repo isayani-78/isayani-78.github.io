@@ -8,13 +8,13 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- Matrix background -->
+  <!-- Matrix background canvas -->
   <canvas id="matrix"></canvas>
 
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="brand">SAYANI <span>MAITY</span></div>
 
-    <nav class="top-nav" aria-label="Primary navigation">
+    <nav class="top-nav" aria-label="Primary">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -23,53 +23,62 @@
       <a href="#research">Research</a>
       <a href="#empire">The Foundation</a>
       <a href="#contact">Contact</a>
-      <a href="https://isayani-78.github.io/Sayani Maity Resume.pdf" class="resume-btn" download="Sayani_Maity_Resume.pdf">
-        Download Resume
-      </a>
+      <a href="https://isayani-78.github.io/Sayani Maity Resume.pdf" class="resume-btn" download="Sayani_Maity_Resume.pdf">Download Resume</a>
     </nav>
 
     <!-- Hamburger for mobile -->
     <div class="hamburger" id="hamburger" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" role="main">
 
-    <!-- Right panel (kept but will remain visible on large screens) -->
+    <!-- RIGHT-SIDEBAR (only visible when user is at top/home) -->
     <aside class="right-panel" id="right-panel" aria-hidden="false">
       <div class="profile-card">
         <div class="photo-wrap">
-          <img src="assets/profile.jpg" alt="Sayani profile photo" />
+          <img src="assets/profile.jpg" alt="Sayani profile photo">
         </div>
         <div class="info">
           <p class="role">Digital Forensics Student • Pentester</p>
           <div class="social-bar" id="social-bar-desktop">
-            <!-- injected from data.json by script.js -->
+            <!-- social links injected from data.json or kept as HTML fallback -->
+            <a href="https://github.com/isayani-78" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:sayanimaity2024@gmail.com">Email</a>
+            <a href="https://x.com/isayani78" target="_blank" rel="noopener">X</a>
           </div>
         </div>
       </div>
 
       <div class="slideshow" id="slideshow">
-        <div class="slide active"><img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL"><div class="cap">CMTL — CyberSec Multi-Tool Launcher</div></div>
-        <div class="slide"><img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI-Powered Phishing Email Detector"><div class="cap">AI-Powered Phishing Email Detector (In Dev)</div></div>
-        <div class="slide"><img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study"><div class="cap">Forensic Case Study</div></div>
+        <div class="slide active">
+          <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
+          <div class="cap">CMTL — CyberSec Multi-Tool Launcher</div>
+        </div>
+        <div class="slide">
+          <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI Phishing">
+          <div class="cap">AI-Powered Phishing Email Detector (In Dev)</div>
+        </div>
+        <div class="slide">
+          <img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study">
+          <div class="cap">Forensic Case Study</div>
+        </div>
       </div>
     </aside>
 
-    <!-- HOME -->
+    <!-- HOME / HERO -->
     <section id="home" class="section hero-section">
       <div class="hero-center">
         <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
         <h1 class="hero-name">SAYANI MAITY</h1>
         <ul class="hero-sub" id="hero-sub">
-          <li>B.Sc. Digital Forensic Student 🔍</li>
+          <li>B.Sc. Digital Forensics Student 🔍</li>
           <li>Academic Researcher 👩‍💻</li>
           <li>Curious learner 💻</li>
           <li>Exploring security & coding 🔐</li>
-          <li>Ethical Hacker (Pentester)💻</li>
+          <li>Ethical Hacker (Pentester) 💻</li>
         </ul>
       </div>
     </section>
@@ -80,57 +89,215 @@
         <h2>About Me</h2>
         <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics (2023-2026)</strong> at the <strong>Indian School Of Ethical Hacking (ISOEH)</strong> under <strong>MAKAUT, West Bengal</strong>. I specialize in Digital Forensics, Penetration Testing, OSINT, and cybersecurity tooling.</p>
         <p>I actively engage in <strong>CTF challenges, hands-on security research, and AI-assisted detection</strong> projects focused on automation and <strong>threat analysis</strong>.</p>
-        <p>My Technical skills include <strong>Python, Bash, Shell Scripting, VAPT, WAPT, Nmap, Burp Suite, Autopsy and OSINT research</strong>. I am passionate about continuous learning and applying cybersecurity knowledge to real-world problems.</p>
-
-        <h3>🎓 Education</h3>
-        <ul>
-          <li>📘 <strong>ICSE, ISC (Pure Science):</strong> St. Thomas' High School, Howrah, West Bengal</li>
-          <li>💻 <strong>B.Sc. Digital Forensics:</strong> Indian School of Ethical Hacking (ISOEH) under MAKAUT, 2023–2026</li>
-        </ul>
-
-        <h3>🎯 Goal</h3>
-        <p>As a dedicated Digital Forensics Student, my goal is to strengthen my expertise in Cybersecurity, Digital Investigations, and Ethical Hacking. I aim to develop practical skills that help uncover Digital Evidence, detect vulnerabilities, and secure critical systems.</p>
       </div>
     </section>
 
-    <!-- SKILLS (dynamic from data.json) -->
+    <!-- SKILLS: FULL original skill items preserved, but styled as boxed glowing elements -->
     <section id="skills" class="section">
       <div class="content">
         <h2>Skills</h2>
 
-        <!-- The skills grid will be injected from data.json. Boxes with glowing outlines. -->
-        <div id="skills-grid" class="skills-grid" aria-live="polite">
-          <!-- injected by script.js -->
-        </div>
+        <!-- Grid container for all skill boxes -->
+        <div class="skill-grid-columns">
+
+          <!-- Languages & Scripting -->
+          <div class="skill-box">
+            <h3>Languages & Scripting</h3>
+
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">Python</span><span class="skill-level">90%</span></div>
+              <div class="skill-item"><span class="skill-title">Matplotlib</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Bash</span><span class="skill-level">85%</span></div>
+              <div class="skill-item"><span class="skill-title">Shell Scripting</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">HTML</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">NumPy</span><span class="skill-level">80%</span></div>
+            </div>
+          </div>
+
+          <!-- Security & Pentesting -->
+          <div class="skill-box">
+            <h3>Security & Pentesting</h3>
+
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">VAPT</span><span class="skill-level">85%</span></div>
+              <div class="skill-item"><span class="skill-title">WAPT</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Threat Management</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Burp</span><span class="skill-level">78%</span></div>
+              <div class="skill-item"><span class="skill-title">Nmap</span><span class="skill-level">78%</span></div>
+              <div class="skill-item"><span class="skill-title">Internet Security</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">Network Security</span><span class="skill-level">75%</span></div>
+            </div>
+          </div>
+
+          <!-- Forensic & OSINT -->
+          <div class="skill-box">
+            <h3>Forensic & OSINT</h3>
+
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">Digital Forensic</span><span class="skill-level">90%</span></div>
+              <div class="skill-item"><span class="skill-title">Computer Forensic</span><span class="skill-level">85%</span></div>
+              <div class="skill-item"><span class="skill-title">Mobile Forensic</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Network Forensic</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Social Engineering</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">Information Gathering</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">Blue Team</span><span class="skill-level">70%</span></div>
+            </div>
+          </div>
+
+          <!-- Operating Systems (kept smaller layout like your original intent) -->
+          <div class="skill-box small-box" id="os-box">
+            <h3>Operating Systems</h3>
+
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">Unix</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">GNU/Linux</span><span class="skill-level">90%</span></div>
+              <div class="skill-item"><span class="skill-title">Ubuntu</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">Kali Linux</span><span class="skill-level">65%</span></div>
+              <div class="skill-item"><span class="skill-title">Black Arch</span><span class="skill-level">60%</span></div>
+              <div class="skill-item"><span class="skill-title">Parrot</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Windows (as always)</span><span class="skill-level">80%</span></div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-box">
+            <h3>Tools</h3>
+
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">Nmap</span><span class="skill-level">85%</span></div>
+              <div class="skill-item"><span class="skill-title">Autopsy</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">SPF (Smartphone Forensic)</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Magnet AXIOM</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">FTK Imager</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">ZAP</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Wireshark</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">WhatWeb / Wappalyzer</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">OpenVAS</span><span class="skill-level">75%</span></div>
+              <div class="skill-item"><span class="skill-title">Nessus</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Nikto</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Netcat</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Telnet</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Netdiscover</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Angry IP Scanner</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Advanced IP Scanner</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">And Many More</span><span class="skill-level">70%</span></div>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="skill-box">
+            <h3>AI & ML</h3>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">AI Prompting</span><span class="skill-level">80%</span></div>
+              <div class="skill-item"><span class="skill-title">Machine Learning (ML)</span><span class="skill-level">75%</span></div>
+            </div>
+          </div>
+
+          <!-- Data Protection & Info Hiding -->
+          <div class="skill-box">
+            <h3>Data Protection & Info Hiding</h3>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-title">Cryptography</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Steganography</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Steganalysis</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Obfuscation</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Encoding</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Decoding</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Quantum Cryptography</span><span class="skill-level">70%</span></div>
+              <div class="skill-item"><span class="skill-title">Format-Preserving Encryption (FPE)</span><span class="skill-level">70%</span></div>
+            </div>
+          </div>
+
+        </div> <!-- end skill-grid-columns -->
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (4 projects preserved) -->
     <section id="projects" class="section">
       <div class="content">
         <h2>Projects</h2>
-        <div id="projects-grid" class="projects-grid">
-          <!-- injected by script.js -->
+        <div class="projects-grid" id="projects-grid">
+          <article class="project-card">
+            <img src="assets/Basic-Strong-Password-Generator.jpg" alt="Basic Strong Password Generator">
+            <h3>Basic Strong Password Generator (2025)</h3>
+            <p>A simple Python script to generate a strong random password of desired length using uppercase letters, lowercase letters, digits, and special characters.</p>
+            <p><a href="https://github.com/isayani-78/-Basic-Strong-Password-Generator" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/caesar-cipher-generator.jpg" alt="Caesar Cipher Generator">
+            <h3>Caesar Cipher Generator (2025)</h3>
+            <p>Educational tool with auto-decryption and brute-force cracking for learning encryption basics and attack techniques.</p>
+            <p><a href="https://github.com/isayani-78/caesar-cipher-generator" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
+            <h3>CMTL — CyberSec Multi-Tool Launcher (2025)</h3>
+            <p>Unified GUI-based platform that integrates network scanning, vulnerability assessment, and forensic tools in one interface.</p>
+            <p><a href="https://github.com/isayani-78/CMTL" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="Phishing Detector">
+            <h3>AI-Powered Phishing Email Detector (2025–Present)</h3>
+            <p>NLP + header analysis to detect phishing emails (in development). Seeking contributions.</p>
+            <p><a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
+    <!-- CERTIFICATES (all items kept) -->
     <section id="certificates" class="section">
       <div class="content">
         <h2>Certificates of Participation</h2>
-        <div class="certificates-grid" id="certificates-grid">
-         
-          <div class="certificate-card"><img src="assets/Completion of Core Python Course.jpg" alt="Completion of Core Python Course"><h3>Completion of Core Python Course</h3></div>
-          <div class="certificate-card"><img src="assets/Certificate from Cyber Security Centre of Exellence Deprtment of Information Technology & Electronics Government of West Bengal.jpg" alt="Certificate from Cyber Security Centre"><h3>Certificate from Cyber Security Centre of Excellence</h3></div>
-          <div class="certificate-card"><img src="assets/Participation in CTF Organised by Our University Maulana Abul Kalam Azad University OF Technology (MAKAUT), West Bengal.jpg" alt="CTF participation"><h3>Participation in MAKAUT CTF</h3></div>
-          <div class="certificate-card"><img src="assets/CTF Participation of Infocom Hackstar by ABP (2023).jpeg" alt="CTF Participation of Infocom Hackstar by ABP (2023)"><h3>CTF Participation of Infocom Hackstar by ABP (2023)</h3></div>
-          <div class="certificate-card"><img src="assets/CTF Participation of Infocom Hackstar by ABP (2024).jpg" alt="CTF Participation of Infocom Hackstar by ABP (2024)"><h3>CTF Participation of Infocom Hackstar by ABP (2024)</h3></div>
-          <div class="certificate-card"><img src="assets/Participation in Cryptoquest.jpg" alt="Participation in Cryptoquest"><h3>Participation in Cryptoquest</h3></div>
-          <div class="certificate-card"><img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 1].jfif" alt="Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 1]</h3></div>
-          <div class="certificate-card"><img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2].jpg" alt="Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2]"><h3>Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2]</h3></div>
-          <div class="certificate-card"><img src="assets/Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata).jpg" alt="Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata)"><h3>Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata)</h3></div>
-                                           
+        <div class="certificates-grid">
+          <div class="certificate-card">
+            <img src="assets/Completion of Core Python Course.jpg" alt="Completion of Core Python Course">
+            <h3>Completion of Core Python Course</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Certificate from Cyber Security Centre of Exellence Deprtment of Information Technology & Electronics Government of West Bengal.jpg" alt="Certificate from Cyber Security Centre">
+            <h3>Certificate from Cyber Security Centre of Excellence, Dept. of IT & Electronics, Govt. of West Bengal</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Participation in CTF Organised by Our University Maulana Abul Kalam Azad University OF Technology (MAKAUT), West Bengal.jpg" alt="Participation in MAKAUT CTF">
+            <h3>Participation in CTF organised by MAKAUT</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/CTF Participation of Infocom Hackstar by ABP (2023).jpeg" alt="CTF Infocom Hackstar 2023">
+            <h3>CTF Participation of Infocom Hackstar by ABP (2023)</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/CTF Participation of Infocom Hackstar by ABP (2024).jpg" alt="CTF Infocom Hackstar 2024">
+            <h3>CTF Participation of Infocom Hackstar by ABP (2024)</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Participation in Cryptoquest.jpg" alt="Participation in Cryptoquest">
+            <h3>Participation in Cryptoquest</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 1].jfif" alt="Cyraksha CTF 1">
+            <h3>Participation in CTF - Cyraksha (Hackathon 1)</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2].jpg" alt="Cyraksha CTF 2">
+            <h3>Participation in CTF - Cyraksha (Hackathon 2)</h3>
+          </div>
+
+          <div class="certificate-card">
+            <img src="assets/Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata).jpg" alt="Cyraksha workshop">
+            <h3>Participation in CTF Workshop - Cyraksha</h3>
+          </div>
         </div>
       </div>
     </section>
@@ -157,13 +324,16 @@
     <section id="contact" class="section light-section">
       <div class="content contact-content">
         <h2>Contact Me</h2>
-
         <div class="contact-box">
           <p>📧 — <a href="mailto:sayanimaity2024@gmail.com" id="email-link">sayanimaity2024@gmail.com</a></p>
 
           <div class="connect-grid">
             <div id="social-links" class="social-links">
-              <!-- injected social links from data.json -->
+              <!-- injected by script.js or fallback -->
+              <a href="https://github.com/isayani-78" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="mailto:sayanimaity2024@gmail.com">Email</a>
+              <a href="https://x.com/isayani78" target="_blank" rel="noopener">X</a>
             </div>
 
             <form id="contact-form" action="https://formspree.io/f/mpwjkzzz" method="POST" class="contact-form">
@@ -190,7 +360,6 @@
 
   </main>
 
-  <!-- load JS that will fetch data.json and handle matrix/slideshow/interaction -->
   <script src="script.js"></script>
 </body>
 </html>
