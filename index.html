@@ -37,12 +37,11 @@
     <!-- RIGHT-SIDEBAR (only visible while at top / home) -->
     <aside class="right-panel" id="right-panel" aria-hidden="false">
       <div class="profile-card">
-        <div class="photo-wrap">
-          <img src="assets/profile.jpg" alt="Sayani profile photo">
         </div>
         <div class="info">
           <p class="role">Digital Forensics Student • Pentester</p>
           <div class="social-bar" id="sidebar-socials">
+            
             <!-- social links (kept visible here on Home only) -->
             <a href="https://github.com/isayani-78" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" rel="noopener">LinkedIn</a>
@@ -99,72 +98,120 @@
       </div>
     </section>
 
-    <!-- SKILLS (kept all items — changed layout to compact boxes, no percentages) -->
-    <section id="skills" class="page">
-      <div class="content">
-        <h2>Skills</h2>
+    <!-- ===== SKILLS SECTION (Horizontal Glowing Boxes) ===== -->
+<section id="skills" class="page">
+  <div class="content">
+    <h2 style="text-align:center; color: var(--accent2); margin-bottom: 30px;">Skills</h2>
 
-        <div class="skill-grid-columns">
+    <div class="skills-container">
 
-          <!-- Languages & Scripting -->
-          <div class="skill-box">
-            <h3>Languages & Scripting</h3>
-            <div class="skill-items">
-              <span>Python</span><span>Matplotlib</span><span>Bash</span><span>Shell Scripting</span><span>HTML</span><span>NumPy</span>
-            </div>
-          </div>
-
-          <!-- Security & Pentesting -->
-          <div class="skill-box">
-            <h3>Security & Pentesting</h3>
-            <div class="skill-items">
-              <span>VAPT</span><span>WAPT</span><span>Threat Management</span><span>Burp</span><span>Nmap</span><span>Internet Security</span><span>Network Security</span>
-            </div>
-          </div>
-
-          <!-- Forensic & OSINT -->
-          <div class="skill-box">
-            <h3>Forensic & OSINT</h3>
-            <div class="skill-items">
-              <span>Digital Forensic</span><span>Computer Forensic</span><span>Mobile Forensic</span><span>Network Forensic</span><span>Social Engineering</span><span>Information Gathering</span><span>Blue Team</span>
-            </div>
-          </div>
-
-          <!-- Operating Systems -->
-          <div class="skill-box small-box">
-            <h3>Operating Systems</h3>
-            <div class="skill-items">
-              <span>Unix</span><span>GNU/Linux</span><span>Ubuntu</span><span>Kali Linux</span><span>Black Arch</span><span>Parrot</span><span>Windows</span>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="skill-box">
-            <h3>Tools</h3>
-            <div class="skill-items">
-              <span>Nmap</span><span>Autopsy</span><span>SPF (Smartphone Forensic)</span><span>Magnet AXIOM</span><span>FTK Imager</span><span>ZAP</span><span>Wireshark</span><span>WhatWeb / Wappalyzer</span><span>OpenVAS</span><span>Nessus</span><span>Nikto</span><span>Netcat</span><span>Telnet</span><span>Netdiscover</span><span>Angry IP Scanner</span><span>Advanced IP Scanner</span><span>And Many More</span>
-            </div>
-          </div>
-
-          <!-- AI & ML -->
-          <div class="skill-box">
-            <h3>Artificial Intelligence & Machine Learning</h3>
-            <div class="skill-items">
-              <span>AI Prompting</span><span>Machine Learning (ML)</span>
-            </div>
-          </div>
-
-          <!-- Data Protection & Info Hiding -->
-          <div class="skill-box">
-            <h3>Data Protection & Information Hiding Techniques</h3>
-            <div class="skill-items">
-              <span>Cryptography</span><span>Steganography</span><span>Steganalysis</span><span>Obfuscation</span><span>Encoding</span><span>Decoding</span><span>Quantum Cryptography</span><span>Format-Preserving Encryption (FPE)</span>
-            </div>
-          </div>
-
+      <!-- Languages & Scripting -->
+      <div class="skill-category">
+        <h3>Languages & Scripting</h3>
+        <div class="skill-list">
+          <span>Python</span>
+          <span>Matplotlib</span>
+          <span>Bash</span>
+          <span>Shell Scripting</span>
+          <span>HTML</span>
+          <span>NumPy</span>
         </div>
       </div>
-    </section>
+
+      <!-- Security & Pentesting -->
+      <div class="skill-category">
+        <h3>Security & Pentesting</h3>
+        <div class="skill-list">
+          <span>VAPT</span>
+          <span>WAPT</span>
+          <span>Threat Management</span>
+          <span>Burp</span>
+          <span>Nmap</span>
+          <span>Internet Security</span>
+          <span>Network Security</span>
+        </div>
+      </div>
+
+      <!-- Forensic & OSINT -->
+      <div class="skill-category">
+        <h3>Forensic & OSINT</h3>
+        <div class="skill-list">
+          <span>Digital Forensic</span>
+          <span>Computer Forensic</span>
+          <span>Mobile Forensic</span>
+          <span>Network Forensic</span>
+          <span>Social Engineering</span>
+          <span>Information Gathering</span>
+          <span>Blue Team</span>
+        </div>
+      </div>
+
+      <!-- Operating Systems -->
+      <div class="skill-category">
+        <h3>Operating Systems</h3>
+        <div class="skill-list">
+          <span>Unix</span>
+          <span>GNU/Linux</span>
+          <span>Ubuntu</span>
+          <span>Kali Linux</span>
+          <span>Black Arch</span>
+          <span>Parrot</span>
+          <span>Windows</span>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-category">
+        <h3>Tools</h3>
+        <div class="skill-list">
+          <span>Nmap</span>
+          <span>Autopsy</span>
+          <span>SPF (Smartphone Forensic)</span>
+          <span>Magnet AXIOM</span>
+          <span>FTK Imager</span>
+          <span>ZAP</span>
+          <span>Wireshark</span>
+          <span>WhatWeb / Wappalyzer</span>
+          <span>OpenVAS</span>
+          <span>Nessus</span>
+          <span>Nikto</span>
+          <span>Netcat</span>
+          <span>Telnet</span>
+          <span>Netdiscover</span>
+          <span>Angry IP Scanner</span>
+          <span>Advanced IP Scanner</span>
+          <span>And Many More</span>
+        </div>
+      </div>
+
+      <!-- Artificial Intelligence & Machine Learning -->
+      <div class="skill-category">
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <div class="skill-list">
+          <span>AI Prompting</span>
+          <span>Machine Learning (ML)</span>
+        </div>
+      </div>
+
+      <!-- Data Protection & Info Hiding -->
+      <div class="skill-category">
+        <h3>Data Protection & Info Hiding</h3>
+        <div class="skill-list">
+          <span>Cryptography</span>
+          <span>Steganography</span>
+          <span>Steganalysis</span>
+          <span>Obfuscation</span>
+          <span>Encoding</span>
+          <span>Decoding</span>
+          <span>Quantum Cryptography</span>
+          <span>Format-Preserving Encryption (FPE)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- PROJECTS: all 4 preserved -->
     <section id="projects" class="page">
@@ -243,14 +290,17 @@
 
         <p style="margin-top:12px; font-size:16px; color:#34495e;">Let’s connect and collaborate! Reach out to me for cybersecurity discussions, research ideas, or project opportunities.</p>
 
-        <!-- Social links (visible here too) -->
-        <div style="margin-top:18px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-          <a href="https://github.com/isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none;">GitHub</a>
-          <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" style="color:#2c3e50; text-decoration:none;">LinkedIn</a>
-          <a href="https://x.com/isayani78" target="_blank" style="color:#2c3e50; text-decoration:none;">X</a>
-          <a href="https://medium.com/@isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none;">Medium</a>
-          <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" style="color:#2c3e50; text-decoration:none;">GfG</a>
-        </div>
+        <!-- Social links as small outlined boxes -->
+<div style="margin-top:18px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+  <a href="https://github.com/isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">GitHub</a>
+  <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">LinkedIn</a>
+  <a href="https://x.com/isayani78" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">X</a>
+  <a href="https://medium.com/@isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">Medium</a>
+  <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">GfG</a>
+  <a href="https://discord.com/invite/isayani_78" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">Discord</a>
+  <a href="https://www.facebook.com/isayani78" target="_blank" style="color:#2c3e50; text-decoration:none; border:1px solid #1e90ff; padding:6px 12px; border-radius:8px; transition: all 0.3s;">Facebook</a>
+</div>
+
 
         <!-- Contact form (Formspree) - preserved -->
         <form id="contact-form" action="https://formspree.io/f/mpwjkzzz" method="POST" style="margin-top:20px; text-align:left;">
