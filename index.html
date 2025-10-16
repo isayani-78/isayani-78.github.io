@@ -1,178 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title>
   <meta name="description" content="Portfolio & resume of SAYANI MAITY — Digital Forensics student."/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
   <canvas id="matrix"></canvas>
 
-  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="brand">SAYANI <span>MAITY</span></div>
-    <nav class="top-nav">
+
+    <nav class="top-nav" id="top-nav">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#Certificates">Certificates</a>
-      <a href="#research">Research</a>
+      <a href="#Certificates">Certificates of Participation</a>
+      <a href="#research">Research Focus</a>
+      <!-- Foundation removed per request -->
       <a href="#contact">Contact</a>
-      <a href="Sayani Maity Resume.pdf" download class="resume-btn">Download Resume</a>
+      <a href="https://isayani-78.github.io/Sayani%20Maity%20Resume.pdf" class="resume-btn" download="Sayani_Maity_Resume.pdf">Download Resume</a>
     </nav>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
   <main class="container">
 
-    <!-- RIGHT SIDEBAR (Only on Home Section) -->
-    <aside class="right-panel" id="right-panel">
+    <!-- RIGHT-SIDEBAR (only visible while at top / home) -->
+    <aside class="right-panel" id="right-panel" aria-hidden="false">
       <div class="profile-card">
+        <div class="photo-wrap">
+          <img src="assets/profile.jpg" alt="Sayani profile photo">
+        </div>
         <div class="info">
           <p class="role">Digital Forensics Student • Pentester</p>
-          <div class="social-bar">
-            <a href="https://github.com/isayani-78" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank">LinkedIn</a>
+          <div class="social-bar" id="sidebar-socials">
+            <!-- social links (kept visible here on Home only) -->
+            <a href="https://github.com/isayani-78" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="mailto:sayanimaity2024@gmail.com">Email</a>
-            <a href="https://discord.com/invite/isayani_78" target="_blank">Discord</a>
-            <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank">GfG</a>
-            <a href="https://x.com/isayani78" target="_blank">X</a>
-            <a href="https://medium.com/@isayani-78" target="_blank">Medium</a>
-            <a href="https://www.facebook.com/isayani78" target="_blank">Facebook</a>
+            <a href="https://discord.com/invite/isayani_78" target="_blank" rel="noopener">Discord</a>
+            <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" rel="noopener">GfG</a>
+            <a href="https://x.com/isayani78" target="_blank" rel="noopener">X</a>
+            <a href="https://medium.com/@isayani-78" target="_blank" rel="noopener">Medium</a>
+            <a href="https://www.facebook.com/isayani78" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
       </div>
 
       <div class="slideshow" id="slideshow">
-        <div class="slide active">
-          <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
-          <div class="cap">CMTL — CyberSec Multi-Tool Launcher</div>
-        </div>
-        <div class="slide">
-          <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI Phishing Detector">
-          <div class="cap">AI-Powered Phishing Email Detector (In Dev)</div>
-        </div>
-        <div class="slide">
-          <img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study">
-          <div class="cap">Forensic Case Study</div>
-        </div>
+        <div class="slide active"><img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL"><div class="cap">CMTL — CyberSec Multi-Tool Launcher</div></div>
+        <div class="slide"><img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI-Powered Phishing Email Detector"><div class="cap">AI-Powered Phishing Email Detector (In Dev)</div></div>
+        <div class="slide"><img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study"><div class="cap">Forensic Case Study</div></div>
       </div>
     </aside>
 
-    <!-- ===== HOME SECTION ===== -->
-    <section id="home" class="page active">
+    <!-- HOME -->
+    <section id="home" class="page">
       <div class="hero-center">
         <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
         <h1 class="hero-name">SAYANI MAITY</h1>
         <ul class="hero-sub">
           <li>B.Sc. Digital Forensic Student 🔍</li>
           <li>Academic Researcher 👩‍💻</li>
-          <li>Curious Learner 💻</li>
-          <li>Exploring Security & Coding 🔐</li>
-          <li>Ethical Hacker (Pentester) 💻</li>
+          <li>Curious learner 💻</li>
+          <li>Exploring security & coding 🔐</li>
+          <li>Ethical Hacker (Pentester)💻</li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ABOUT -->
     <section id="about" class="page">
       <div class="content">
         <h2>About Me</h2>
-        <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics (2023–2026)</strong> at the <strong>Indian School Of Ethical Hacking (ISOEH)</strong> under <strong>MAKAUT, West Bengal</strong>. I specialize in Digital Forensics, Penetration Testing, OSINT, and Cybersecurity Tooling.</p>
+        <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics (2023-2026)</strong> at the <strong>Indian School Of Ethical Hacking (ISOEH)</strong> under <strong>MAKAUT, West Bengal</strong>. I specialize in Digital Forensics, Penetration Testing, OSINT, and cybersecurity tooling.</p>
 
-        <p>I am a fully <strong>CEH trained student</strong> and currently completing the <strong>CHFI syllabus</strong>. I actively engage in <strong>CTF challenges, hands-on security research, and AI-assisted detection projects</strong> focused on automation and <strong>threat analysis</strong>.</p>
+        <p>I am a fully <strong>CEH trained student</strong> and now completing the <strong>CHFI syllabus</strong>. I actively engage in <strong>CTF challenges, hands-on security research, and AI-assisted detection</strong> projects focused on automation and <strong>threat analysis</strong>.</p>
 
-        <p>My Technical skills include <strong>Python, Bash, Shell Scripting, VAPT, WAPT, Nmap, Burp Suite, Autopsy, and OSINT Research</strong>. I am passionate about continuous learning, applying cybersecurity knowledge to real-world problems, and contributing to a safer digital ecosystem.</p>
+        <p>My Technical skills include <strong>Python, Bash, Shell Scripting, VAPT, WAPT, Nmap, Burp Suite, Autopsy and OSINT research</strong>. I am Passionate about continuous learning, applying cybersecurity knowledge to real-world problems, and contributing to a safer digital ecosystem.</p>
 
         <h3>🎓 Education</h3>
-        <ul id="education-list"></ul>
+        <ul>
+          <li>📘 <strong>ICSE, ISC (Pure Science):</strong> St. Thomas' High School, Howrah, West Bengal</li>
+          <li>💻 <strong>B.Sc. Digital Forensics:</strong> Indian School of Ethical Hacking (ISOEH) under MAKAUT, 2023–2026</li>
+        </ul>
 
         <h3>🎯 Goal</h3>
-        <p>As a dedicated Digital Forensics Student, my goal is to strengthen my expertise in Cybersecurity, Digital Investigations, and Ethical Hacking. I aim to develop practical skills that help uncover Digital Evidence, Detect Vulnerabilities, and secure critical systems. Ultimately, I aspire to become a proficient Cybersecurity Professional bridging theory and real-world application.</p>
+        <p>As a dedicated Digital Forensics Student, my goal is to strengthen my expertise in Cybersecurity, Digital Investigations, and Ethical Hacking. I aim to develop practical skills that help uncover Digital Evidence, Detect Vulnerabilities, and secure critical systems. Ultimately, I aspire to become a proficient Cybersecurity Professional, bridging theoretical knowledge and real-world application.</p>
       </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- SKILLS (kept all items — changed layout to compact boxes, no percentages) -->
     <section id="skills" class="page">
       <div class="content">
         <h2>Skills</h2>
-        <div id="skills-container" class="skills-container"></div>
+
+        <div class="skill-grid-columns">
+
+          <!-- Languages & Scripting -->
+          <div class="skill-box">
+            <h3>Languages & Scripting</h3>
+            <div class="skill-items">
+              <span>Python</span><span>Matplotlib</span><span>Bash</span><span>Shell Scripting</span><span>HTML</span><span>NumPy</span>
+            </div>
+          </div>
+
+          <!-- Security & Pentesting -->
+          <div class="skill-box">
+            <h3>Security & Pentesting</h3>
+            <div class="skill-items">
+              <span>VAPT</span><span>WAPT</span><span>Threat Management</span><span>Burp</span><span>Nmap</span><span>Internet Security</span><span>Network Security</span>
+            </div>
+          </div>
+
+          <!-- Forensic & OSINT -->
+          <div class="skill-box">
+            <h3>Forensic & OSINT</h3>
+            <div class="skill-items">
+              <span>Digital Forensic</span><span>Computer Forensic</span><span>Mobile Forensic</span><span>Network Forensic</span><span>Social Engineering</span><span>Information Gathering</span><span>Blue Team</span>
+            </div>
+          </div>
+
+          <!-- Operating Systems -->
+          <div class="skill-box small-box">
+            <h3>Operating Systems</h3>
+            <div class="skill-items">
+              <span>Unix</span><span>GNU/Linux</span><span>Ubuntu</span><span>Kali Linux</span><span>Black Arch</span><span>Parrot</span><span>Windows</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-box">
+            <h3>Tools</h3>
+            <div class="skill-items">
+              <span>Nmap</span><span>Autopsy</span><span>SPF (Smartphone Forensic)</span><span>Magnet AXIOM</span><span>FTK Imager</span><span>ZAP</span><span>Wireshark</span><span>WhatWeb / Wappalyzer</span><span>OpenVAS</span><span>Nessus</span><span>Nikto</span><span>Netcat</span><span>Telnet</span><span>Netdiscover</span><span>Angry IP Scanner</span><span>Advanced IP Scanner</span><span>And Many More</span>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="skill-box">
+            <h3>Artificial Intelligence & Machine Learning</h3>
+            <div class="skill-items">
+              <span>AI Prompting</span><span>Machine Learning (ML)</span>
+            </div>
+          </div>
+
+          <!-- Data Protection & Info Hiding -->
+          <div class="skill-box">
+            <h3>Data Protection & Information Hiding Techniques</h3>
+            <div class="skill-items">
+              <span>Cryptography</span><span>Steganography</span><span>Steganalysis</span><span>Obfuscation</span><span>Encoding</span><span>Decoding</span><span>Quantum Cryptography</span><span>Format-Preserving Encryption (FPE)</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION ===== -->
+    <!-- PROJECTS: all 4 preserved -->
     <section id="projects" class="page">
       <div class="content">
         <h2>Projects</h2>
-        <div id="projects-grid" class="projects-grid"></div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="assets/Basic-Strong-Password-Generator.jpg" alt="Basic Strong Password Generator">
+            <h3>Basic Strong Password Generator (2025)</h3>
+            <p>A simple Python script to generate a strong random password of desired length using uppercase letters, lowercase letters, digits, and special characters.</p>
+            <p><a href="https://github.com/isayani-78/-Basic-Strong-Password-Generator" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/caesar-cipher-generator.jpg" alt="Caesar Cipher Generator">
+            <h3>Caesar Cipher Generator (2025)</h3>
+            <p>The Caesar Cipher is one of the oldest known encryption techniques. This tool enhances it with auto-decryption and brute-force cracking for learning purposes.</p>
+            <p><a href="https://github.com/isayani-78/caesar-cipher-generator" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
+            <h3>CMTL — CyberSec Multi-Tool Launcher (2025)</h3>
+            <p>Cyber Security Multi-Tool Launcher: unified GUI to run scans, assessments and manage tools centrally.</p>
+            <p><a href="https://github.com/isayani-78/CMTL" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="Phishing Detector">
+            <h3>AI-Powered Phishing Email Detector (2025–Present)</h3>
+            <p>NLP + header analysis to detect phishing emails (in development). Seeking contributions.</p>
+            <p><a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector" target="_blank" class="github-link">View on GitHub</a></p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ===== CERTIFICATES ===== -->
+    <!-- CERTIFICATES: all preserved -->
     <section id="Certificates" class="page">
       <div class="content">
         <h2>Certificates of Participation</h2>
-        <div id="certificates-grid" class="certificates-grid"></div>
+        <div class="certificates-grid">
+          <div class="certificate-card"><img src="assets/Completion of Core Python Course.jpg" alt="Completion of Core Python Course"><h3>Completion of Core Python Course</h3></div>
+          <div class="certificate-card"><img src="assets/Certificate from Cyber Security Centre of Exellence Deprtment of Information Technology & Electronics Government of West Bengal.jpg" alt="Certificate from Cyber Security Centre"><h3>Certificate from Cyber Security Centre of Excellence</h3></div>
+          <div class="certificate-card"><img src="assets/Participation in CTF Organised by Our University Maulana Abul Kalam Azad University OF Technology (MAKAUT), West Bengal.jpg" alt="Participation in MAKAUT CTF"><h3>Participation in CTF organised by MAKAUT</h3></div>
+          <div class="certificate-card"><img src="assets/CTF Participation of Infocom Hackstar by ABP (2023).jpeg" alt="CTF 2023"><h3>CTF Participation Infocom Hackstar (2023)</h3></div>
+          <div class="certificate-card"><img src="assets/CTF Participation of Infocom Hackstar by ABP (2024).jpg" alt="CTF 2024"><h3>CTF Participation Infocom Hackstar (2024)</h3></div>
+          <div class="certificate-card"><img src="assets/Participation in Cryptoquest.jpg" alt="Cryptoquest"><h3>Participation in Cryptoquest</h3></div>
+          <div class="certificate-card"><img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 1].jfif" alt="Cyraksha 1"><h3>Participation in Cyraksha CTF (Hackathon 1)</h3></div>
+          <div class="certificate-card"><img src="assets/Participation in CTF of Cyraksha (The Cyber Club of Kolkata) [Hackathon 2].jpg" alt="Cyraksha 2"><h3>Participation in Cyraksha CTF (Hackathon 2)</h3></div>
+          <div class="certificate-card"><img src="assets/Participation In CTF workshop By Cyraksha (The Cyber Club Of Kolkata).jpg" alt="Cyraksha Workshop"><h3>Participation in Cyraksha CTF Workshop</h3></div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== RESEARCH FOCUS ===== -->
+    <!-- RESEARCH -->
     <section id="research" class="page">
       <div class="content" style="max-width:900px; margin:auto; text-align:left;">
         <h2>Research Focus</h2>
-        <p>
-          My Research Focuses on <strong>Forensic Artifact Analysis, Security Automation, and AI-driven threat detection</strong>. I explore <strong>Phishing detection, Privacy-preserving Forensics, and the development of open-source forensic tools</strong>. I also study <strong>machine learning techniques</strong> to improve digital evidence acquisition, analysis, and efficiency.
-        </p>
-        <p>
-          My ultimate aim is to Contribute Meaningfully to the Cybersecurity and Digital Forensics field, enhancing investigative efficiency and fostering safer digital environments through research and innovation.
-        </p>
+        <p>My Research Focuses on Forensic Artofact Analysis, Security Automation, and AI-driven threat detection. I explore Phishing detection,Privacy-preserving Forensics, and the development of open-source forensic tools. I also study machine learning techniques to improve digital evidence acquisition, analysis, and efficiency.</p>
+        <p>My ultimate aim is to Contribute Meaningfully to the Cybersecurity and Digital Forensics field, enhancing investigative efficiency and fostering safer digital environments through research and innovation.</p>
       </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
+    <!-- CONTACT (white background) - includes Formspree form and social links and short quote -->
     <section id="contact" class="page" style="background:#ffffff; padding:60px 20px;">
-      <div class="content" style="max-width:700px; margin:auto; text-align:center;">
+      <div class="content" style="max-width:760px; margin:auto; text-align:center;">
         <h2 style="color:#2c3e50;">Contact Me</h2>
-        <div style="display:inline-block; background-color:#2c3e50; padding:10px 20px; border-radius:8px; margin-bottom:20px;">
-          📧 
-          <a href="mailto:sayanimaity2024@gmail.com" style="color:#ffffff; text-decoration:none; font-weight:bold;">
-            sayanimaity2024@gmail.com
-          </a>
+
+        <div style="margin-top:12px;">
+          <div style="display:inline-block; background-color:#2c3e50; padding:10px 20px; border-radius:8px; margin-bottom:12px;">
+            📧 
+            <a href="mailto:sayanimaity2024@gmail.com" style="color:#ffffff; text-decoration:none; font-weight:bold;">sayanimaity2024@gmail.com</a>
+          </div>
         </div>
-        <p style="margin-top:15px; font-size:16px; color:#34495e;">
-          Let’s connect and collaborate! Reach out to me for cybersecurity discussions, research ideas, or tech projects.
-        </p>
+
+        <p style="margin-top:12px; font-size:16px; color:#34495e;">Let’s connect and collaborate! Reach out to me for cybersecurity discussions, research ideas, or project opportunities.</p>
+
+        <!-- Social links (visible here too) -->
+        <div style="margin-top:18px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+          <a href="https://github.com/isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none;">GitHub</a>
+          <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" style="color:#2c3e50; text-decoration:none;">LinkedIn</a>
+          <a href="https://x.com/isayani78" target="_blank" style="color:#2c3e50; text-decoration:none;">X</a>
+          <a href="https://medium.com/@isayani-78" target="_blank" style="color:#2c3e50; text-decoration:none;">Medium</a>
+          <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" style="color:#2c3e50; text-decoration:none;">GfG</a>
+        </div>
+
+        <!-- Contact form (Formspree) - preserved -->
+        <form id="contact-form" action="https://formspree.io/f/mpwjkzzz" method="POST" style="margin-top:20px; text-align:left;">
+          <div style="display:flex; gap:12px; flex-direction:column;">
+            <label for="name" style="color:#2c3e50; font-weight:600;">Name</label>
+            <input id="name" name="name" required placeholder="Your Name" style="padding:10px; border-radius:8px; border:1px solid #bdc3c7;"/>
+
+            <label for="email" style="color:#2c3e50; font-weight:600;">Email</label>
+            <input id="email" name="email" type="email" required placeholder="Your Email" style="padding:10px; border-radius:8px; border:1px solid #bdc3c7;"/>
+
+            <label for="message" style="color:#2c3e50; font-weight:600;">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message" style="padding:10px; border-radius:8px; border:1px solid #bdc3c7;"></textarea>
+
+            <button class="btn" type="submit" style="background:#27ae60;color:#fff;padding:12px;border:none;border-radius:8px;cursor:pointer;">Send Message</button>
+          </div>
+
+          <p style="font-size:0.85rem;color:#7f8c8d;margin-top:8px;">Sign up at Formspree and replace the form action if you need messages delivered to your email.</p>
+        </form>
       </div>
 
       <style>
-        #contact a:hover {
-          text-decoration: underline;
-          color: #27ae60;
-        }
+        #contact a:hover { text-decoration:underline; color:#27ae60; }
       </style>
     </section>
+
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="site-footer" style="background:#2c3e50; color:white; text-align:center; padding:20px 0;">
     <p>© <span id="year"></span> Sayani Maity — Built with care.</p>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    window.addEventListener("scroll", () => {
-      const homeSection = document.getElementById("home");
-      const rightPanel = document.getElementById("right-panel");
-      const rect = homeSection.getBoundingClientRect();
-      rightPanel.style.display = rect.bottom > 0 ? "block" : "none";
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
   <script src="script.js"></script>
