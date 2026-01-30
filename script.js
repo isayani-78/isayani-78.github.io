@@ -1,6 +1,6 @@
-/* script.js - final */
+/* script.js - final for own-hosted site */
 
-/* MATRIX BACKGROUND */
+/* MATRIX BACKGROUND (optional, can remove if not needed) */
 const canvas = document.getElementById('matrix');
 const ctx = canvas && canvas.getContext ? canvas.getContext('2d') : null;
 let cols = 0;
@@ -31,27 +31,17 @@ if (canvas && ctx){
   setInterval(tick,50);
 }
 
-/* SLIDESHOW (right panel) */
-let slideIdx = 0;
-const slides = Array.from(document.querySelectorAll('#slideshow .slide'));
-function showSlide(i){
-  slides.forEach((s,idx)=> s.classList.toggle('active', idx===i));
-}
-if (slides.length){
-  setInterval(()=>{ slideIdx = (slideIdx+1) % slides.length; showSlide(slideIdx);}, 4000);
-}
-
 /* MOBILE MENU (hamburger) */
 const hamburger = document.getElementById('hamburger');
 const topNav = document.getElementById('top-nav');
 hamburger?.addEventListener('click', ()=> topNav.classList.toggle('show'));
 
-/* SMOOTH NAV & ACTIVE LINK */
+/* SMOOTH NAVIGATION & ACTIVE LINK */
 const navLinks = Array.from(document.querySelectorAll('.top-nav a[href^="#"]'));
 navLinks.forEach(link=>{
   link.addEventListener('click', (e)=>{
     e.preventDefault();
-    topNav.classList.remove('show'); // close mobile menu
+    topNav.classList.remove('show');
     const target = document.querySelector(link.getAttribute('href'));
     if(target){
       const top = target.getBoundingClientRect().top + window.scrollY - 72;
@@ -60,23 +50,9 @@ navLinks.forEach(link=>{
   });
 });
 
-/* RIGHT PANEL: show only on top (home visible) */
-const rightPanel = document.getElementById('right-panel');
-function updateRightPanel(){
-  const home = document.getElementById('home');
-  if(!home || !rightPanel) return;
-  const rect = home.getBoundingClientRect();
-  // when home bottom > 100px -> show, else hide
-  if(rect.bottom > 120) { rightPanel.classList.remove('hidden'); rightPanel.style.pointerEvents='auto'; }
-  else { rightPanel.classList.add('hidden'); rightPanel.style.pointerEvents='none'; }
-}
-window.addEventListener('scroll', updateRightPanel);
-window.addEventListener('load', updateRightPanel);
-setTimeout(updateRightPanel,300);
-
 /* SECTION OBSERVER FOR ACTIVE LINK HIGHLIGHT */
 if('IntersectionObserver' in window){
-  const sections = document.querySelectorAll('main .page');
+  const sections = document.querySelectorAll('main .section, main section');
   const obs = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
@@ -88,10 +64,70 @@ if('IntersectionObserver' in window){
   sections.forEach(s=> obs.observe(s));
 }
 
-/* CERTIFICATE REVEAL - optional small effect */
+/* Dynamic content rendering from JSON */
+fetch('data.json')
+.then(r => r.json())
+.then(data => {
+  /* Projects */
+  const projContainer = document.getElementById('projects-container');
+  if(projContainer && data.projects){
+    data.projects.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'project-card';
+      div.innerHTML = `
+        <img src="${p.image}" alt="${p.title}">
+        <h3>${p.title} (${p.year})</h3>
+        <p><a href="${p.github}" target="_blank">View on GitHub</a></p>
+      `;
+      projContainer.appendChild(div);
+    });
+  }
+
+  /* Certificates */
+  const certContainer = document.getElementById('cert-container');
+  if(certContainer && data.certs){
+    data.certs.forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'certificate-card';
+      div.innerHTML = `<h3>${c}</h3>`;
+      certContainer.appendChild(div);
+    });
+  }
+
+  /* Skills */
+  const skillContainer = document.querySelector('.skill-grid');
+  if(skillContainer && data.skills){
+    skillContainer.innerHTML = ''; // clear static
+    Object.keys(data.skills).forEach(category=>{
+      const div = document.createElement('div');
+      div.innerHTML = `<h4>${category}</h4><p>${data.skills[category].join(', ')}</p>`;
+      skillContainer.appendChild(div);
+    });
+  }
+});
+
+/* Optional: Right Panel show/hide logic if still used */
+const rightPanel = document.getElementById('right-panel');
+function updateRightPanel(){
+  const home = document.getElementById('home');
+  if(!home || !rightPanel) return;
+  const rect = home.getBoundingClientRect();
+  if(rect.bottom > 120){
+    rightPanel.classList.remove('hidden');
+    rightPanel.style.pointerEvents='auto';
+  } else {
+    rightPanel.classList.add('hidden');
+    rightPanel.style.pointerEvents='none';
+  }
+}
+window.addEventListener('scroll', updateRightPanel);
+window.addEventListener('load', updateRightPanel);
+setTimeout(updateRightPanel,300);
+
+/* Certificate reveal effect */
 if('IntersectionObserver' in window){
   const certs = document.querySelectorAll('.certificate-card');
-  const cobs = new IntersectionObserver((entries, o) => {
+  const cobs = new IntersectionObserver((entries, o)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.style.transform = 'translateY(0)';
@@ -100,11 +136,9 @@ if('IntersectionObserver' in window){
       }
     });
   }, {threshold:0.12});
-  certs.forEach(c=> {
+  certs.forEach(c=>{
     c.style.transform = 'translateY(20px)';
     c.style.opacity = '0';
     cobs.observe(c);
   });
 }
-
-/* keep contact form default (Formspree) — no override */
