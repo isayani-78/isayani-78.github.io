@@ -1,6 +1,6 @@
 # 🌟 Sayani Maity — Portfolio & Resume Website  
 
-https://isayani-78.github.io/
+https://sayanimaity78.site/
 
 ---
 
@@ -33,11 +33,11 @@ This portfolio presents my journey: showcasing my technical skills, projects, ce
 - **GitHub:** [isayani-78](https://github.com/isayani-78)  
 - **LinkedIn:** [Sayani Maity](https://www.linkedin.com/in/sayani-maity-/)  
 - **Twitter / X:** [@isayani78](https://twitter.com/isayani78)  
-- **Portfolio:** [isayani-78.github.io](https://isayani-78.github.io/)  
+- **Portfolio:** [sayanimaity78.site](https://sayanimaity78.site/)  
 
 ---
 
 © 2025 **Sayani Maity** — All rights reserved.  
 Thank you for visiting my portfolio.  
 If you like my work, feel free to connect or ⭐ this repository!
-](https://isayani-78.github.io/)
+](https://sayanimaity78.site/)
