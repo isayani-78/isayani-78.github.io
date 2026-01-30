@@ -13,9 +13,43 @@
     "Data Protection & Info Hiding": ["Cryptography", "Steganography", "Steganalysis", "Obfuscation", "Encoding", "Decoding", "Quantum Cryptography", "Format-Preserving Encryption (FPE)"]
   },
   "projects": [
-    {"title":"Basic Strong Password Generator","year":"2025","image":"assets/Basic-Strong-Password-Generator.jpg","github":"https://github.com/isayani-78/-Basic-Strong-Password-Generator"},
-    {"title":"Caesar Cipher Generator","year":"2025","image":"assets/caesar-cipher-generator.jpg","github":"https://github.com/isayani-78/caesar-cipher-generator"},
-    {"title":"CMTL — CyberSec Multi-Tool Launcher","year":"2025","image":"assets/CMTL — CyberSec Multi-Tool Launcher.jpg","github":"https://github.com/isayani-78/CMTL"},
-    {"title":"AI-Powered Phishing Email Detector","year":"2025–Present","image":"assets/AI- powered Phishing Email Detector (In Development).jpg","github":"https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector"}
+    {
+      "title": "Basic Strong Password Generator",
+      "year": "2025",
+      "image": "assets/Basic-Strong-Password-Generator.jpg",
+      "github": "https://github.com/isayani-78/-Basic-Strong-Password-Generator"
+    },
+    {
+      "title": "Caesar Cipher Generator",
+      "year": "2025",
+      "image": "assets/caesar-cipher-generator.jpg",
+      "github": "https://github.com/isayani-78/caesar-cipher-generator"
+    },
+    {
+      "title": "CMTL — CyberSec Multi-Tool Launcher",
+      "year": "2025",
+      "image": "assets/CMTL — CyberSec Multi-Tool Launcher.jpg",
+      "github": "https://github.com/isayani-78/CMTL"
+    },
+    {
+      "title": "AI-Powered Phishing Email Detector",
+      "year": "2025–Present",
+      "image": "assets/AI- powered Phishing Email Detector (In Development).jpg",
+      "github": "https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector"
+    }
+  ],
+  "certs": [
+    "Completion of Core Python Course",
+    "Certificate from Cyber Security Centre of Excellence",
+    "Participation in CTF organised by MAKAUT",
+    "CTF Participation Infocom Hackstar 2023",
+    "CTF Participation Infocom Hackstar 2024",
+    "Participation in CryptoQuest",
+    "Participation in Cyraksha CTF Hackathon 1",
+    "Participation in Cyraksha CTF Hackathon 2",
+    "Participation in Cyraksha CTF Workshop",
+    "Deloitte Job Simulation (Forage)",
+    "Mastercard & New York Jobs CEO Council – Cybersecurity Job Simulation (Forage)",
+    "GroundZero WB Hackathon Certificate (ISOEH)"
   ]
 }
