@@ -1,448 +1,95 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title>
-  <meta name="description" content="Portfolio & resume of SAYANI MAITY — Digital Forensics student."/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary: linear-gradient(135deg, #00d4ff 0%, #ff6b6b 50%, #4ecdc4 100%);
-      --dark: #0a0a23;
-      --accent: #00d4ff;
-      --accent2: #ff6b6b;
-      --glass: rgba(255,255,255,0.1);
-    }
-    body { 
-      font-family: 'Inter', sans-serif; 
-      line-height: 1.7; 
-      color: #333; 
-      overflow-x: hidden;
-      background: #0a0a0f;
-    }
-
-    /* Matrix Canvas */
-    #matrix { 
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-      z-index: -1; opacity: 0.3;
-    }
-
-    /* Header */
-    .site-header {
-      position: fixed; top: 0; width: 100%; 
-      backdrop-filter: blur(20px); background: rgba(10,10,15,0.95);
-      z-index: 1000; padding: 1rem 5%; transition: all 0.3s ease;
-    }
-    .brand { 
-      font-size: 1.8rem; font-weight: 800; 
-      background: var(--primary); -webkit-background-clip: text; 
-      -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .brand span { color: var(--accent); }
-    .top-nav { display: flex; gap: 2rem; align-items: center; }
-    .top-nav a { 
-      color: #ccc; text-decoration: none; font-weight: 500; 
-      padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s;
-      position: relative;
-    }
-    .top-nav a:hover, .top-nav a.active { 
-      color: white; background: var(--glass); backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0,212,255,0.3);
-    }
-    .resume-btn { 
-      background: var(--primary); color: white !important; 
-      padding: 0.7rem 1.5rem !important; border-radius: 50px !important;
-      box-shadow: 0 10px 30px rgba(0,212,255,0.4);
-    }
-    .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 3px; background: #fff; border-radius: 2px; transition: 0.3s; }
-
-    /* Main Container */
-    main { margin-top: 80px; position: relative; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
-
-    /* Right Sidebar */
-    .right-panel { 
-      position: fixed; right: 5%; top: 120px; width: 320px; 
-      opacity: 0; visibility: hidden; transition: all 0.5s ease;
-    }
-    .right-panel.show { opacity: 1; visibility: visible; }
-    .profile-card { 
-      background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); 
-      border-radius: 25px; padding: 2rem; border: 1px solid var(--glass);
-      margin-bottom: 2rem; box-shadow: 0 25px 60px rgba(0,0,0,0.3);
-    }
-    .role { 
-      font-size: 1.1rem; color: var(--accent); font-weight: 600; 
-      margin-bottom: 1.5rem;
-    }
-    .social-bar a { 
-      display: block; color: #ccc; text-decoration: none; 
-      padding: 0.8rem 1rem; margin: 0.3rem 0; border-radius: 12px;
-      transition: all 0.3s; border: 1px solid var(--glass);
-    }
-    .social-bar a:hover { 
-      background: var(--primary); color: white; transform: translateX(10px);
-      box-shadow: 0 10px 30px rgba(0,212,255,0.4);
-    }
-
-    /* Slideshow */
-    .slideshow { 
-      position: relative; height: 200px; overflow: hidden; border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-    .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: 0.5s; }
-    .slide.active { opacity: 1; }
-    .slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
-    .cap { 
-      position: absolute; bottom: 15px; left: 15px; 
-      background: rgba(0,0,0,0.8); color: white; padding: 0.5rem 1rem;
-      border-radius: 20px; font-size: 0.85rem; font-weight: 500;
-    }
-
-    /* Sections */
-    .page { min-height: 100vh; padding: 120px 0; opacity: 0; transform: translateY(50px); transition: all 0.8s; }
-    .page.show { opacity: 1; transform: translateY(0); }
-    .content { max-width: 1000px; margin: 0 auto; }
-    .content h2 { 
-      font-size: 3rem; font-weight: 800; text-align: center; 
-      background: var(--primary); -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; margin-bottom: 3rem;
-    }
-    .content h3 { 
-      font-size: 1.8rem; color: var(--accent); margin: 2rem 0 1rem; 
-    }
-
-    /* Hero */
-    .hero-center { 
-      text-align: center; max-width: 800px; margin: 0 auto;
-      padding-top: 2rem;
-    }
-    .hero-photo { 
-      width: 250px; height: 250px; border-radius: 50%; 
-      object-fit: cover; box-shadow: 0 30px 80px rgba(0,212,255,0.4);
-      border: 6px solid var(--accent); margin-bottom: 2rem;
-    }
-    .hero-name { 
-      font-size: 4rem; font-weight: 800; margin: 1rem 0 1.5rem;
-      background: var(--primary); -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero-sub { list-style: none; font-size: 1.3rem; color: #ccc; }
-    .hero-sub li { margin: 0.8rem 0; opacity: 0.9; }
-
-    /* About + CEH Section */
-    .ceh-poster-section { 
-      background: rgba(255,255,255,0.03); backdrop-filter: blur(20px);
-      border-radius: 30px; padding: 4rem; margin: 3rem 0; border: 1px solid var(--glass);
-      box-shadow: 0 30px 100px rgba(0,0,0,0.4);
-    }
-    .ceh-poster { 
-      display: block; max-width: 100%; height: 500px; object-fit: cover;
-      border-radius: 20px; box-shadow: 0 25px 80px rgba(0,212,255,0.5);
-      border: 8px solid var(--accent); margin: 2rem auto;
-    }
-
-    /* Skills - Enhanced Grid */
-    .skills-container { 
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-      gap: 2rem; 
-    }
-    .skill-category { 
-      background: rgba(255,255,255,0.05); border-radius: 25px; 
-      padding: 2.5rem; border: 1px solid var(--glass); backdrop-filter: blur(15px);
-      transition: all 0.4s ease; position: relative; overflow: hidden;
-    }
-    .skill-category::before {
-      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.6s;
-    }
-    .skill-category:hover::before { left: 100%; }
-    .skill-category:hover { 
-      transform: translateY(-10px); box-shadow: 0 40px 120px rgba(0,212,255,0.3);
-    }
-    .skill-category h3 { 
-      color: var(--accent); margin-bottom: 1.5rem; font-size: 1.5rem;
-    }
-    .skill-list { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-    .skill-list span { 
-      background: var(--glass); color: #fff; padding: 0.6rem 1.2rem;
-      border-radius: 25px; font-size: 0.9rem; font-weight: 500;
-      transition: all 0.3s; backdrop-filter: blur(10px);
-    }
-    .skill-list span:hover { 
-      background: var(--primary); transform: scale(1.05);
-    }
-
-    /* Projects & Certificates Grid */
-    .projects-grid, .certificates-grid { 
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 2rem; margin-top: 3rem;
-    }
-    .project-card, .certificate-card { 
-      background: rgba(255,255,255,0.08); border-radius: 25px; 
-      overflow: hidden; border: 1px solid var(--glass); backdrop-filter: blur(15px);
-      transition: all 0.4s ease; position: relative;
-    }
-    .project-card:hover, .certificate-card:hover { 
-      transform: translateY(-15px) scale(1.02); 
-      box-shadow: 0 40px 100px rgba(0,212,255,0.4);
-    }
-    .project-card img, .certificate-card img { 
-      width: 100%; height: 220px; object-fit: cover;
-    }
-    .project-card h3, .certificate-card h3 { 
-      padding: 1.5rem 1.5rem 1rem; color: white; font-size: 1.3rem;
-    }
-    .project-card p { 
-      padding: 0 1.5rem 1.5rem; color: #ccc; 
-    }
-    .github-link { 
-      display: inline-block; margin: 0 1.5rem 1.5rem; 
-      color: var(--accent); text-decoration: none; font-weight: 600;
-      padding: 0.6rem 1.5rem; border: 2px solid var(--accent);
-      border-radius: 25px; transition: all 0.3s;
-    }
-    .github-link:hover { 
-      background: var(--accent); color: #0a0a0f;
-    }
-
-    /* Contact */
-    #contact { background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%); }
-    #contact .content { text-align: center; }
-    #contact .content > div { 
-      background: rgba(255,255,255,0.08); border-radius: 25px; 
-      padding: 3rem; border: 1px solid var(--glass); backdrop-filter: blur(20px);
-      margin: 2rem auto; max-width: 800px;
-    }
-    #contact-form input, #contact-form textarea { 
-      width: 100%; padding: 1rem; border: none; border-radius: 15px;
-      background: rgba(255,255,255,0.1); color: white; margin: 1rem 0;
-      backdrop-filter: blur(10px); font-family: inherit;
-    }
-    #contact-form button { 
-      background: var(--primary); color: white; border: none;
-      padding: 1rem 3rem; border-radius: 50px; font-size: 1.1rem;
-      cursor: pointer; font-weight: 600; transition: all 0.3s;
-    }
-    #contact-form button:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(0,212,255,0.5); }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .top-nav { display: none; }
-      .hamburger { display: flex; }
-      .right-panel { right: 2%; width: 280px; top: 100px; }
-      .hero-name { font-size: 2.5rem; }
-      .content h2 { font-size: 2rem; }
-      .skills-container, .projects-grid, .certificates-grid { 
-        grid-template-columns: 1fr; gap: 1.5rem; 
-      }
-    }
-
-    /* Animations */
-    @keyframes glow { 0%, 100% { text-shadow: 0 0 20px var(--accent); } 50% { text-shadow: 0 0 40px var(--accent), 0 0 60px var(--accent); } }
-    .glow { animation: glow 2s ease-in-out infinite; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayani Maity | CEH v13 | Digital Forensics</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <canvas id="matrix"></canvas>
 
-  <header class="site-header">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="brand">SAYANI <span>MAITY</span></div>
-      <nav class="top-nav" id="top-nav">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#Certificates">Certificates</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-        <a href="https://isayani-78.github.io/Sayani%20Maity%20Resume.pdf" class="resume-btn" download="Sayani_Maity_Resume.pdf">
-          <i class="fas fa-download"></i> Resume
-        </a>
-      </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+<header class="nav">
+  <div class="logo">Sayani<span>Maity</span></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certs">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>Certified Ethical Hacker <span>v13</span></h1>
+    <p>Digital Forensics • VAPT • OSINT • Cyber Research</p>
+    <div class="hero-badges">
+      <span>CEH v13</span>
+      <span>ISOEH</span>
+      <span>MAKAUT</span>
     </div>
-  </header>
+  </div>
+  <img src="assets/profile.jpg" class="hero-img">
+</section>
 
-  <main class="container">
-    <!-- Right Sidebar -->
-    <aside class="right-panel" id="right-panel">
-      <div class="profile-card">
-        <div class="info">
-          <p class="role">Digital Forensics Student • Pentester</p>
-          <div class="social-bar" id="sidebar-socials">
-            <a href="https://github.com/isayani-78" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="mailto:sayanimaity2024@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://discord.com/invite/isayani_78" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
-            <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank" rel="noopener"><i class="fab fa-geeksforgeeks"></i> GfG</a>
-            <a href="https://x.com/isayani78" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> X</a>
-            <a href="https://medium.com/@isayani-78" target="_blank" rel="noopener"><i class="fab fa-medium"></i> Medium</a>
-            <a href="https://www.facebook.com/isayani78" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
-          </div>
-        </div>
-      </div>
-      <div class="slideshow" id="slideshow">
-        <div class="slide active"><img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL"><div class="cap">CMTL — CyberSec Multi-Tool Launcher</div></div>
-        <div class="slide"><img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="AI-Powered Phishing Email Detector"><div class="cap">AI-Powered Phishing Email Detector (In Dev)</div></div>
-        <div class="slide"><img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study"><div class="cap">Forensic Case Study</div></div>
-      </div>
-    </aside>
+<section id="about" class="section">
+<h2>About</h2>
+<div class="about-grid">
+  <div class="about-text">
+    <p>I am <b>Sayani Maity</b>, a CEH v13 certified cybersecurity professional and B.Sc. Digital Forensics student at the Indian School of Ethical Hacking (ISOEH), under MAKAUT. My work focuses on ethical hacking, digital investigations, OSINT, and security research.</p>
+    <p>I actively participate in CTFs, hands‑on labs, and research projects involving phishing detection, forensic artefact analysis, and AI‑assisted security automation. I aim to bridge academic research with real‑world cybersecurity challenges.</p>
+  </div>
+  <div class="about-image">
+    <!-- Placeholder for your second picture -->
+    <div class="image-placeholder">Upload Image Here</div>
+  </div>
+</div>
+</section>
 
-    <!-- ALL YOUR ORIGINAL SECTIONS - ENHANCED -->
-    <section id="home" class="page">
-      <div class="hero-center">
-        <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
-        <h1 class="hero-name glow">SAYANI MAITY</h1>
-        <ul class="hero-sub">
-          <li>B.Sc. Digital Forensic Student 🔍</li>
-          <li>Academic Researcher 👩‍💻</li>
-          <li>Curious learner 💻</li>
-          <li>Exploring security & coding 🔐</li>
-          <li>Pentester 💻</li>
-        </ul>
-      </div>
-    </section>
+<section id="skills" class="section">
+<h2>Skills & Tools</h2>
+<div class="skill-grid">
+<div><h4>Pentesting</h4><p>Nmap, Burp, Nessus, OpenVAS, Nikto</p></div>
+<div><h4>Forensics</h4><p>Autopsy, FTK, Magnet AXIOM, Cellebrite</p></div>
+<div><h4>Languages</h4><p>Python, Bash, Shell, HTML</p></div>
+<div><h4>OS</h4><p>Kali, Parrot, Ubuntu, Windows</p></div>
+<div><h4>AI & Research</h4><p>ML, NLP, Phishing Detection</p></div>
+</div>
+</section>
 
-    <section id="about" class="page">
-      <div class="content">
-        <h2>About Me</h2>
-        <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics (2023-2026)</strong> at the <strong>Indian School Of Ethical Hacking (ISOEH),Kolkata</strong> under <strong>Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal, India</strong>. I specialize in Digital Forensics, Penetration Testing, OSINT, and cybersecurity tooling.</p>
-        <p>I am a fully <strong>CEH trained student</strong> and now completing the <strong>CHFI syllabus</strong>. I actively engage in <strong>CTF challenges, hands-on security research, and AI-assisted detection</strong> projects focused on automation and <strong>threat analysis</strong>.</p>
-        <p>My Technical skills include <strong>Python, Bash, Shell Scripting, VAPT, WAPT, Nmap, Burp Suite, Autopsy and OSINT research</strong>. I am Passionate about continuous learning, applying cybersecurity knowledge to real-world problems, and contributing to a safer digital ecosystem.</p>
-        <p>Top 6% in TryHackMe... <img src="assets/Sayani thm badge id.png" alt="Sayani THM Badge" width="80" style="vertical-align:middle; border-radius:6px; filter: drop-shadow(0 4px 12px rgba(0,212,255,0.6));"></p>
+<section id="projects" class="section">
+<h2>Projects</h2>
+<div id="projects-container" class="card-grid"></div>
+</section>
 
-        <h3>🎓 Education</h3>
-        <ul style="color: #ccc; font-size: 1.1rem; margin-left: 2rem;">
-          <li>📘 <strong>ICSE, ISC (Pure Science):</strong> St. Thomas' High School, Howrah, West Bengal</li>
-          <li>💻 <strong>B.Sc. Digital Forensics:</strong> Indian School of Ethical Hacking (ISOEH),Kolkata <strong>under</strong> Maulana Abul Kalam Azad University of Technology (MAKAUT), West Bengal, India (2023–2026)</li>
-        </ul>
+<section id="certs" class="section">
+<h2>Certifications</h2>
+<div class="ceh-card">
+  <img src="assets/ceh-poster.png">
+  <div>
+    <h3>Certified Ethical Hacker (CEH v13)</h3>
+    <p>EC‑Council • Active Credential</p>
+  </div>
+</div>
+<h3 class="sub">Other Certifications & Participation</h3>
+<div id="cert-container" class="card-grid"></div>
+</section>
 
-        <h3>🎯 Goal</h3>
-        <p style="font-style: italic; color: #aaa; font-size: 1.1rem;">As a dedicated Digital Forensics Student, my goal is to strengthen my expertise in Cybersecurity, Digital Investigations, and Ethical Hacking. I aim to develop practical skills that help uncover Digital Evidence, Detect Vulnerabilities, and secure critical systems. Ultimately, I aspire to become a proficient Cybersecurity Professional, bridging theoretical knowledge and real-world application.</p>
-      </div>
-    </section>
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Email: <a href="mailto:sayanimaity78@gmail.com">sayanimaity78@gmail.com</a></p>
+<p class="socials">
+<a href="https://github.com/isayani-78">GitHub</a>
+<a href="https://www.linkedin.com/in/sayanimaity/">LinkedIn</a>
+<a href="https://x.com/isayani78">X</a>
+<a href="https://medium.com/@isayani-78">Medium</a>
+</p>
+</section>
 
-    <!-- CEH POSTER SECTION - NEW! -->
-    <section class="ceh-poster-section">
-      <div class="content" style="text-align: center;">
-        <h2 style="background: var(--primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CEH Certification</h2>
-        <img src="assets/ceh-poster.jpg" alt="CEH Certificate Poster" class="ceh-poster">
-        <p style="font-size: 1.3rem; color: #ccc; margin-top: 1.5rem;">Certified Ethical Hacker - Ready to secure the digital world! 🔐</p>
-      </div>
-    </section>
-
-    <!-- ALL YOUR SKILLS, PROJECTS, CERTIFICATES SECTIONS CONTINUE EXACTLY AS ORIGINAL -->
-    <!-- [PASTE ALL REMAINING SECTIONS FROM YOUR ORIGINAL HTML HERE - THEY'RE IDENTICAL] -->
-    
-    <!-- Skills Section -->
-    <section id="skills" class="page">
-      <div class="content">
-        <h2>Skills</h2>
-        <div class="skills-container">
-          <!-- ALL YOUR ORIGINAL SKILL CATEGORIES - ENHANCED STYLING -->
-          <div class="skill-category">
-            <h3>Languages & Scripting</h3>
-            <div class="skill-list">
-              <span>Python</span><span>Matplotlib</span><span>Bash</span><span>Shell Scripting</span><span>HTML</span><span>NumPy</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Security & Pentesting</h3>
-            <div class="skill-list">
-              <span>VAPT</span><span>WAPT</span><span>Threat Management</span><span>Burp</span><span>Nmap</span><span>Internet Security</span><span>Network Security</span>
-            </div>
-          </div>
-          <!-- Continue all your other skill categories exactly as original -->
-          <!-- ... [Include ALL your original skills content] ... -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Continue with Projects, Certificates, Research, Contact EXACTLY as your original -->
-    <!-- I've preserved 100% of your content structure -->
-
-  </main>
-
-  <footer style="background: rgba(44,62,80,0.95); backdrop-filter: blur(20px); color: #ccc; text-align: center; padding: 2rem;">
-    <p>© <span id="year"></span> Sayani Maity | Digital Forensics & Ethical Hacking</p>
-  </footer>
-
-  <script>
-    // Matrix Rain Effect (Your Original)
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-    
-    function draw() {
-      ctx.fillStyle = 'rgba(0,0,0,0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#00d4ff';
-      ctx.font = `${fontSize}px monospace`;
-      
-      drops.forEach((y, i) => {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        ctx.fillText(text, i * fontSize, y * fontSize);
-        if (y * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      });
-    }
-    setInterval(draw, 50);
-
-    // Navigation & Animations (Enhanced)
-    const sections = document.querySelectorAll('.page');
-    const navLinks = document.querySelectorAll('.top-nav a');
-    
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-        navLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        document.getElementById('right-panel').classList.remove('show');
-      });
-    });
-
-    // Intersection Observer for animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    });
-    sections.forEach(section => observer.observe(section));
-
-    // Slideshow
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 4000);
-
-    // Mobile menu
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('top-nav').classList.toggle('show');
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer>© 2026 Sayani Maity</footer>
+<script src="script.js"></script>
 </body>
 </html>
+```
+
