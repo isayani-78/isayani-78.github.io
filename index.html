@@ -1,230 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>SAYANI MAITY — Digital Forensics & Ethical Hacking</title>
-<meta name="description" content="Portfolio & resume of SAYANI MAITY — Digital Forensics student."/>
-<link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayani Maity | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-<canvas id="matrix"></canvas>
+    <canvas id="matrix"></canvas>
 
-<header class="site-header">
-  <div class="brand">SAYANI <span>MAITY</span></div>
-  <nav class="top-nav" id="top-nav">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#Certificates">Certificates</a>
-    <a href="#research">Research Focus</a>
-    <a href="#contact">Contact</a>
-    <a href="Sayani_Maity_Resume.pdf" class="resume-btn" download>Download Resume</a>
-  </nav>
-  <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
-
-<main class="container">
-
-  <!-- RIGHT-SIDEBAR -->
-  <aside class="right-panel" id="right-panel">
-    <div class="profile-card">
-      <div class="photo-wrap">
-        <img src="assets/profile.jpg" alt="Sayani profile">
-      </div>
-      <div class="info">
-        <p class="role">Digital Forensics Student • Pentester</p>
-        <div class="social-bar">
-          <a href="https://github.com/isayani-78" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank">LinkedIn</a>
-          <a href="mailto:sayanimaity2024@gmail.com">Email</a>
-          <a href="https://discord.com/invite/isayani_78" target="_blank">Discord</a>
-          <a href="https://auth.geeksforgeeks.org/user/isayani_05" target="_blank">GfG</a>
-          <a href="https://x.com/isayani78" target="_blank">X</a>
-          <a href="https://medium.com/@isayani-78" target="_blank">Medium</a>
-          <a href="https://www.facebook.com/isayani78" target="_blank">Facebook</a>
+    <nav>
+        <div class="logo">SAYANI<span>.AI</span></div>
+        <div class="nav-links">
+            <a href="#about">01. About</a>
+            <a href="#skills">02. Arsenal</a>
+            <a href="#projects">03. Ops</a>
+            <a href="#contact" class="btn-glow">Connect</a>
         </div>
-      </div>
-    </div>
+    </nav>
 
-    <div class="slideshow" id="slideshow">
-      <div class="slide active">
-        <img src="assets/CMTL — CyberSec Multi-Tool Launcher.jpg" alt="CMTL">
-        <div class="cap">CMTL — CyberSec Multi-Tool Launcher</div>
-      </div>
-      <div class="slide">
-        <img src="assets/AI- powered Phishing Email Detector (In Development).jpg" alt="Phishing Detector">
-        <div class="cap">AI-Powered Phishing Email Detector</div>
-      </div>
-      <div class="slide">
-        <img src="assets/Forensic Case Study.jpg" alt="Forensic Case Study">
-        <div class="cap">Forensic Case Study</div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- HOME -->
-  <section id="home" class="page hero-section">
-    <div class="hero-center">
-      <img src="assets/profile.jpg" alt="Sayani profile" class="hero-photo"/>
-      <h1 class="hero-name">SAYANI MAITY</h1>
-      <ul class="hero-sub">
-        <li>B.Sc. Digital Forensic Student 🔍</li>
-        <li>Academic Researcher 👩‍💻</li>
-        <li>Curious Learner 💻</li>
-        <li>Exploring Security & Coding 🔐</li>
-        <li>Pentester 💻</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="page">
-    <div class="content" style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
-      <div style="flex:1; min-width:280px;">
-        <h2>About Me</h2>
-        <p>I am <strong>SAYANI MAITY</strong>, currently pursuing <strong>B.Sc. in Digital Forensics (2023-2026)</strong> at the <strong>ISOEH, Kolkata</strong> under <strong>MAKAUT</strong>. I specialize in Digital Forensics, Penetration Testing, OSINT, and cybersecurity tooling.</p>
-        <p>Fully <strong>CEH trained</strong> and completing the <strong>CHFI syllabus</strong>. Actively participating in <strong>CTFs, research, and AI-assisted detection projects</strong> focused on automation and threat analysis.</p>
-        <p>Technical skills include <strong>Python, Bash, Shell Scripting, VAPT, WAPT, Nmap, Burp Suite, Autopsy, OSINT</strong>.</p>
-        <p>Top 6% in TryHackMe <img src="assets/Sayani thm badge id.png" alt="THM Badge" width="80" style="vertical-align:middle; border-radius:6px;"></p>
-        <h3>🎓 Education</h3>
-        <ul>
-          <li>📘 ICSE, ISC (Pure Science): St. Thomas' High School, Howrah</li>
-          <li>💻 B.Sc. Digital Forensics: ISOEH, Kolkata under MAKAUT (2023–2026)</li>
-        </ul>
-        <h3>🎯 Goal</h3>
-        <p>To develop practical expertise in Cybersecurity, Digital Investigations, and Ethical Hacking. Aspiring to bridge theoretical knowledge with real-world application.</p>
-      </div>
-      <div style="flex:1; min-width:280px;">
-        <!-- Placeholder for second picture -->
-        <div style="width:100%; border:2px dashed var(--accent2); border-radius:12px; height:320px; display:flex; align-items:center; justify-content:center; color:var(--accent2); font-weight:bold; font-size:16px;">
-          Your Second Picture Here
+    <header class="hero">
+        <div class="hero-left">
+            <p class="mono accent">00 / System.Init</p>
+            <h1>Sayani Maity</h1>
+            <h2 class="text-gradient">CEH v13 AI & Digital Forensics</h2>
+            <p class="hero-bio">Investigating digital shadows and building AI-driven security architectures. Focused on the intersection of forensics and offensive AI.</p>
+            <div class="social-links" id="hero-socials"></div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="page">
-    <div class="content">
-      <h2 style="text-align:center; color: var(--accent2); margin-bottom: 30px;">Skills</h2>
-      <div class="skills-container">
-        <!-- Individual skill categories -->
-        <div class="skill-category">
-          <h3>Languages & Scripting</h3>
-          <div class="skill-list">
-            <span>Python</span><span>Matplotlib</span><span>Bash</span><span>Shell Scripting</span><span>HTML</span><span>NumPy</span>
-          </div>
+        <div class="hero-right">
+            <div class="hero-image-circle">
+                <img src="assets/profile.jpg" alt="Sayani">
+            </div>
         </div>
-        <div class="skill-category">
-          <h3>Security & Pentesting</h3>
-          <div class="skill-list">
-            <span>VAPT</span><span>WAPT</span><span>Threat Management</span><span>Burp</span><span>Nmap</span><span>Internet Security</span><span>Network Security</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Digital Forensics</h3>
-          <div class="skill-list">
-            <span>Digital Forensic</span><span>Computer Forensic</span><span>Mobile Forensic</span><span>Network Forensic</span><span>Social Engineering</span><span>Information Gathering</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Operating Systems</h3>
-          <div class="skill-list">
-            <span>GNU/Linux</span><span>Ubuntu</span><span>Kali Linux</span><span>Black Arch</span><span>Parrot</span><span>Windows</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Tools</h3>
-          <div class="skill-list">
-            <span>Nmap</span><span>Autopsy</span><span>SPF</span><span>Magnet AXIOM</span><span>FTK Imager</span><span>ZAP</span><span>Wireshark</span><span>OpenVAS</span><span>Nessus</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>AI & ML</h3>
-          <div class="skill-list">
-            <span>AI Prompting</span><span>Machine Learning (ML)</span>
-          </div>
-        </div>
-        <div class="skill-category">
-          <h3>Data Protection & Info Hiding</h3>
-          <div class="skill-list">
-            <span>Cryptography</span><span>Steganography</span><span>Steganalysis</span><span>Obfuscation</span><span>Encoding</span><span>Decoding</span><span>Quantum Cryptography</span><span>FPE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="page">
-    <div class="content">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <!-- Example project card -->
-        <article class="project-card">
-          <img src="assets/Basic-Strong-Password-Generator.jpg" alt="Basic Strong Password Generator">
-          <h3>Basic Strong Password Generator (2025)</h3>
-          <p>Python script to generate strong passwords with letters, digits, and special chars.</p>
-          <p><a href="https://github.com/isayani-78/-Basic-Strong-Password-Generator" target="_blank" class="github-link">View on GitHub</a></p>
-        </article>
-        <!-- Add other projects similarly -->
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATES -->
-  <section id="Certificates" class="page">
-    <div class="content">
-      <h2>Certificates</h2>
-      <div class="certificates-grid">
-        <!-- Example certificate card -->
-        <div class="certificate-card">
-          <img src="assets/Completion of Core Python Course.jpg" alt="Core Python Course">
-          <h3>Completion of Core Python Course</h3>
+    <section id="about" class="page">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="mono accent">01 / The Narrative</span>
+                <h2>Behind the Terminal</h2>
+                <p id="about-content">I am SAYANI MAITY, pursuing B.Sc. in Digital Forensics at ISOEH. Specialized in VAPT, OSINT, and forensic investigation.</p>
+                <div class="education-box">
+                    <h3>🎓 Education</h3>
+                    <p>B.Sc. Digital Forensics - MAKAUT (2023-2026)</p>
+                </div>
+                <div class="goal-box">
+                    <h3>🎯 Mission</h3>
+                    <p>To bridge the gap between digital evidence and secure AI-driven architecture.</p>
+                </div>
+            </div>
+            <div class="about-portrait">
+                <img src="assets/portrait.jpg" alt="Sayani Portrait" class="portrait-img">
+            </div>
         </div>
-        <!-- Add other certificates similarly -->
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- RESEARCH -->
-  <section id="research" class="page">
-    <div class="content">
-      <h2>Research Focus</h2>
-      <p>Focus on forensic artifact analysis, security automation, AI-driven threat detection, phishing detection, privacy-preserving forensics, and open-source forensic tools.</p>
-      <p>Goal: Contribute to Cybersecurity and Digital Forensics field by enhancing investigative efficiency and safer digital environments.</p>
-    </div>
-  </section>
+    <section id="skills" class="page">
+        <span class="mono accent">02 / Technical Arsenal</span>
+        <h2>Capabilities</h2>
+        <div id="skills-grid" class="skills-grid"></div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="page">
-    <div class="content">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:sayanimaity78@gmail.com">sayanimaity78@gmail.com</a></p>
-      <p>Let’s connect for cybersecurity discussions, research ideas, or projects.</p>
-      <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <a href="https://github.com/isayani-78" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/sayanimaity/" target="_blank">LinkedIn</a>
-        <a href="https://x.com/isayani78" target="_blank">X</a>
-      </div>
-    </div>
-  </section>
+    <section id="projects" class="page">
+        <span class="mono accent">03 / Operations</span>
+        <h2>Case Studies</h2>
+        <div id="projects-grid" class="projects-grid"></div>
+    </section>
 
-</main>
+    <section id="contact" class="page">
+        <div class="contact-box">
+            <h2>Secure Connection</h2>
+            <form id="email-form">
+                <input type="text" name="user_name" placeholder="Name" required>
+                <input type="email" name="user_email" placeholder="Email" required>
+                <textarea name="message" placeholder="Encrypted Message" rows="5"></textarea>
+                <button type="submit" class="btn-glow">Send Transmission</button>
+            </form>
+        </div>
+    </section>
 
-<footer class="site-footer">
-  <p>© <span id="year"></span> Sayani Maity</p>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
