@@ -1,55 +1,43 @@
 {
   "personal": {
     "name": "Sayani Maity",
-    "email": "sayanimaity2024@gmail.com"
+    "role": "CEH v13 AI Certified | Digital Forensics Specialist",
+    "email": "sayanimaity2024@gmail.com",
+    "location": "Kolkata, India",
+    "resume_link": "https://isayani-78.github.io/Sayani%20Maity%20Resume.pdf"
   },
-  "skills": {
-    "Languages & Scripting": ["Python", "Matplotlib", "Bash", "Shell Scripting", "HTML", "NumPy"],
-    "Security & Pentesting": ["VAPT", "WAPT", "Threat Management", "Burp", "Nmap", "Internet Security", "Network Security"],
-    "Forensic & OSINT": ["Digital Forensic", "Computer Forensic", "Mobile Forensic", "Network Forensic", "Social Engineering", "Information Gathering", "Blue Team"],
-    "Operating Systems": ["Unix", "GNU/Linux", "Ubuntu", "Kali Linux", "Black Arch", "Parrot", "Windows"],
-    "Tools": ["Nmap", "Autopsy", "SPF (Smartphone Forensic)", "Magnet AXIOM", "FTK Imager", "ZAP", "Wireshark", "WhatWeb / Wappalyzer", "OpenVAS", "Nessus", "Nikto", "Netcat", "Telnet", "Netdiscover", "Angry IP Scanner", "Advanced IP Scanner", "And Many More"],
-    "AI & ML": ["AI Prompting", "Machine Learning (ML)"],
-    "Data Protection & Info Hiding": ["Cryptography", "Steganography", "Steganalysis", "Obfuscation", "Encoding", "Decoding", "Quantum Cryptography", "Format-Preserving Encryption (FPE)"]
-  },
+  "socials": [
+    {"name": "GitHub", "url": "https://github.com/isayani-78"},
+    {"name": "LinkedIn", "url": "https://www.linkedin.com/in/sayanimaity/"},
+    {"name": "X", "url": "https://x.com/isayani78"},
+    {"name": "Medium", "url": "https://medium.com/@isayani-78"}
+  ],
+  "skills_categories": [
+    {
+      "title": "Forensics & OSINT",
+      "list": ["Autopsy", "Magnet AXIOM", "FTK Imager", "Cellebrite UFED", "OSINT Research"]
+    },
+    {
+      "title": "Offensive Security",
+      "list": ["VAPT", "WAPT", "Burp Suite", "Nmap", "Metasploit", "ZAP"]
+    },
+    {
+      "title": "AI & Research",
+      "list": ["CEH v13 AI", "Machine Learning", "AI Prompting", "Security Automation"]
+    }
+  ],
   "projects": [
     {
-      "title": "Basic Strong Password Generator",
-      "year": "2025",
-      "image": "assets/Basic-Strong-Password-Generator.jpg",
-      "github": "https://github.com/isayani-78/-Basic-Strong-Password-Generator"
-    },
-    {
-      "title": "Caesar Cipher Generator",
-      "year": "2025",
-      "image": "assets/caesar-cipher-generator.jpg",
-      "github": "https://github.com/isayani-78/caesar-cipher-generator"
-    },
-    {
-      "title": "CMTL — CyberSec Multi-Tool Launcher",
-      "year": "2025",
-      "image": "assets/CMTL — CyberSec Multi-Tool Launcher.jpg",
+      "title": "CMTL Launcher",
+      "desc": "CyberSec Multi-Tool Launcher for automated security testing.",
+      "image": "assets/CMTL.jpg",
       "github": "https://github.com/isayani-78/CMTL"
     },
     {
-      "title": "AI-Powered Phishing Email Detector",
-      "year": "2025–Present",
-      "image": "assets/AI- powered Phishing Email Detector (In Development).jpg",
+      "title": "AI Phishing Detector",
+      "desc": "NLP + header analysis to detect malicious emails.",
+      "image": "assets/phishing.jpg",
       "github": "https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector"
     }
-  ],
-  "certs": [
-    "Completion of Core Python Course",
-    "Certificate from Cyber Security Centre of Excellence",
-    "Participation in CTF organised by MAKAUT",
-    "CTF Participation Infocom Hackstar 2023",
-    "CTF Participation Infocom Hackstar 2024",
-    "Participation in CryptoQuest",
-    "Participation in Cyraksha CTF Hackathon 1",
-    "Participation in Cyraksha CTF Hackathon 2",
-    "Participation in Cyraksha CTF Workshop",
-    "Deloitte Job Simulation (Forage)",
-    "Mastercard & New York Jobs CEO Council – Cybersecurity Job Simulation (Forage)",
-    "GroundZero WB Hackathon Certificate (ISOEH)"
   ]
 }
