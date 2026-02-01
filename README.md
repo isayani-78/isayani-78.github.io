@@ -1,6 +1,6 @@
 # 🌟 Sayani Maity — Portfolio & Resume Website  
 
-https://sayanimaity78.site/
+sayanimaity78.site
 
 ---
 
