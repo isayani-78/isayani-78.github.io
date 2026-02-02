@@ -807,31 +807,46 @@
         </a>
     </div>
 
-    <!-- Contact Info -->
-    <div class="contact-info" style="margin-bottom: 30px;">
-        <p>Initiate handshake protocol. Open to internships and collaborative investigations.</p>
-        <div class="contact-links" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
-            <a href="mailto:sayanimaity78@gmail.com" class="contact-btn">✉ EMAIL</a>
-            <a href="https://linkedin.com/in/sayanimaity" target="_blank" class="contact-btn">in LINKEDIN</a>
-            <a href="https://github.com/sayanimaity" target="_blank" class="contact-btn">git GITHUB</a>
-            <a href="https://medium.com/@sayanimaity" target="_blank" class="contact-btn">m MEDIUM</a>
-            <a href="https://twitter.com/sayanimaity" target="_blank" class="contact-btn">t TWITTER</a>
-            <a href="https://facebook.com/sayanimaity" target="_blank" class="contact-btn">f FACEBOOK</a>
-            <a href="https://discord.com/users/yourdiscordid" target="_blank" class="contact-btn">d DISCORD</a>
-            <a href="https://t.me/sayanimaity" target="_blank" class="contact-btn">tg TELEGRAM</a>
-        </div>
-    </div>
+    <section id="contact" style="display:flex; justify-content:center; align-items:center; min-height:100vh; background-color:#121212; color:#fff;">
+    <div style="width:100%; max-width:600px; padding:30px; background-color:#1e1e1e; border-radius:15px; box-shadow:0 4px 20px rgba(0,0,0,0.5); text-align:center;">
 
-    <!-- Contact Form -->
-    <form id="contact-form" class="contact-form" style="display:flex; flex-direction:column; gap:15px;">
-        <div style="display:flex; gap:15px; flex-wrap:wrap;">
-            <input type="text" name="name" placeholder="Your Name *" required style="flex:1; padding:10px;">
-            <input type="email" name="email" placeholder="Your Email *" required style="flex:1; padding:10px;">
+        <!-- Resume Download -->
+        <div style="margin-bottom:20px;">
+            <a href="resume.pdf" download 
+               style="display:inline-block; padding:10px 15px; background-color:#333; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold; font-size:14px;">
+                ⬇ Download Resume
+            </a>
         </div>
-        <input type="text" name="subject" placeholder="Your Subject.." style="padding:10px;">
-        <textarea name="message" placeholder="Your Message..." rows="6" style="padding:10px;"></textarea>
-        <button type="submit" class="contact-btn" style="align-self:flex-start; padding:10px 20px;">Send Message</button>
-    </form>
+
+        <!-- Contact Info -->
+        <p style="font-weight:bold; font-size:16px; margin-bottom:20px;">
+            Initiate handshake protocol. Open to internships and collaborative investigations.
+        </p>
+
+        <!-- Social Links -->
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:25px;">
+            <a href="mailto:sayanimaity78@gmail.com" class="contact-btn" style="padding:8px 12px; background:#333; border-radius:6px; text-decoration:none; color:#fff;">✉ Email</a>
+            <a href="https://linkedin.com/in/sayanimaity" target="_blank" style="padding:8px 12px; background:#0077b5; border-radius:6px; text-decoration:none; color:#fff;">in LinkedIn</a>
+            <a href="https://github.com/sayanimaity" target="_blank" style="padding:8px 12px; background:#24292f; border-radius:6px; text-decoration:none; color:#fff;">GitHub</a>
+            <a href="https://medium.com/@sayanimaity" target="_blank" style="padding:8px 12px; background:#000000; border-radius:6px; text-decoration:none; color:#fff;">Medium</a>
+            <a href="https://twitter.com/sayanimaity" target="_blank" style="padding:8px 12px; background:#1DA1F2; border-radius:6px; text-decoration:none; color:#fff;">Twitter</a>
+            <a href="https://facebook.com/sayanimaity" target="_blank" style="padding:8px 12px; background:#1877F2; border-radius:6px; text-decoration:none; color:#fff;">Facebook</a>
+            <a href="https://discord.com/users/yourdiscordid" target="_blank" style="padding:8px 12px; background:#5865F2; border-radius:6px; text-decoration:none; color:#fff;">Discord</a>
+            <a href="https://t.me/sayanimaity" target="_blank" style="padding:8px 12px; background:#0088cc; border-radius:6px; text-decoration:none; color:#fff;">Telegram</a>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" style="display:flex; flex-direction:column; gap:15px;">
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <input type="text" name="name" placeholder="Your Name *" required style="flex:1; padding:10px; border-radius:6px; border:none;">
+                <input type="email" name="email" placeholder="Your Email *" required style="flex:1; padding:10px; border-radius:6px; border:none;">
+            </div>
+            <input type="text" name="subject" placeholder="Your Subject.." style="padding:10px; border-radius:6px; border:none;">
+            <textarea name="message" placeholder="Your Message..." rows="6" style="padding:10px; border-radius:6px; border:none;"></textarea>
+            <button type="submit" style="padding:10px 20px; background:#ff4d4d; color:#fff; border:none; border-radius:8px; cursor:pointer;">Send Message</button>
+        </form>
+
+    </div>
 </section>
 
 
@@ -1130,6 +1145,7 @@
 </body>
 
 </html>
+
 
 
 
