@@ -5,21 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-        /* FIX: prevent project card click affecting lower sections */
-.project-card {
-    position: relative;
-    cursor: pointer;
-}
-
-.project-card-inner {
-    pointer-events: auto;
-}
-
-.project-card * {
-    pointer-events: auto;
-}
-
-        /* --- RESET & VARIABLES --- */
+    
+    /* --- RESET & VARIABLES --- */
         :root {
             --bg-color: #050505;
             --text-color: #a0a0a0;
@@ -559,7 +546,12 @@
     <div class="projects-grid">
 
         <!-- PROJECT 1 -->
-        <div class="project-card" onclick="window.open('https://github.com/isayani-78/forensic-analyzer', '_blank')">
+        <div class="project-card">
+    <!-- CLICK LAYER (new, safe) -->
+    <a href="https://github.com/isayani-78/forensic-analyzer"
+       target="_blank"
+       class="project-click-layer"></a>
+
     <div class="project-card-inner">
 
         <div class="project-card-front">
@@ -584,18 +576,26 @@
 
     </div>
 </div>
+
         <!-- PROJECT 2 -->
-       <div class="project-card" onclick="window.open('https://github.com/isayani-78/CMTL', '_blank')">
+      <div class="project-card">
+    <!-- SAFE CLICK LAYER -->
+    <a href="https://github.com/isayani-78/CMTL"
+       target="_blank"
+       class="project-click-layer"></a>
+
     <div class="project-card-inner">
 
         <div class="project-card-front">
             <img src="project2.png" alt="Cyber Security Multi-Tool" style="width:70px; height:70px; object-fit:contain; margin-bottom:10px;">
-            <h3 style="color:#fff; font-weight:bold; font-size:16px; margin-bottom:6px;">Cyber Security Multi-Tool Launcher (CMTL).</h3>
+            <h3 style="color:#fff; font-weight:bold; font-size:16px; margin-bottom:6px;">
+                Cyber Security Multi-Tool Launcher (CMTL).
+            </h3>
             <p style="font-size:13px; line-height:1.4; opacity:0.85; margin-bottom:10px;">
                 GUI platform for VAPT, Pen Testing, and Network Scanning.
             </p>
-            <a href="https://github.com/isayani-78/CMTL" 
-               target="_blank" 
+            <a href="https://github.com/isayani-78/CMTL"
+               target="_blank"
                style="font-size:12px; text-decoration:none; border:1px solid currentColor; padding:4px 10px; color:#fff;">
                View on GitHub
             </a>
@@ -604,20 +604,30 @@
         <div class="project-card-back">
             <span class="project-date">Aug 2025 - Present</span>
             <h3 class="project-title">Cyber Security Multi-Tool Launcher</h3>
-            <p class="project-desc">GUI platform for VAPT, Pen Testing, and Network Scanning. A one-click interface to streamline tasks for efficiency. (Academic Project)</p>
+            <p class="project-desc">
+                GUI platform for VAPT, Pen Testing, and Network Scanning. A one-click interface to streamline tasks for efficiency. (Academic Project)
+            </p>
             <div class="project-tech">GUI // VAPT // AUTOMATION</div>
         </div>
 
     </div>
 </div>
 
+
 <!-- PROJECT 3 -->
-        <div class="project-card" onclick="window.open('https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector', '_blank')">
+       <div class="project-card">
+    <!-- SAFE CLICK LAYER -->
+    <a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector"
+       target="_blank"
+       class="project-click-layer"></a>
+
     <div class="project-card-inner">
 
         <div class="project-card-front">
-            <img src="project3.png" alt="AI Phishing Detector" style="width:70px; height:70px; object-fit:contain; margin-bottom:10px;">
-            <h3 style="color:#fff; font-weight:bold; font-size:16px; margin-bottom:6px;">AI-Powered Phishing Email Detector.</h3>
+            <img src="project3.png" alt="AI-Powered Phishing Detector" style="width:70px; height:70px; object-fit:contain; margin-bottom:10px;">
+            <h3 style="color:#fff; font-weight:bold; font-size:16px; margin-bottom:6px;">
+                AI-Powered Phishing Email Detector.
+            </h3>
             <p style="font-size:13px; line-height:1.4; opacity:0.85; margin-bottom:10px;">
                 Detects phishing emails using AI analysis of headers and content.
             </p>
@@ -631,7 +641,9 @@
         <div class="project-card-back">
             <span class="project-date">June 2025 - Present</span>
             <h3 class="project-title">AI-Powered Phishing Email Detector</h3>
-            <p class="project-desc">Detects phishing emails using AI-based analysis of headers and content to identify malicious patterns.</p>
+            <p class="project-desc">
+                Detects phishing emails using AI-based analysis of headers and content to identify malicious patterns.
+            </p>
             <div class="project-tech">AI // EMAIL SEC // THREAT INTEL</div>
         </div>
 
@@ -1179,6 +1191,7 @@
     </script>
 </body>
 </html>
+
 
 
 
