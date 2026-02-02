@@ -797,64 +797,43 @@
         </div>
     </section>
 
-   <section id="contact" class="hidden">
+  <section id="contact" class="hidden">
     <h2 class="section-title hyper-text">SECURE UPLINK</h2>
 
     <!-- Resume Download -->
-    <div class="resume-download">
+    <div class="resume-download" style="margin-bottom: 20px;">
         <a href="resume.pdf" download class="contact-btn">
-            <span>⬇</span> DOWNLOAD RESUME
+            ⬇ DOWNLOAD RESUME
         </a>
     </div>
 
     <!-- Contact Info -->
-    <div class="contact-box">
+    <div class="contact-info" style="margin-bottom: 30px;">
         <p>Initiate handshake protocol. Open to internships and collaborative investigations.</p>
-
-        <!-- Email -->
-        <a href="mailto:sayanimaity78@gmail.com" class="contact-btn">
-            <span>✉</span> sayanimaity78@gmail.com
-        </a>
-
-        <!-- Social Links -->
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/sayanimaity" target="_blank" class="contact-btn">
-                <span>in</span> LINKEDIN
-            </a>
-            <a href="https://github.com/sayanimaity" target="_blank" class="contact-btn">
-                <span>git</span> GITHUB
-            </a>
-            <a href="https://medium.com/@sayanimaity" target="_blank" class="contact-btn">
-                <span>m</span> MEDIUM
-            </a>
-            <a href="https://twitter.com/sayanimaity" target="_blank" class="contact-btn">
-                <span>t</span> TWITTER
-            </a>
-            <a href="https://facebook.com/sayanimaity" target="_blank" class="contact-btn">
-                <span>f</span> FACEBOOK
-            </a>
-            <a href="https://discord.com/users/yourdiscordid" target="_blank" class="contact-btn">
-                <span>d</span> DISCORD
-            </a>
-            <a href="https://t.me/sayanimaity" target="_blank" class="contact-btn">
-                <span>tg</span> TELEGRAM
-            </a>
+        <div class="contact-links" style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+            <a href="mailto:sayanimaity78@gmail.com" class="contact-btn">✉ EMAIL</a>
+            <a href="https://linkedin.com/in/sayanimaity" target="_blank" class="contact-btn">in LINKEDIN</a>
+            <a href="https://github.com/sayanimaity" target="_blank" class="contact-btn">git GITHUB</a>
+            <a href="https://medium.com/@sayanimaity" target="_blank" class="contact-btn">m MEDIUM</a>
+            <a href="https://twitter.com/sayanimaity" target="_blank" class="contact-btn">t TWITTER</a>
+            <a href="https://facebook.com/sayanimaity" target="_blank" class="contact-btn">f FACEBOOK</a>
+            <a href="https://discord.com/users/yourdiscordid" target="_blank" class="contact-btn">d DISCORD</a>
+            <a href="https://t.me/sayanimaity" target="_blank" class="contact-btn">tg TELEGRAM</a>
         </div>
     </div>
 
     <!-- Contact Form -->
-    <form id="contact-form" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="contact-btn">Send Message</button>
+    <form id="contact-form" class="contact-form" style="display:flex; flex-direction:column; gap:15px;">
+        <div style="display:flex; gap:15px; flex-wrap:wrap;">
+            <input type="text" name="name" placeholder="Your Name *" required style="flex:1; padding:10px;">
+            <input type="email" name="email" placeholder="Your Email *" required style="flex:1; padding:10px;">
+        </div>
+        <input type="text" name="subject" placeholder="Your Subject.." style="padding:10px;">
+        <textarea name="message" placeholder="Your Message..." rows="6" style="padding:10px;"></textarea>
+        <button type="submit" class="contact-btn" style="align-self:flex-start; padding:10px 20px;">Send Message</button>
     </form>
 </section>
 
-
-    <footer>
-        <p>SYSTEM STATUS: OPTIMAL | © 2026 SAYANI MAITY | DESIGNED BY AI</p>
-    </footer>
 
     <script>
         // --- HORROR SPLASH LOGIC ---
@@ -1151,6 +1130,7 @@
 </body>
 
 </html>
+
 
 
 
