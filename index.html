@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
+        /* FIX: prevent project card click affecting lower sections */
+.project-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.project-card-inner {
+    pointer-events: auto;
+}
+
+.project-card * {
+    pointer-events: auto;
+}
+
         /* --- RESET & VARIABLES --- */
         :root {
             --bg-color: #050505;
@@ -1165,6 +1179,7 @@
     </script>
 </body>
 </html>
+
 
 
 
