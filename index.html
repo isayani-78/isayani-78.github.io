@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sayani Maity | Portfolio</title>
+
+<!-- =======================
+     DO NOT TOUCH THIS AREA
+     YOUR ORIGINAL 3D BACKGROUND
+     PASTE YOUR EXACT CODE HERE
+     ======================= -->
+<style>
+/* ===== ORIGINAL 3D BACKGROUND CSS GOES HERE (UNCHANGED) ===== */
+</style>
+
+<script>
+/* ===== ORIGINAL 3D BACKGROUND JS GOES HERE (UNCHANGED) ===== */
+</script>
+<!-- ======================= -->
+
+<style>
+/* BASIC RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#0b0b0b;color:#fff}
+
+/* NAVBAR */
+nav{
+ position:fixed;top:0;width:100%;z-index:999;
+ background:rgba(0,0,0,.6);
+ padding:15px 30px;
+ display:flex;justify-content:space-between;align-items:center
+}
+nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
+.menu{display:flex}
+.menu-toggle{display:none;font-size:22px;cursor:pointer}
+
+/* HERO */
+.hero{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+ padding-top:80px
+}
+.hero img{
+ width:170px;height:170px;
+ border-radius:50%;
+ object-fit:cover;
+ margin-bottom:20px
+}
+
+/* SECTION */
+section{padding:80px 20px}
+.section-title{text-align:center;font-size:26px;margin-bottom:40px}
+
+/* PROJECTS */
+.projects{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+ gap:30px
+}
+.project-box{
+ background:#141414;
+ padding:30px;
+ border-radius:16px;
+ min-height:280px
+}
+.project-box a{color:#0f0;text-decoration:none}
+
+/* ARSENAL */
+.arsenal{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:25px
+}
+.box{background:#141414;padding:20px;border-radius:14px}
+
+/* CERTIFICATES */
+.cert-area{
+ display:flex;
+ justify-content:center;
+ margin-top:30px
+}
+.cert-box{
+ width:300px;height:180px;
+ border:2px dashed #444;
+ display:flex;
+ align-items:center;
+ justify-content:center
+}
+
+/* CONTACT */
+.contact-box{
+ max-width:600px;
+ margin:0 auto;
+ background:#141414;
+ padding:30px;
+ border-radius:15px;
+ text-align:center
+}
+
+/* MOBILE */
+@media(max-width:768px){
+ .menu{display:none;flex-direction:column;background:#000;position:absolute;top:60px;right:20px;padding:15px}
+ .menu.show{display:flex}
+ .menu-toggle{display:block}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+ <strong>Sayani</strong>
+ <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+ <div class="menu">
+  <a href="#projects">Projects</a>
+  <a href="#arsenal">Arsenal</a>
+  <a href="#credentials">Credentials</a>
+  <a href="#contact">Contact</a>
+ </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+ <!-- 1️⃣ PROFILE IMAGE -->
+ <img src="sayanipfp.jpg" alt="Profile Picture">
+ <h1>Sayani Maity</h1>
+ <p>Cybersecurity | Digital Forensics | Ethical Hacking</p>
+
+ <!-- 2️⃣ INITIALIZE CONTACT REMOVED COMPLETELY -->
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">PROJECTS</h2>
+
+<div class="projects">
+
+ <!-- 3️⃣ PROJECT BOXES (ENLARGED, NO RED LABEL, NO TOP SECRET) -->
+ <div class="project-box">
+  <h3>Forensic Analyzer</h3>
+  <p>Web-based forensic learning and analysis platform with hashing, encoding and evidence handling.</p>
+  <a href="https://github.com/isayani-78/forensic-analyzer" target="_blank">View on GitHub</a>
+ </div>
+
+ <div class="project-box">
+  <h3>CMTL</h3>
+  <p>Cyber Security Multi-Tool Launcher integrating VAPT utilities into one interface.</p>
+  <a href="https://github.com/isayani-78/CMTL" target="_blank">View on GitHub</a>
+ </div>
+
+ <div class="project-box">
+  <h3>AI Phishing Detector</h3>
+  <p>AI-powered email phishing detection system for cybersecurity awareness.</p>
+  <a href="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector" target="_blank">View on GitHub</a>
+ </div>
+
+</div>
+</section>
+
+<!-- ABOUT + CERT -->
+<section id="about">
+<h2 class="section-title">ABOUT</h2>
+
+<!-- 4️⃣ CEH CERT PLACEHOLDER -->
+<div class="cert-area">
+ <div class="cert-box">
+  CEH CERTIFICATE IMAGE HERE
+ </div>
+</div>
+</section>
+
+<!-- ARSENAL -->
+<section id="arsenal">
+<h2 class="section-title">THE ARSENAL</h2>
+
+<div class="arsenal">
+ <div class="box">Forensics Tools</div>
+ <div class="box">Pentesting Tools</div>
+
+ <!-- 5️⃣ TWO EXTRA BOXES ADDED -->
+ <div class="box">Custom Box 1</div>
+ <div class="box">Custom Box 2</div>
+</div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+<h2 class="section-title">CREDENTIALS</h2>
+
+<!-- 6️⃣ CEH V13AI REMOVED — CUSTOM CERTS GO HERE -->
+<!-- YOU WILL ADD YOUR CERT CODE HERE -->
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">SECURE UPLINK</h2>
+
+<!-- 7️⃣ CONTACT CODE WILL BE INSERTED HERE -->
+<div class="contact-box">
+ YOUR CONTACT CODE HERE
+</div>
+</section>
+
+<script>
+function toggleMenu(){
+ document.querySelector('.menu').classList.toggle('show')
+}
+</script>
+
+</body>
+</html>
+
 
