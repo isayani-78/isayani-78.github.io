@@ -594,7 +594,7 @@
 
         <!-- Contact Description -->
         <p style="font-size:16px; margin-bottom:10px;">
-            Initiate handshake protocol. Ready to deploy remotely or on-site collaborative investigations.
+            Let’s connect and collaborate! Reach out to me for cybersecurity discussions, research ideas, or project opportunities.
         </p>
 
         <!-- Email Display -->
@@ -624,11 +624,20 @@
             <button type="submit" style="padding:10px 20px; background:#ff4d4d; color:#fff; border:none; border-radius:8px; cursor:pointer;">Send Message</button>
         </form>
 
-        <form
-  action="https://formspree.io/f/xnjbaapy"
-  method="POST"
->
-</form>
+       <!-- Contact Form (CONNECTED TO YOUR FORMSPREE) -->
+                <form action="https://formspree.io/f/xnjbaapy" method="POST" style="display:flex; flex-direction:column; gap:15px;">
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <input type="text" name="name" placeholder="Your Name *" required style="flex:1; padding:10px; border-radius:6px; border:none; color:#000;">
+                        <input type="email" name="email" placeholder="Your Email *" required style="flex:1; padding:10px; border-radius:6px; border:none; color:#000;">
+                    </div>
+                    <input type="text" name="subject" placeholder="Your Subject.." style="padding:10px; border-radius:6px; border:none; color:#000;">
+                    <textarea name="message" placeholder="Your Message..." rows="6" style="padding:10px; border-radius:6px; border:none; color:#000;"></textarea>
+                    
+                    <button type="submit" style="padding:10px 20px; background:#ff4d4d; color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight: bold;">Send Message</button>
+                </form>
+
+            </div>
+        </section>
     </div>
 </section>
 
@@ -851,5 +860,6 @@
 </body>
 
 </html>
+
 
 
