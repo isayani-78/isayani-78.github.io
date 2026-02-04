@@ -504,8 +504,9 @@
 
     <div class="projects-grid">
 
-        <!-- PROJECT 1 -->
-        <div class="project-card">
+<!-- PROJECT 1 -->
+<div class="project-card" data-link="https://github.com/isayani-78/forensic-analyzer">
+
             <div class="project-card-inner">
 
                 <div class="project-card-front">
@@ -537,8 +538,9 @@
             </div>
         </div>
 
-        <!-- PROJECT 2 -->
-        <div class="project-card">
+       <!-- PROJECT 2 -->
+<div class="project-card" data-link="https://github.com/isayani-78/CMTL">
+
             <div class="project-card-inner">
 
                 <div class="project-card-front">
@@ -571,7 +573,8 @@
         </div>
 
         <!-- PROJECT 3 -->
-        <div class="project-card">
+<div class="project-card" data-link="https://github.com/isayani-78/AI-Powered-Phishing-Email-Detector">
+
             <div class="project-card-inner">
 
                 <div class="project-card-front">
@@ -970,9 +973,21 @@
         function closeModal() { document.getElementById('cert-modal').style.display = 'none'; }
         document.getElementById('cert-modal').addEventListener('click', (e) => { if (e.target.id === 'cert-modal') closeModal(); });
     </script>
+    <script>
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const link = card.getAttribute("data-link");
+        if (link) {
+            window.open(link, "_blank");
+        }
+    });
+});
+</script>
+
 </body>
 
 </html>
+
 
 
 
