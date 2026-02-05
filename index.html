@@ -84,39 +84,7 @@
         #canvas-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; opacity: 0.4; }
         #canvas-ripple { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.6; mix-blend-mode: screen; }
 
-        /* --- SPLASH SCREEN (HORROR) --- */
-        #splash-screen {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100dvh;
-            background-color: #020000; z-index: 99999;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            font-family: var(--font-mono); overflow: hidden; perspective: 1000px;
-        }
-        #splash-screen::before {
-            content: ""; position: absolute; top: -100%; left: -100%; width: 300%; height: 300%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
-            opacity: 0.15; animation: grain-dance 0.5s steps(10) infinite; pointer-events: none; z-index: 10;
-        }
-        #splash-screen::after {
-            content: " "; display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), radial-gradient(circle at center, transparent 60%, black 100%);
-            z-index: 20; background-size: 100% 3px, 100% 100%; pointer-events: none;
-        }
-        .background-code { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 14px; line-height: 1.2; color: #1a0505; overflow: hidden; padding: 2rem; opacity: 0.8; z-index: 1; text-align: left; word-break: break-all; white-space: pre-wrap; font-family: 'Courier New', Courier, monospace; filter: blur(0.8px) contrast(1.2); }
-        .occult-sigil { width: 300px; height: 300px; position: relative; margin-bottom: 3rem; display: flex; justify-content: center; align-items: center; z-index: 50; filter: drop-shadow(0 0 10px rgba(138, 0, 0, 0.5)); transform: scale(0.8); }
-        .sigil-ring-outer { position: absolute; width: 100%; height: 100%; border: 2px solid var(--horror-red); border-radius: 48% 52% 51% 49% / 52% 48% 49% 51%; animation: rot-jitter 10s infinite linear; opacity: 0.9; box-shadow: 0 0 5px var(--horror-red), inset 0 0 10px #000; }
-        .sigil-ring-inner { position: absolute; width: 75%; height: 75%; border: 1px dashed #500; border-radius: 52% 48% 49% 51% / 52% 48% 49% 51%; animation: rot-jitter-rev 15s infinite linear; opacity: 0.6; }
-        .sigil-triangle { position: absolute; width: 180px; height: 180px; border: 1px solid var(--horror-bright); transform: rotate(180deg); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); animation: breathe-tri 5s ease-in-out infinite; background: rgba(40, 0, 0, 0.2); box-shadow: 0 0 20px rgba(255, 0, 0, 0.2); }
-        .sigil-eye { width: 24px; height: 24px; background: #fff; border-radius: 50%; box-shadow: 0 0 15px var(--horror-bright), 0 0 40px var(--horror-red); animation: eye-twitch 4s infinite cubic-bezier(0.11, 0, 0.5, 0); position: relative; overflow: hidden; z-index: 55; }
-        .sigil-eye::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 3px; height: 24px; background: #000; border-radius: 40%; }
-        .sigil-eye::before { content: ''; position: absolute; top: 60%; left: 50%; transform: translateX(-50%); width: 6px; height: 0; background: var(--horror-red); animation: tear-drip 6s infinite; opacity: 0.8; border-radius: 2px; }
-        .splash-text-container { text-align: center; z-index: 50; position: relative; mix-blend-mode: difference; }
-        .splash-status { font-size: 2rem; letter-spacing: 5px; margin-bottom: 0.5rem; font-weight: 900; text-transform: uppercase; color: #d0d0d0; text-shadow: 3px 0 var(--horror-red), -2px 0 blue; animation: text-shake 0.15s infinite; font-family: var(--font-mono); }
-        .splash-sub { font-size: 0.9rem; color: var(--terminal-amber); font-family: var(--font-mono); letter-spacing: 2px; opacity: 0.9; background: rgba(0,0,0,0.8); padding: 5px 15px; border: 1px solid #330; }
-        .splash-progress-bar { width: 300px; height: 6px; background: #050000; margin-top: 2rem; position: relative; border: 1px solid #400; box-shadow: 0 0 15px rgba(255, 0, 0, 0.1); overflow: hidden; z-index: 50; }
-        .splash-progress-fill { height: 100%; width: 0%; background: var(--horror-bright); position: relative; box-shadow: 5px 0 10px var(--horror-red); animation: progress-fill 7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-        .red-flash { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--horror-red); opacity: 0; pointer-events: none; z-index: 80; mix-blend-mode: overlay; }
-        .subliminal { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.5); font-size: 8rem; font-weight: 900; color: rgba(10, 0, 0, 0.95); z-index: 90; pointer-events: none; white-space: nowrap; text-shadow: 0 0 20px red; font-family: var(--font-serif); opacity: 0; letter-spacing: -5px; }
-
+        
         /* --- NAVIGATION --- */
         nav { 
             position: fixed; top: 0; width: 100%; 
@@ -358,27 +326,6 @@
     </style>
 </head>
 <body>
-
-    <!-- SPLASH SCREEN -->
-    <div id="splash-screen">
-        <div class="background-code" id="bg-code"></div>
-        <div class="red-flash" id="red-flash"></div>
-        <div class="subliminal" id="subliminal">DON'T LOOK</div>
-        <div class="occult-sigil">
-            <div class="sigil-ring-outer"></div>
-            <div class="sigil-ring-inner"></div>
-            <div class="sigil-triangle"></div>
-            <div class="sigil-eye"></div>
-        </div>
-        <div class="splash-text-container">
-            <div class="splash-status" id="splash-text">INIT_DAEMON_666</div>
-            <div class="splash-sub" id="splash-sub">CONNECTING TO THE VOID...</div>
-        </div>
-        <div class="splash-progress-bar">
-            <div class="splash-progress-fill"></div>
-        </div>
-    </div>
-
     <!-- MAIN UI & CANVAS -->
     <div id="cursor"></div>
     <canvas id="canvas-bg"></canvas>
