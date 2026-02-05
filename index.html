@@ -816,70 +816,7 @@
     </footer>
 
     <script>
-        // --- HORROR SPLASH LOGIC ---
-        const splashScreen = document.getElementById('splash-screen');
-        const splashText = document.getElementById('splash-text');
-        const splashSub = document.getElementById('splash-sub');
-        const redFlash = document.getElementById('red-flash');
-        const bgCode = document.getElementById('bg-code');
-        const subliminal = document.getElementById('subliminal');
-        const body = document.body;
-
-        const crypticPhrases = ["0x666", "SEGFAULT_CORE", "INJECT_PAYLOAD", "DAEMON_RISING", "KILL_SIGNAL", "SOUL_HASH", "VOID_NULL", "MEM_LEAK", "OVERFLOW_BUFFER", "HEX_CURSE", "RITUAL_INIT", "DEV/BLOOD", "ROOT_KILLED", "NO_ESCAPE", "THEY_WATCH", "EYE_OPEN", "DARK_WEB_INDEX", "TOR_NODE_FAIL", "CIPHER_BROKEN", "SATANIC_KERNEL"];
-        let codeContent = "";
-        for(let i=0; i<600; i++) {
-            if (Math.random() > 0.95) codeContent += "\n>> " + crypticPhrases[Math.floor(Math.random()*crypticPhrases.length)] + " <<\n";
-            else codeContent += Math.random().toString(16).substr(2, 8).toUpperCase() + " ";
-            if(i % 12 === 0) codeContent += "\n";
-        }
-        bgCode.innerText = codeContent;
-
-        const panicPhrases = ["CANNOT ESCAPE", "LOOK BEHIND YOU", "SYSTEM DEAD", "NULL POINTER", "FATAL ERROR", "0xDEADBEEF", "I SEE YOU", "RUN"];
-        const normalPhrases = ["INIT_DAEMON_666", "ACCESSING_DARK_NET", "BYPASSING_FIREWALL", "INJECTING_ROOTKIT", "ESTABLISHING_UPLINK"];
-
-        let tick = 0;
-        const horrorInterval = setInterval(() => {
-            tick++;
-            if (tick > 10 && Math.random() > 0.82) {
-                redFlash.style.opacity = (Math.random() * 0.6).toString();
-                const panicText = panicPhrases[Math.floor(Math.random() * panicPhrases.length)];
-                splashText.innerText = panicText;
-                splashText.style.color = "red";
-                splashText.style.textShadow = "5px 0 0 black";
-                splashText.style.transform = `scale(${1 + Math.random() * 0.2}) skew(${Math.random()*20 - 10}deg)`;
-                subliminal.innerText = panicText;
-                subliminal.style.opacity = "0.3";
-                subliminal.style.top = `${20 + Math.random()*60}%`;
-                subliminal.style.left = `${10 + Math.random()*80}%`;
-                subliminal.style.transform = `translate(-50%, -50%) scale(${1 + Math.random() * 2}) rotate(${Math.random()*20 - 10}deg)`;
-                setTimeout(() => {
-                    redFlash.style.opacity = "0";
-                    subliminal.style.opacity = "0";
-                    splashText.style.transform = "none";
-                    splashText.style.textShadow = "3px 0 var(--horror-red), -2px 0 blue";
-                    splashText.style.color = "#d0d0d0";
-                    if(tick < 65) splashText.innerText = normalPhrases[Math.floor(Math.random() * normalPhrases.length)];
-                }, 100);
-            } 
-            if (tick % 5 === 0 && tick < 65) splashSub.innerText = `> DECRYPTING SECTOR ${Math.floor(Math.random() * 999)}... [${Math.floor(tick * 1.5)}%]`;
-            if (tick > 70) {
-                 splashSub.innerText = "ACCESS GRANTED. WELCOME TO THE ABYSS.";
-                 splashText.innerText = "SYSTEM_UNLOCKED";
-                 splashText.style.color = "#00ffcc";
-                 splashText.style.textShadow = "0 0 10px #00ffcc";
-            }
-            if (tick > 75) clearInterval(horrorInterval);
-        }, 100);
-
-        setTimeout(() => {
-            splashScreen.style.animation = "crt-off 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards";
-            setTimeout(() => {
-                body.classList.remove('loading');
-                splashScreen.style.display = "none";
-                const heroH1 = document.querySelector('.hero h1');
-                if(heroH1) triggerDecryption(heroH1);
-            }, 500);
-        }, 7500); 
+        
 
         // --- MOBILE MENU ---
         function toggleMenu() {
@@ -1040,6 +977,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
