@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-      /* --- SINGLE FRAME 3D FLIP --- */
+      /* --- FINAL SINGLE-BORDER FLIP FIX --- */
 .cert-display-case {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
-    perspective: 1200px;
+    padding: 30px 0;
+    perspective: 1000px;
 }
 
 .cert-card {
     width: 600px; 
-    height: 430px;
-    background: #000;
+    height: 420px;
+    background: transparent;
     cursor: pointer;
-    /* THIS IS YOUR SINGLE OUTER BORDER */
-    border: 2px solid var(--accent-primary);
-    border-radius: 12px;
     position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+    /* This is your ONLY border */
+    border: 2px solid var(--accent-primary);
+    border-radius: 8px;
+    overflow: hidden; 
 }
 
 .cert-inner {
@@ -34,7 +33,6 @@
     transform-style: preserve-3d;
 }
 
-/* Flip Action */
 .cert-card:hover .cert-inner {
     transform: rotateY(180deg);
 }
@@ -45,11 +43,7 @@
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #000;
-    /* NO BORDERS HERE - THIS KILLS THE BOX-IN-BOX LOOK */
 }
 
 .cert-back {
@@ -57,31 +51,30 @@
 }
 
 .cert-front img, .cert-back img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    object-fit: contain; /* Shows full cert without cropping */
+    object-fit: fill; /* This stretches the image slightly to kill the inner box gaps */
+    display: block;
 }
 
-/* Floating Label Style */
+/* SMALLER LABEL: Won't cover the cert content */
 .cert-label {
     position: absolute;
     top: 0;
     left: 0;
     background: var(--accent-primary);
     color: #000;
-    padding: 6px 15px;
-    font-size: 0.7rem;
+    padding: 3px 10px;
+    font-size: 0.65rem; /* Smaller font */
     font-weight: bold;
     z-index: 10;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 8px;
     text-transform: uppercase;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Hover Glow */
+/* Hover effect for the whole container */
 .cert-card:hover {
-    box-shadow: 0 0 35px rgba(0, 255, 204, 0.4);
-    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.3);
 }
         /* --- FINAL BALANCED BADGE & MOBILE FIX --- */
 
@@ -523,11 +516,11 @@
 <section id="about" class="hidden">
     <h2 class="section-title hyper-text">FILE: PROFILE</h2>
     
-    <div class="cert-display-case">
+   <div class="cert-display-case">
     <div class="cert-card">
         <div class="cert-inner">
             <div class="cert-front">
-                <div class="cert-label">PRIMARY CREDENTIAL: CEH V13ai</div>
+                <div class="cert-label">CEH V13ai</div>
                 <img src="https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/Sayani%20CEH-Certificate.jpg" alt="CEH Certificate">
             </div>
             <div class="cert-back">
@@ -1066,6 +1059,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
