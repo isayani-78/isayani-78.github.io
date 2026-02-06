@@ -300,31 +300,11 @@
         .hidden { opacity: 0; transform: translateY(50px); transition: 1s all ease; }
         .show { opacity: 1; transform: translateY(0); }
 
-        /* --- MOBILE OPTIMIZATION --- */
+       --- MOBILE OPTIMIZATION --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             .about-grid { grid-template-columns: 1fr; }
             .cert-display-case { width: 90%; } 
-            /* FORCE STACKING */
-    .hero, .about, .contact, .container, section {
-        flex-direction: column !important;
-        display: flex !important;
-        text-align: center !important;
-        padding: 40px 20px !important;
-    }
-
-    .hero-content, .about-content {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Fix the certificate display for mobile */
-    .cert-display-case {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 20px 0 !important;
-    }
-}
             
             /* Mobile Nav */
             .nav-links { 
@@ -346,7 +326,6 @@
     </style>
 </head>
 <body>
-}
     <!-- MAIN UI & CANVAS -->
     <div id="cursor"></div>
     <canvas id="canvas-bg"></canvas>
@@ -940,6 +919,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
