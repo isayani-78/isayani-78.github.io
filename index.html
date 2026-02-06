@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-        /* --- 3D CERTIFICATE FLIP LOGIC --- */
+       /* --- CLEAN 3D CERTIFICATE FLIP: NO INNER BOX --- */
 .cert-display-case {
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
-    perspective: 1000px; /* Essential for 3D depth */
+    padding: 60px 20px;
+    perspective: 1200px; /* Better 3D depth */
 }
 
 .cert-card {
-    width: 600px; /* Matches your laptop view size */
+    width: 600px; 
     height: 450px;
     background: transparent;
     cursor: pointer;
@@ -24,7 +24,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
 }
@@ -38,25 +37,11 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    border: 2px solid var(--accent-primary);
-    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
     overflow: hidden;
-    background: #050505;
-}
-
-/* Label at the top of the cert */
-.cert-label {
-    background: var(--accent-primary);
-    color: #000;
-    font-weight: bold;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+    /* Borders and background removed to eliminate the "inner box" look */
 }
 
 .cert-back {
@@ -66,7 +51,29 @@
 .cert-front img, .cert-back img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the full cert is visible */
+    object-fit: contain; /* Shows full document without cropping */
+    display: block;
+}
+
+/* Clean Floating Label */
+.cert-label {
+    background: var(--accent-primary);
+    color: #000;
+    font-weight: bold;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 5;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Optional: Subtle Glow on the entire card when hovering */
+.cert-card:hover .cert-inner {
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
 }
         /* --- FINAL BALANCED BADGE & MOBILE FIX --- */
 
@@ -513,7 +520,7 @@
         <div class="cert-inner">
             <div class="cert-front">
                 <div class="cert-label">PRIMARY CREDENTIAL: CEH V13ai</div>
-                <img src="https://sayanimaity78.site/CEH%20V13ai.jpg" alt="CEH Certificate">
+                <img src="https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/Sayani%20ExamTranscript.jpg" alt="CEH Certificate">
             </div>
             <div class="cert-back">
                 <div class="cert-label">EXAM TRANSCRIPT</div>
@@ -1051,6 +1058,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
