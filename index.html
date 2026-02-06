@@ -21,6 +21,24 @@
 
 /* 2. Fix Mobile View (Alignment & Scaling) */
 @media (max-width: 768px) {
+    /* Fix Header Overlap */
+    header .nav-container {
+        flex-direction: column !important;
+        padding: 10px 0 !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 5px !important;
+        margin-top: 5px !important;
+    }
+
+    .nav-links a {
+        font-size: 0.6rem !important;
+        padding: 2px 5px !important;
+    }
     /* Stack everything vertically (Fixes parallel view) */
     section, .about-grid, .hero, .container, .cert-display-case {
         display: flex !important;
@@ -959,6 +977,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
