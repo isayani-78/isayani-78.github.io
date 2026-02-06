@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-       /* --- SINGLE BORDER 3D FLIP --- */
+      /* --- SINGLE FRAME 3D FLIP --- */
 .cert-display-case {
     display: flex;
     justify-content: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
     perspective: 1200px;
 }
 
@@ -20,10 +20,10 @@
     cursor: pointer;
     /* THIS IS YOUR SINGLE OUTER BORDER */
     border: 2px solid var(--accent-primary);
-    border-radius: 15px;
+    border-radius: 12px;
     position: relative;
-    overflow: hidden; /* Keeps the flip inside the border */
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
 }
 
 .cert-inner {
@@ -49,6 +49,7 @@
     align-items: center;
     justify-content: center;
     background: #000;
+    /* NO BORDERS HERE - THIS KILLS THE BOX-IN-BOX LOOK */
 }
 
 .cert-back {
@@ -56,9 +57,9 @@
 }
 
 .cert-front img, .cert-back img {
-    width: 95%; /* Small gap so it doesn't touch your border */
-    height: 95%;
-    object-fit: contain;
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; /* Shows full cert without cropping */
 }
 
 /* Floating Label Style */
@@ -68,19 +69,19 @@
     left: 0;
     background: var(--accent-primary);
     color: #000;
-    padding: 5px 15px;
+    padding: 6px 15px;
     font-size: 0.7rem;
     font-weight: bold;
     z-index: 10;
     border-bottom-right-radius: 10px;
     text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Glow Effect on Hover */
+/* Hover Glow */
 .cert-card:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
-    border-color: var(--accent-secondary);
-    transition: 0.4s;
+    box-shadow: 0 0 35px rgba(0, 255, 204, 0.4);
+    transition: 0.3s ease-in-out;
 }
         /* --- FINAL BALANCED BADGE & MOBILE FIX --- */
 
@@ -1065,6 +1066,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
