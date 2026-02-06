@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
+        .click-view-hint {
+    color: var(--accent-primary);
+    font-size: 0.7rem;           /* Small size as requested */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -10px;           /* Pulls it up close to the title */
+    margin-bottom: 20px;
+    opacity: 0.8;
+    font-weight: bold;
+}
       /* --- FINAL SINGLE-BORDER FLIP FIX --- */
 .cert-display-case {
     display: flex;
@@ -489,10 +500,7 @@
             <a href="#about" class="nav-link" onclick="toggleMenu()">FILE: PROFILE</a>
             <a href="#skills" class="nav-link" onclick="toggleMenu()">ARSENAL</a>
             <a href="#projects" class="nav-link" onclick="toggleMenu()">CASES</a>
-            <div class="credentials-header">
-    <a href="#credentials" class="nav-link" onclick="toggleMenu()">CREDENTIALS</a>
-    <span class="click-hint">( CLICK TO VIEW CERTIFICATES )</span>
-</div>
+            <a href="#credentials" class="nav-link" onclick="toggleMenu()">CREDENTIALS</a>
             <a href="#thm-badges" class="nav-link" onclick="toggleMenu()">BADGES</a>
             <a href="#contact" class="nav-link" onclick="toggleMenu()">UPLINK</a>
         </div>
@@ -735,6 +743,7 @@
     <!-- Credentials Section -->
     <section id="credentials" class="hidden">
         <h2 class="section-title hyper-text">CREDENTIALS</h2>
+<p class="click-view-hint">( CLICK TO VIEW )</p>
         <div class="cert-container">
             <div class="cert-track">
                  <div class="cert-card" onclick="openCert('Infocom Hackstar 2023', 'ABP & ISOEH', 'CTF Participation', 'https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/CTF%20Participation%20of%20Infocom%20Hackstar%20by%20ABP%20(2023).jpeg')"><div class="cert-img-wrapper"><div class="cert-img-thumb" style="background-image: url('https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/CTF%20Participation%20of%20Infocom%20Hackstar%20by%20ABP%20(2023).jpeg')"></div><div class="cert-overlay"><span>VIEW</span></div></div><div class="cert-content"><div class="cert-name">Hackstar '23</div><div class="cert-issuer">CTF Event</div></div></div>
@@ -1062,6 +1071,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
