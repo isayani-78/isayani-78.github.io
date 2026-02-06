@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-       /* --- CLEAN 3D CERTIFICATE FLIP: NO INNER BOX --- */
+       /* --- SINGLE BORDER 3D FLIP --- */
 .cert-display-case {
     display: flex;
     justify-content: center;
     padding: 60px 20px;
-    perspective: 1200px; /* Better 3D depth */
+    perspective: 1200px;
 }
 
 .cert-card {
     width: 600px; 
-    height: 450px;
-    background: transparent;
+    height: 430px;
+    background: #000;
     cursor: pointer;
+    /* THIS IS YOUR SINGLE OUTER BORDER */
+    border: 2px solid var(--accent-primary);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden; /* Keeps the flip inside the border */
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
 }
 
 .cert-inner {
@@ -28,7 +34,7 @@
     transform-style: preserve-3d;
 }
 
-/* The Flip Trigger */
+/* Flip Action */
 .cert-card:hover .cert-inner {
     transform: rotateY(180deg);
 }
@@ -39,41 +45,42 @@
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    border-radius: 12px;
-    overflow: hidden;
-    /* Borders and background removed to eliminate the "inner box" look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
 }
 
 .cert-back {
-    transform: rotateY(180deg); /* Faces the back away initially */
+    transform: rotateY(180deg);
 }
 
 .cert-front img, .cert-back img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Shows full document without cropping */
-    display: block;
+    width: 95%; /* Small gap so it doesn't touch your border */
+    height: 95%;
+    object-fit: contain;
 }
 
-/* Clean Floating Label */
+/* Floating Label Style */
 .cert-label {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: var(--accent-primary);
     color: #000;
+    padding: 5px 15px;
+    font-size: 0.7rem;
     font-weight: bold;
-    padding: 4px 12px;
-    font-size: 0.75rem;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 5;
-    border-radius: 4px;
+    z-index: 10;
+    border-bottom-right-radius: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* Optional: Subtle Glow on the entire card when hovering */
-.cert-card:hover .cert-inner {
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.2);
+/* Glow Effect on Hover */
+.cert-card:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+    border-color: var(--accent-secondary);
+    transition: 0.4s;
 }
         /* --- FINAL BALANCED BADGE & MOBILE FIX --- */
 
@@ -520,11 +527,11 @@
         <div class="cert-inner">
             <div class="cert-front">
                 <div class="cert-label">PRIMARY CREDENTIAL: CEH V13ai</div>
-                <img src="https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/Sayani%20ExamTranscript.jpg" alt="CEH Certificate">
+                <img src="https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/Sayani%20CEH-Certificate.jpg" alt="CEH Certificate">
             </div>
             <div class="cert-back">
                 <div class="cert-label">EXAM TRANSCRIPT</div>
-                <img src="https://sayanimaity78.site/Sayani%20ExamTranscript.jpg" alt="Exam Transcript">
+                <img src="https://raw.githubusercontent.com/isayani-78/sayanimaity78/refs/heads/main/assets/Sayani%20ExamTranscript.jpg" alt="Exam Transcript">
             </div>
         </div>
     </div>
@@ -1058,6 +1065,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
