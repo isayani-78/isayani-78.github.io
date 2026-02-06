@@ -300,13 +300,12 @@
         .hidden { opacity: 0; transform: translateY(50px); transition: 1s all ease; }
         .show { opacity: 1; transform: translateY(0); }
 
-       /* --- MOBILE OPTIMIZATION (CORRECTED) --- */
-@media (max-width: 768px) {
-    /* Layout Fix */
-    .hero h1 { font-size: 2.8rem; }
-    .about-grid { grid-template-columns: 1fr; }
-    
-    /* Force Sections to stack vertically */
+        /* --- MOBILE OPTIMIZATION --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .cert-display-case { width: 90%; } 
+            /* FORCE STACKING */
     .hero, .about, .contact, .container, section {
         flex-direction: column !important;
         display: flex !important;
@@ -319,39 +318,35 @@
         margin: 0 !important;
     }
 
-    /* Certificate & Project Fix */
+    /* Fix the certificate display for mobile */
     .cert-display-case {
         width: 100% !important;
         max-width: 100% !important;
         margin: 20px 0 !important;
     }
-    .project-card { height: 400px; } 
-    .cert-card { width: 280px; }
+}
+            
+            /* Mobile Nav */
+            .nav-links { 
+                position: fixed; top: 0; right: -100%; width: 70%; height: 100vh;
+                background: #0a0a0a; flex-direction: column; align-items: center; justify-content: center;
+                transition: 0.4s; border-left: 1px solid var(--accent-primary); z-index: 1001;
+            }
+            .nav-links.active { right: 0; }
+            .hamburger { display: flex; z-index: 1002; }
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    /* TryHackMe BADGES: Large view for Mobile */
-    .thm-scene { 
-        transform: scale(0.85) !important; /* Made larger than your 0.55 */
-        height: 450px !important; 
-        margin-top: 1rem; 
-    }
-    
-    /* Pulling the badge circle back to make front badges look bigger */
-    .badge-carousel-inner {
-        transform: translateZ(-250px) !important;
-    }
-
-    /* Mobile Nav Logic */
-    .nav-links { 
-        position: fixed; top: 0; right: -100%; width: 70%; height: 100vh;
-        background: #0a0a0a; flex-direction: column; align-items: center; justify-content: center;
-        transition: 0.4s; border-left: 1px solid var(--accent-primary); z-index: 1001;
-    }
-    .nav-links.active { right: 0; }
-    .hamburger { display: flex !important; z-index: 1002; }
-    .hamburger.active .bar:nth-child(2) { opacity: 0; }
-    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-} /* Everything is now correctly inside this final bracket */
+            /* TryHackMe Mobile Scaling */
+            .thm-scene { transform: scale(0.55); height: 300px; margin-top: 2rem; }
+            .project-card { height: 400px; } 
+            .cert-card { width: 280px; }
+        }
+    </style>
+</head>
+<body>
+}
     <!-- MAIN UI & CANVAS -->
     <div id="cursor"></div>
     <canvas id="canvas-bg"></canvas>
@@ -945,6 +940,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
