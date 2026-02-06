@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
+        /* --- UNIVERSAL LAYOUT & BADGE FIX --- */
+
+/* 1. Desktop/Laptop: Make badges large and clear */
+.thm-item img {
+    width: 180px !important;
+    height: auto !important;
+    filter: drop-shadow(0 0 10px var(--accent-primary));
+}
+
+/* 2. Universal Mobile Fix */
+@media (max-width: 768px) {
+    /* Stack parallel sections vertically */
+    section, .about-grid, .hero, .container, .cert-display-case {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    /* Fix overlapping/small badges on mobile */
+    .thm-scene {
+        height: 350px !important;
+        transform: scale(0.9) !important;
+    }
+
+    .thm-item {
+        /* This pulls the 400px circle in to fit a small screen */
+        transform-origin: center !important;
+    }
+
+    /* Force mobile badges to stay readable */
+    .thm-item img {
+        width: 130px !important;
+    }
+
+    /* Override the inline 400px translate to bring badges closer */
+    div[style*="translateZ(400px)"] {
+        transform: translate3d(0, 0, 150px) !important;
+        /* Note: This logic targets your specific inline styles */
+    }
+}
         /* --- RESET & VARIABLES --- */
         :root {
             --bg-color: #050505;
@@ -919,6 +961,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
