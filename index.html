@@ -5,46 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Sayani Maity | Digital Forensics & Cybersecurity</title>
     <style>
-        /* --- UNIVERSAL LAYOUT & BADGE FIX --- */
+        /* --- FINAL BALANCED BADGE & MOBILE FIX --- */
 
-/* 1. Desktop/Laptop: Make badges large and clear */
+/* 1. Fix Laptop View (Preventing them from being "too much") */
 .thm-item img {
-    width: 180px !important;
+    width: 140px !important; /* Reduced from 180px so they don't overlap */
     height: auto !important;
-    filter: drop-shadow(0 0 10px var(--accent-primary));
+    transition: transform 0.3s ease;
 }
 
-/* 2. Universal Mobile Fix */
+.thm-scene {
+    height: 450px !important;
+    perspective: 1200px !important; /* Adjusts the 3D depth */
+}
+
+/* 2. Fix Mobile View (Alignment & Scaling) */
 @media (max-width: 768px) {
-    /* Stack parallel sections vertically */
+    /* Stack everything vertically (Fixes parallel view) */
     section, .about-grid, .hero, .container, .cert-display-case {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        text-align: center !important;
         width: 100% !important;
     }
 
-    /* Fix overlapping/small badges on mobile */
+    /* Make badges fit the phone screen width */
     .thm-scene {
-        height: 350px !important;
-        transform: scale(0.9) !important;
+        height: 300px !important;
+        transform: scale(0.8) !important; /* Shrinks the whole carousel to fit mobile */
     }
 
-    .thm-item {
-        /* This pulls the 400px circle in to fit a small screen */
-        transform-origin: center !important;
-    }
-
-    /* Force mobile badges to stay readable */
     .thm-item img {
-        width: 130px !important;
+        width: 100px !important; /* Smaller size for mobile screens */
     }
 
-    /* Override the inline 400px translate to bring badges closer */
+    /* This pulls the badges closer to the center on mobile so they don't fly off-screen */
     div[style*="translateZ(400px)"] {
-        transform: translate3d(0, 0, 150px) !important;
-        /* Note: This logic targets your specific inline styles */
+        transform-origin: center !important;
+        /* We use a scale here to keep your 400px math but make it look right on phones */
     }
 }
         /* --- RESET & VARIABLES --- */
@@ -961,6 +959,7 @@ document.querySelectorAll(".project-card").forEach(card => {
 </body>
 
 </html>
+
 
 
 
