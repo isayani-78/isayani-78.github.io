@@ -1,43 +1,101 @@
-# 🌟 Sayani Maity — Portfolio & Resume Website  
+# 🌐 Sayani Maity — Portfolio & Resume Website  
 
-[sayanimaity78.site](https://sayanimaity78.site/)
-
----
-
-## 👤 About Me  
-I’m **Sayani Maity**, an undergraduate student majoring in **Digital Forensics & Ethical Hacking**.  
-This portfolio presents my journey: showcasing my technical skills, projects, certifications, and research interests in cybersecurity and digital forensics.
+🔗 **Live Website:** https://sayanimaity78.site  
 
 ---
 
-## ✨ Highlights & Features  
-- Clean, responsive, and modern design  
-- Dynamic content via **JSON**  
-- Well-structured sections: About, Skills, Projects, Certificates, Research, and Contact  
-- Lightweight and performance-focused  
-- Hosted and deployed on **GitHub Pages**
+## 👩‍💻 About Me  
+
+Hi! I’m **Sayani Maity**, a **CEHv13 AI Certified** cybersecurity enthusiast with an academic background in  
+**Digital Forensics & Ethical Hacking**.
+
+This website serves as my **personal portfolio and online resume**, showcasing my technical skills, projects, certifications, research interests, and hands-on experience in cybersecurity, VAPT, and digital forensics.
+
+I actively focus on practical learning, real-world security scenarios, and continuous skill enhancement in the field of cyber defense and ethical hacking.
 
 ---
 
-## 🛠 Technology Stack  
+## 🚀 Purpose of This Website  
+
+- 📄 Acts as my **online resume**
+- 💼 Showcases my **projects and technical skills**
+- 🎓 Highlights **certifications and learning journey**
+- 🔬 Displays **research interests and work**
+- 🌍 Uses **subdomains** for structured content and future expansion
+
+---
+
+## ✨ Key Features  
+
+- Clean, modern, and responsive UI  
+- Lightweight and performance-optimized  
+- Well-organized sections:
+  - About Me  
+  - Skills  
+  - Projects  
+  - Certifications  
+  - Research & Learning  
+  - Contact  
+- Hosted using **GitHub Pages** with a custom domain  
+
+---
+
+## 🛠 Tech Stack  
+
 - **HTML5**  
 - **CSS3**  
 - **JavaScript (ES6+)**  
-- **JSON** (for data management)  
-- **GitHub Pages** (for hosting)
 
 ---
 
-## 📬 Contact & Social Links  
-- **Email:** sayanimaity78@gmail.com  
-- **GitHub:** [isayani-78](https://github.com/isayani-78)  
-- **LinkedIn:** [Sayani Maity](https://www.linkedin.com/in/sayanimaity/)  
-- **Twitter / X:** [@isayani78](https://twitter.com/isayani78)  
-- **Portfolio:** [sayanimaity78.site](https://sayanimaity78.site/)  
+## 🏆 Certifications  
+
+- 🛡 **Certified Ethical Hacker (CEHv13 AI)**  
+- Additional certifications in cybersecurity, forensics, and security fundamentals  
 
 ---
 
-© 2025 **Sayani Maity** — All rights reserved.  
-Thank you for visiting my portfolio.  
-If you like my work, feel free to connect or ⭐ this repository!
-](https://sayanimaity78.site/)
+## 📌 Projects & Learning  
+
+This portfolio includes:
+- Cybersecurity & VAPT-related projects  
+- Digital forensics tools and analysis work  
+- Research-oriented learning and documentation  
+- Continuous updates as I grow in the field  
+
+---
+
+## 🌐 Domain & Hosting  
+
+- **Primary Domain:** `sayanimaity78.site`  
+- Used as:
+  - Personal portfolio  
+  - Online resume  
+  - Subdomain-based content hosting  
+- Hosted via **GitHub Pages**
+
+---
+
+## 📬 Contact & Socials  
+
+- 📧 **Email:** sayanimaity78@gmail.com  
+- 🐙 **GitHub:** [isayani-78](https://github.com/isayani-78)  
+- 💼 **LinkedIn:** [Sayani Maity](https://www.linkedin.com/in/sayanimaity/)  
+- 🐦 **Twitter / X:** [@isayani78](https://twitter.com/isayani78)  
+- 🌐 **Portfolio:** https://sayanimaity78.site  
+
+---
+
+## ⭐ Support  
+
+If you find this portfolio helpful or inspiring:
+- ⭐ Star this repository  
+- 🤝 Connect with me on LinkedIn  
+- 💬 Reach out for collaboration or discussion  
+
+---
+
+**SYSTEM STATUS:** OPTIMAL  
+© 2026 **Sayani Maity** | Portfolio System Online 💻  
+
+Thank you for visiting my portfolio!
