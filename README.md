@@ -1,6 +1,6 @@
 # 🌐 Sayani Maity — Portfolio & Resume Website  
 
-🔗 **Live Website:** https://sayanimaity78.site  
+🔗 **Live Website:** [sayanimaity78.site](https://sayanimaity78.site) 
 
 ---
 
@@ -82,7 +82,7 @@ This portfolio includes:
 - 🐙 **GitHub:** [isayani-78](https://github.com/isayani-78)  
 - 💼 **LinkedIn:** [Sayani Maity](https://www.linkedin.com/in/sayanimaity/)  
 - 🐦 **Twitter / X:** [@isayani78](https://twitter.com/isayani78)  
-- 🌐 **Portfolio:** https://sayanimaity78.site  
+- 🌐 **Portfolio:** [sayanimaity78.site](https://sayanimaity78.site)   
 
 ---
 
