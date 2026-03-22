@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- NEXT.JS STYLE SEO & SECURITY HEADERS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050505">
     <title>Hello :) I am Sayani</title>
+    
     <style>
+        /* --- FORENSIC & HACKING BACKGROUND EDIT --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .forensic-scanline {
+            width: 100%;
+            height: 10px;
+            z-index: 999;
+            background: rgba(0, 255, 204, 0.03);
+            position: fixed;
+            bottom: 100%;
+            animation: scanline 6s linear infinite;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+        }
+
+        @keyframes scanline {
+            0% { bottom: 100%; }
+            100% { bottom: -100%; }
+        }
+
+        /* --- YOUR ORIGINAL STYLES (NO CHANGES BELOW) --- */
       /* --- FINAL SINGLE-BORDER FLIP FIX --- */
 .cert-display-case {
     display: flex;
@@ -455,7 +492,10 @@
         }
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
+    <!-- TECH OVERLAYS -->
+    <div class="forensic-scanline"></div>
+
     <!-- MAIN UI & CANVAS -->
     <div id="cursor"></div>
     <canvas id="canvas-bg"></canvas>
@@ -914,7 +954,22 @@
 
 
     <script>
+        // --- SECURITY: ANTI-DEBUG & ANTI-INSPECT ---
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123) return false; // Block F12
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Block Ctrl+Shift+I
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Block Ctrl+Shift+C
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Block Ctrl+Shift+J
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // Block Ctrl+U (Source)
+        };
         
+        // Anti-Console-Log message
+        setInterval(() => {
+            console.clear();
+            console.log("%c[SECURITY NOTICE]", "color: red; font-size: 20px; font-weight: bold;");
+            console.log("Unauthorized debugging attempt detected. Uplink encrypted.");
+        }, 2000);
+
         // --- MOBILE MENU ---
         function toggleMenu() {
             const nav = document.getElementById('nav-menu');
@@ -1072,95 +1127,4 @@ document.querySelectorAll(".project-card").forEach(card => {
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
